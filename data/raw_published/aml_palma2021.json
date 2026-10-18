@@ -1,0 +1,49 @@
+{
+  "name": "AML FLT3-ITD Patient-Specific Drug Resistance Network",
+  "citation": "Palma et al. (2021) J. Pers. Med. 11(2):117",
+  "url": "https://raw.githubusercontent.com/colomoto/colomoto-models/master/models/AML_Palma2021.bnet",
+  "stimuli": [
+    "FLT3_ITD",
+    "Microenv",
+    "NPM1_mut",
+    "DNMT3A_mut"
+  ],
+  "drug_targets": [
+    "FLT3",
+    "PI3K_AKT",
+    "PIM",
+    "MAPK",
+    "BCL2",
+    "MCL1",
+    "STAT5"
+  ],
+  "phenotypes": {
+    "cancer_state": {
+      "Proliferation": 1,
+      "Apoptosis": 0
+    },
+    "curative_state": {
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "rules": {
+    "FLT3_ITD": "FLT3_ITD",
+    "Microenv": "Microenv",
+    "NPM1_mut": "NPM1_mut",
+    "DNMT3A_mut": "DNMT3A_mut",
+    "FLT3": "FLT3_ITD  or  Microenv",
+    "STAT5": "FLT3  and   not P53",
+    "PI3K_AKT": "FLT3  or  Microenv",
+    "PIM": "STAT5  or  FLT3",
+    "MAPK": "FLT3",
+    "MYC": "MAPK  or  STAT5  or  PIM",
+    "BCL2": "(STAT5  or  PI3K_AKT  or  NPM1_mut)  and   not P53",
+    "MCL1": "(PI3K_AKT  or  PIM  or  STAT5)  and   not BAX_BAK",
+    "MDM2": "PI3K_AKT  and   not P53",
+    "P53": " not DNMT3A_mut  and   not MDM2  and   not BCL2",
+    "BAX_BAK": "(P53  or   not BCL2)  and   not MCL1",
+    "Proliferation": "(MYC  or  STAT5  or  PI3K_AKT)  and   not Apoptosis",
+    "Apoptosis": "BAX_BAK  and   not BCL2  and   not MCL1"
+  }
+}

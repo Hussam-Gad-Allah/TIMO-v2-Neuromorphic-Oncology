@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst05_pan_resistant",
+  "title": "AML Patient 05: Pan-Resistant Triple Mutant",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 1,
+    "NPM1_mut": 1,
+    "DNMT3A_mut": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Ultra-high-risk patient with FLT3-ITD, NPM1, DNMT3A, and stromal microenvironment protection."
+}

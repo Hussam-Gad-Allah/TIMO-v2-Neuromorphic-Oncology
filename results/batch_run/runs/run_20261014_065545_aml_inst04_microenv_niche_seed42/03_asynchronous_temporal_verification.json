@@ -1,0 +1,136 @@
+[
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "FLT3"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 60.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "FLT3"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 30
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "MAPK",
+      "PI3K_AKT"
+    ],
+    "n_drugs": 2,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 63.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PI3K_AKT"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 90
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "STAT5"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 63.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "STAT5"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 180
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "MAPK"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 66.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 300
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "MCL1",
+      "PI3K_AKT"
+    ],
+    "n_drugs": 2,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 81.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PI3K_AKT"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 330
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "PIM"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 60.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PIM"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 990
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "PI3K_AKT"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 66.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PI3K_AKT"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 1440
+  },
+  {
+    "model_name": "AML Patient 04: Bone Marrow Microenvironment Protected",
+    "candidate_drugs": [
+      "MCL1"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 84.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 4620
+  }
+]

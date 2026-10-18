@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt07_tlgl_STAT3_knockdown",
+  "index": 7,
+  "title": "T-LGL Target 07: STAT3 Transcription Factor Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "STAT3"
+  ],
+  "mechanism": "Abolishes transcriptional activation of key downstream anti-apoptotic Bcl-2 family members Mcl-1 and Bcl-xL.",
+  "citation": "Saadatpour et al. (2011), Table 1; Epling-Burnette et al. (2001)",
+  "cnf_file": "gt07_tlgl_STAT3_knockdown.cnf"
+}

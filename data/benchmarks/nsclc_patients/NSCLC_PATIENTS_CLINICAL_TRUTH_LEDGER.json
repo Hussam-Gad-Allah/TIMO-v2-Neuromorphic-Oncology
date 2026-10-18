@@ -1,0 +1,274 @@
+{
+  "nsclc_pt01_egfr_l858r_t790m_osimertinib_resistant": {
+    "title": "Patient NSCLC-01: EGFR L858R/T790M Adenocarcinoma with Acquired C797S Osimertinib Resistance",
+    "citation": "FLAURA / AURA3 Trials; Thress et al. (2015) Nature Medicine",
+    "clinical_history": {
+      "age": 61,
+      "gender": "F",
+      "subtype": "Lung Adenocarcinoma (Never/Light Smoker)",
+      "primary_driver": "EGFR L858R primary mutation + T790M gatekeeper, secondary acquired C797S mutation",
+      "hospital_treatment": "Osimertinib (3rd-generation covalent EGFR TKI)",
+      "real_world_outcome": "Rapid secondary progression at 4.1 months, diffuse bilateral pulmonary lymphangitic spread, death at 11.2 months",
+      "known_resistance_mechanism": "C797S mutation abolishes covalent binding of Osimertinib, maintaining uninterrupted downstream MAPK and PI3K signaling"
+    },
+    "pinned_molecular_baseline": {
+      "EGFR_mut": 1,
+      "EGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "KRAS_mut": 0,
+      "ALK_fusion": 0,
+      "MET_amp": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "HGF_stim": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 262
+    }
+  },
+  "nsclc_pt02_kras_g12c_sotorasib_resistant": {
+    "title": "Patient NSCLC-02: Poorly Differentiated Adenocarcinoma with KRAS G12C and STK11/KEAP1 Double Hit",
+    "citation": "CodeBreaK 100; Skoulidis et al. (2018) Cancer Discovery; Negrao et al. (2023) JCO",
+    "clinical_history": {
+      "age": 64,
+      "gender": "M",
+      "subtype": "KRAS-Mutant / STK11-KEAP1 Co-Mutant (SAK Subgroup)",
+      "primary_driver": "KRAS G12C mutation, STK11/LKB1 biallelic loss, KEAP1 null mutation",
+      "hospital_treatment": "Sotorasib (AMG 510 covalent KRAS-G12C inhibitor)",
+      "real_world_outcome": "Primary resistance with disease progression at 2.6 months, multiple brain metastases, death at 6.8 months",
+      "known_resistance_mechanism": "STK11 loss hyperactivates mTORC1 while KEAP1 null stabilizes NRF2, driving high antioxidant flux and bypassing KRAS dependency"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "STK11_loss": 1,
+      "KEAP1_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "ALK_fusion": 0,
+      "MET_amp": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "EGF_stim": 0,
+      "HGF_stim": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 263
+    }
+  },
+  "nsclc_pt03_alk_eml4_fusion_lorlatinib_resistant": {
+    "title": "Patient NSCLC-03: Signet-Ring Adenocarcinoma with EML4-ALK and Compound G1202R Solvent-Front Mutation",
+    "citation": "CROWN Trial; Shaw et al. (2019) JCO; Gainor et al. (2016) Cancer Discovery",
+    "clinical_history": {
+      "age": 43,
+      "gender": "F",
+      "subtype": "Never-Smoker Young Adenocarcinoma (ALK-Rearranged)",
+      "primary_driver": "EML4-ALK Variant 3 fusion + acquired solvent-front ALK G1202R mutation",
+      "hospital_treatment": "Alectinib followed by Lorlatinib (3rd-generation brain-penetrant ALK TKI)",
+      "real_world_outcome": "Leptomeningeal carcinomatosis and spinal drop metastases at 5.2 months, death at 13.5 months",
+      "known_resistance_mechanism": "G1202R mutation introduces steric clash with Lorlatinib, maintaining persistent STAT3 and PI3K/Akt pro-survival signals"
+    },
+    "pinned_molecular_baseline": {
+      "ALK_fusion": 1,
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "KRAS_mut": 0,
+      "MET_amp": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "EGF_stim": 0,
+      "HGF_stim": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 261
+    }
+  },
+  "nsclc_pt04_met_exon14_skipping_capmatinib_refractory": {
+    "title": "Patient NSCLC-04: Pulmonary Sarcomatoid Carcinoma with MET Exon 14 Skipping and High Gene Amplification",
+    "citation": "GEOMETRY mono-1; Wolf et al. (2020) NEJM; Paik et al. (2015) Cancer Discovery",
+    "clinical_history": {
+      "age": 72,
+      "gender": "M",
+      "subtype": "Pleomorphic / Pulmonary Sarcomatoid Carcinoma (PSC)",
+      "primary_driver": "MET Exon 14 skipping splice site mutation + high focal MET gene amplification (GCN >10)",
+      "hospital_treatment": "Capmatinib (selective MET inhibitor)",
+      "real_world_outcome": "Initial short stability then fulminant pleural effusion and chest wall invasion at 3.3 months, death at 6.1 months",
+      "known_resistance_mechanism": "Secondary D1228N kinase domain mutation blocks Capmatinib, while high HGF autocrine flux hyperactivates STAT3 and MCL-1"
+    },
+    "pinned_molecular_baseline": {
+      "MET_amp": 1,
+      "HGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "KRAS_mut": 0,
+      "ALK_fusion": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "EGF_stim": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 262
+    }
+  },
+  "nsclc_pt05_egfr_ex19del_acquired_met_bypass": {
+    "title": "Patient NSCLC-05: Asian Non-Smoker EGFR ex19del with High-Level MET Amplification Bypass",
+    "citation": "FLAURA Trial; Soria et al. (2018) NEJM; Engelman et al. (2007) Science",
+    "clinical_history": {
+      "age": 55,
+      "gender": "F",
+      "subtype": "Asian Non-Smoker Lung Adenocarcinoma",
+      "primary_driver": "EGFR exon 19 deletion with high focal c-MET amplification emerging under 1st-line Osimertinib",
+      "hospital_treatment": "Osimertinib monotherapy",
+      "real_world_outcome": "Progression-free survival of 6.0 months, rapid bilobar liver metastases, death at 14.0 months",
+      "known_resistance_mechanism": "Emergence of MET amplification recruits ERBB3 and drives constitutive PI3K/Akt activation, bypassing EGFR inhibition"
+    },
+    "pinned_molecular_baseline": {
+      "EGFR_mut": 1,
+      "MET_amp": 1,
+      "EGF_stim": 1,
+      "HGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "KRAS_mut": 0,
+      "ALK_fusion": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 264
+    }
+  },
+  "nsclc_pt06_pdl1_high_immunotherapy_exceptional_responder": {
+    "title": "Patient NSCLC-06: Heavy Smoker Squamous Lung Cancer with PD-L1 95% Exceptional Responder",
+    "citation": "KEYNOTE-024 / KEYNOTE-042; Reck et al. (2016) NEJM; Rizvi et al. (2015) Science",
+    "clinical_history": {
+      "age": 67,
+      "gender": "M",
+      "subtype": "Squamous Cell Lung Carcinoma (Former Smoker)",
+      "primary_driver": "High Tumor Mutational Burden (TMB), PD-L1 Tumor Proportion Score (TPS) 95%, All-Wild-Type Drivers",
+      "hospital_treatment": "Pembrolizumab (anti-PD-1 checkpoint inhibitor monotherapy)",
+      "real_world_outcome": "Complete pathological and metabolic response (CR), ongoing disease-free survival >54 months (SURVIVED / Cured)",
+      "known_resistance_mechanism": "Intact caspase and Bak/Bax machinery; absence of oncogene-driven Bcl-2/Mcl-1 locks permits complete immune eradication"
+    },
+    "pinned_molecular_baseline": {
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "KRAS_mut": 0,
+      "ALK_fusion": 0,
+      "MET_amp": 0,
+      "PIK3CA_mut": 0,
+      "P53_mut": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "EGF_stim": 0,
+      "HGF_stim": 0,
+      "TGFB_stim": 0,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 260
+    }
+  },
+  "nsclc_pt07_squamous_pi3k_akt_sox2_amplified": {
+    "title": "Patient NSCLC-07: Central Bronchogenic Squamous Carcinoma with PIK3CA Mutation and Severe Hypoxia",
+    "citation": "TCGA-LUSC Consortium; Hammerman et al. (2012) Nature; Perez-Ramirez et al. (2015)",
+    "clinical_history": {
+      "age": 69,
+      "gender": "M",
+      "subtype": "Central Bronchogenic Squamous Cell Carcinoma",
+      "primary_driver": "PIK3CA E545K helical domain mutation, TP53 R248W mutation, high necrotic hypoxia signature",
+      "hospital_treatment": "Carboplatin + Gemcitabine + Necitumumab",
+      "real_world_outcome": "Primary chemo-refractory disease, local cavitation, mediastinal invasion and death at 4.8 months",
+      "known_resistance_mechanism": "Constitutive PI3K/Akt signaling directly phosphorylates and inactivates BAD and Caspase-9, preventing chemotherapy-induced apoptosis"
+    },
+    "pinned_molecular_baseline": {
+      "PIK3CA_mut": 1,
+      "P53_mut": 1,
+      "Hypoxia_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "KRAS_mut": 0,
+      "ALK_fusion": 0,
+      "MET_amp": 0,
+      "STK11_loss": 0,
+      "KEAP1_mut": 0,
+      "EGF_stim": 0,
+      "HGF_stim": 0,
+      "TGFB_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 263
+    }
+  },
+  "nsclc_pt08_pan_refractory_kras_tp53_keap1_triplet": {
+    "title": "Patient NSCLC-08: Highly Aggressive Triplet-Mutant KRAS/TP53/KEAP1 Metastatic Lung Carcinoma",
+    "citation": "Arbour et al. (2018) Clin Cancer Res; TCGA-LUAD; Ricciuti et al. (2022) JTO",
+    "clinical_history": {
+      "age": 58,
+      "gender": "M",
+      "subtype": "Pan-Refractory Invasive Lung Adenocarcinoma",
+      "primary_driver": "Concurrent KRAS G12V, TP53 R273H, KEAP1 null mutation, strong TGF-beta mesenchymal stroma",
+      "hospital_treatment": "Carboplatin + Pemetrexed + Pembrolizumab",
+      "real_world_outcome": "Progression-free survival of 1.9 months, extensive hepatic and adrenal metastases, death at 4.9 months",
+      "known_resistance_mechanism": "Co-occurring KRAS, p53, and KEAP1 defects hyper-stabilize NRF2, MCL-1, and XIAP, rendering both chemo and checkpoint blockade ineffective"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "KEAP1_mut": 1,
+      "TGFB_stim": 1,
+      "Hypoxia_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "EGFR_mut": 0,
+      "ALK_fusion": 0,
+      "MET_amp": 0,
+      "PIK3CA_mut": 0,
+      "STK11_loss": 0,
+      "EGF_stim": 0,
+      "HGF_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 265
+    }
+  }
+}

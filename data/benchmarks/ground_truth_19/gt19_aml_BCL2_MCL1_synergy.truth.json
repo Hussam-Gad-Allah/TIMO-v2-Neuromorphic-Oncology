@@ -1,0 +1,13 @@
+{
+  "benchmark_id": "gt19_aml_BCL2_MCL1_synergy",
+  "index": 19,
+  "title": "AML Target 19: Synthetic Lethality Synergy (BCL2 + MCL1 Co-Inhibition)",
+  "model_type": "aml",
+  "ground_truth_solution": [
+    "BCL2",
+    "MCL1"
+  ],
+  "mechanism": "Overcomes FLT3-ITD resistance. Dual inhibition of BCL2 (Venetoclax) + MCL1 frees BAX/BAK for 100% apoptosis.",
+  "citation": "Palma et al. (2021), J. Pers. Med. 11(2):117",
+  "cnf_file": "gt19_aml_BCL2_MCL1_synergy.cnf"
+}

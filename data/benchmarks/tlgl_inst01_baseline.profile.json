@@ -1,0 +1,12 @@
+{
+  "id": "tlgl_inst01_baseline",
+  "title": "T-LGL Patient 01: Standard Autocrine Cytokine Attractor",
+  "pinned": {
+    "Stimuli": 1,
+    "IL15": 1,
+    "PDGF": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Primary T-LGL patient with dual IL-15 and PDGF autocrine survival loops."
+}

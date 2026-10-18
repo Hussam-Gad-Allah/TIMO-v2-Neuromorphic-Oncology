@@ -1,0 +1,11 @@
+{
+  "id": "tlgl_inst06_tax_oncogene",
+  "title": "T-LGL Patient 06: Viral HTLV-1 TAX Oncoprotein Survival",
+  "pinned": {
+    "Stimuli": 1,
+    "TAX": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Refractory patient driven by viral TAX oncoprotein triggering constitutive TPL2/NF-kB."
+}

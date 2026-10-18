@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt16_tlgl_Ceramide_restoration",
+  "index": 16,
+  "title": "T-LGL Target 16: Pro-apoptotic Ceramide Pathway Activation",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "Ceramide"
+  ],
+  "mechanism": "Exogenous Ceramide administration or metabolic accumulation directly activates Caspase-3/8.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt16_tlgl_Ceramide_restoration.cnf"
+}

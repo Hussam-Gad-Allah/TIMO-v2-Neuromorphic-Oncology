@@ -1,0 +1,144 @@
+{
+  "stad_pt01_her2_amp_trastuzumab_resistant": {
+    "title": "Patient stad_pt01_her2_amp_trastuzumab_resistant: HER2-Amplified Intestinal Gastric Adenocarcinoma",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "HER2-Amplified Intestinal Gastric Adenocarcinoma",
+      "primary_driver": "Focal ERBB2 amplification, secondary MET bypass",
+      "hospital_treatment": "Trastuzumab + FOLFOX",
+      "real_world_outcome": "Progression at 5.4 mo, hepatic dissemination",
+      "known_resistance_mechanism": "MET amplification restores downstream PI3K/Akt flux despite Trastuzumab HER2 blockade"
+    },
+    "pinned": {
+      "HER2_amp": 1,
+      "MET_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt02_msi_high_checkpoint_cured": {
+    "title": "Patient stad_pt02_msi_high_checkpoint_cured: MSI-High / dMMR Hypermutated Gastric Cancer",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "MSI-High / dMMR Hypermutated Gastric Cancer",
+      "primary_driver": "MLH1 hypermethylation, intact apoptosis cascade",
+      "hospital_treatment": "Nivolumab + Chemo (CheckMate-649)",
+      "real_world_outcome": "Complete Remission >48 mo (CURED)",
+      "known_resistance_mechanism": "Absence of hardwired anti-apoptotic locks allows cytotoxic T-cells to eradicate the tumor"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt03_cdh1_mutant_diffuse_signet_ring": {
+    "title": "Patient stad_pt03_cdh1_mutant_diffuse_signet_ring: Hereditary Diffuse Gastric Carcinoma (HDGC)",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "Hereditary Diffuse Gastric Carcinoma (HDGC)",
+      "primary_driver": "Biallelic CDH1 inactivating mutation, p53 loss",
+      "hospital_treatment": "ECF (Epirubicin, Cisplatin, 5-FU)",
+      "real_world_outcome": "Primary chemo-refractory, linitis plastica, death at 4.9 mo",
+      "known_resistance_mechanism": "Loss of E-cadherin activates Rho/Akt survival axis and suppresses Bax transcription"
+    },
+    "pinned": {
+      "CDH1_loss": 1,
+      "P53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt04_ebv_positive_immune_responsive": {
+    "title": "Patient stad_pt04_ebv_positive_immune_responsive: Epstein-Barr Virus (EBV)-Associated Gastric Cancer",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "Epstein-Barr Virus (EBV)-Associated Gastric Cancer",
+      "primary_driver": "Viral latent antigen expression, high PD-L1",
+      "hospital_treatment": "Pembrolizumab monotherapy",
+      "real_world_outcome": "Durable Partial Response >28 mo",
+      "known_resistance_mechanism": "High immune antigenicity and low chromosomal instability facilitate apoptotic collapse"
+    },
+    "pinned": {
+      "EBV_pos": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt05_met_amplified_fulminant_resistant": {
+    "title": "Patient stad_pt05_met_amplified_fulminant_resistant: High-Level MET Amplified Gastric Carcinoma",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "High-Level MET Amplified Gastric Carcinoma",
+      "primary_driver": "Focal MET copy number >=10, constitutive STAT3",
+      "hospital_treatment": "Capmatinib salvage therapy",
+      "real_world_outcome": "Progression at 3.0 mo, peritoneal carcinomatosis",
+      "known_resistance_mechanism": "Rapid feedback upregulation of EGFR and MCL-1 overcomes selective MET TKI"
+    },
+    "pinned": {
+      "MET_amp": 1,
+      "EGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt06_pi3k_mutant_platinum_refractory": {
+    "title": "Patient stad_pt06_pi3k_mutant_platinum_refractory: PIK3CA E545K Mutant Gastric Adenocarcinoma",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "PIK3CA E545K Mutant Gastric Adenocarcinoma",
+      "primary_driver": "PIK3CA activating mutation + TP53 loss",
+      "hospital_treatment": "FLOT chemotherapy (Docetaxel, Oxaliplatin, 5-FU)",
+      "real_world_outcome": "Progression at 2.8 mo, death at 6.2 mo",
+      "known_resistance_mechanism": "Constitutive Akt phosphorylation directly inactivates BAD and protects from platinum adducts"
+    },
+    "pinned": {
+      "PIK3CA_mut": 1,
+      "P53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt07_egfr_amplified_cetuximab_failure": {
+    "title": "Patient stad_pt07_egfr_amplified_cetuximab_failure: EGFR-Driven Proximal Cardia Adenocarcinoma",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "EGFR-Driven Proximal Cardia Adenocarcinoma",
+      "primary_driver": "Focal EGFR amplicon, wild-type KRAS",
+      "hospital_treatment": "Cetuximab + Irinotecan",
+      "real_world_outcome": "Progression at 3.6 mo, retroperitoneal adenopathy",
+      "known_resistance_mechanism": "Parallel HER2/HER3 heterodimerization maintains downstream MAPK and Mcl-1 flux"
+    },
+    "pinned": {
+      "EGFR_amp": 1,
+      "HER2_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "stad_pt08_pan_refractory_her2_met_p53_triplet": {
+    "title": "Patient stad_pt08_pan_refractory_her2_met_p53_triplet: Pan-Refractory Triplet-Hit Gastric Carcinoma",
+    "citation": "TCGA-STAD (Nature 2014, 513:202-209); Bang et al. (2010) Lancet (ToGA Trial); Janjigian et al. (2021) Nature (CheckMate-649)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Gastric Carcinoma",
+      "primary_driver": "Concurrent HER2 amp, MET amp, and TP53 null",
+      "hospital_treatment": "Trastuzumab Deruxtecan (T-DXd) salvage",
+      "real_world_outcome": "Primary refractory, rapid death at 2.2 mo",
+      "known_resistance_mechanism": "Dual RTK amplification with p53 loss creates an impenetrable anti-apoptotic barrier"
+    },
+    "pinned": {
+      "HER2_amp": 1,
+      "MET_amp": 1,
+      "P53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt12_tlgl_ERK_inhibition",
+  "index": 12,
+  "title": "T-LGL Target 12: ERK (Extracellular Signal-Regulated Kinase) Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "ERK"
+  ],
+  "mechanism": "Blocks ERK-mediated survival phosphorylation and releases pro-apoptotic transcriptional repressions.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt12_tlgl_ERK_inhibition.cnf"
+}

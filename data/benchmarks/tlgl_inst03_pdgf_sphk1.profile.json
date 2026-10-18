@@ -1,0 +1,12 @@
+{
+  "id": "tlgl_inst03_pdgf_sphk1",
+  "title": "T-LGL Patient 03: PDGF-Driven SPHK1-S1P Attractor",
+  "pinned": {
+    "Stimuli": 0,
+    "IL15": 0,
+    "PDGF": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "PDGF-predominant patient activating Sphingosine Kinase 1 (SPHK1) and S1P."
+}

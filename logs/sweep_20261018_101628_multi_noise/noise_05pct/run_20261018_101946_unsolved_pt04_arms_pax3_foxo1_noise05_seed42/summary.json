@@ -1,0 +1,23 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 31,
+  "steps_taken": 240,
+  "time_seconds": 4.33,
+  "seed": 42,
+  "cnf": "unsolved_pt04_arms_pax3_foxo1.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "active_drugs": [
+    "AKT",
+    "EZH2",
+    "mTOR"
+  ],
+  "validation_noise": 0.05,
+  "apoptosis_rate_clean": 23.0,
+  "apoptosis_rate_noisy": 99.5,
+  "wet_lab_match": [
+    "AKT",
+    "mTOR"
+  ]
+}

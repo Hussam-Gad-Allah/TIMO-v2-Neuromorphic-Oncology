@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt01_tlgl_S1P_knockout",
+  "index": 1,
+  "title": "T-LGL Target 01: S1P (Sphingosine-1-Phosphate) Knockout",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "S1P"
+  ],
+  "mechanism": "Inhibition of S1P cuts off leukemic survival signaling and restores Ceramide synthesis, activating Caspase-8/3.",
+  "citation": "Saadatpour et al. (2011), Table 1; Zhang et al. (2008)",
+  "cnf_file": "gt01_tlgl_S1P_knockout.cnf"
+}

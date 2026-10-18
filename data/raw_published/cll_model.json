@@ -1,0 +1,66 @@
+{
+  "name": "Chronic Lymphocytic Leukemia (CLL)",
+  "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+  "url": "https://doi.org/10.1056/NEJMoa1400376",
+  "stimuli": [
+    "BCR_stim",
+    "Chemo_DNA_damage",
+    "BTK_mut",
+    "PLCG2_mut",
+    "DEL17P_TP53",
+    "NOTCH1_mut",
+    "SF3B1_mut",
+    "BCL2_amp"
+  ],
+  "drug_targets": [
+    "BTK",
+    "SYK",
+    "PI3K",
+    "AKT",
+    "NFkB",
+    "BCL2",
+    "MCL1",
+    "BCLxL",
+    "XIAP"
+  ],
+  "phenotypes": {
+    "cancer_state": {
+      "Proliferation": 1,
+      "Apoptosis": 0
+    },
+    "curative_state": {
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "rules": {
+    "BCR_stim": "BCR_stim",
+    "Chemo_DNA_damage": "Chemo_DNA_damage",
+    "BTK_mut": "BTK_mut",
+    "PLCG2_mut": "PLCG2_mut",
+    "DEL17P_TP53": "DEL17P_TP53",
+    "NOTCH1_mut": "NOTCH1_mut",
+    "SF3B1_mut": "SF3B1_mut",
+    "BCL2_amp": "BCL2_amp",
+    "SYK": "BCR_stim",
+    "BTK": "BTK_mut  or  SYK",
+    "PLCG2": "PLCG2_mut  or  BTK",
+    "PI3K": "SYK  or  BCR_stim",
+    "AKT": "PI3K",
+    "NFkB": "PLCG2  or  AKT  or  NOTCH1_mut",
+    "ATM_ATR": "Chemo_DNA_damage",
+    "P53": "ATM_ATR  and  not DEL17P_TP53",
+    "BCL2": "(BCL2_amp  or  NFkB)  and  not BAX",
+    "BCLxL": "NFkB  and  not BAX",
+    "MCL1": "(AKT  or  NFkB)  and  not BAX",
+    "XIAP": "AKT  and  not SMAC",
+    "BAX": "(P53  or  not BCL2  or  not BCLxL)  and  not MCL1",
+    "CytoC": "BAX",
+    "SMAC": "BAX",
+    "Caspase9": "CytoC  and  not XIAP",
+    "Caspase8": "Chemo_DNA_damage",
+    "Caspase3": "(Caspase9  or  Caspase8)  and  not XIAP",
+    "Apoptosis": "Caspase3",
+    "Proliferation": "(BTK  or  NFkB  or  AKT)  and  not Apoptosis"
+  }
+}

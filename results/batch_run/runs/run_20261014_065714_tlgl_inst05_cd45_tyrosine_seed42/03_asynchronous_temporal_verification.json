@@ -1,0 +1,40 @@
+[
+  {
+    "model_name": "T-LGL Patient 05: CD45 Phosphatase Hyper-activation",
+    "candidate_drugs": [
+      "Caspase",
+      "PDGFR",
+      "sFas"
+    ],
+    "n_drugs": 3,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 41.5,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "Caspase",
+      "sFas",
+      "PDGFR"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 3210
+  },
+  {
+    "model_name": "T-LGL Patient 05: CD45 Phosphatase Hyper-activation",
+    "candidate_drugs": [
+      "NFkB"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 46.5,
+    "apoptosis_rate_noisy": 91.5,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 332.3,
+    "wet_lab_ground_truth_matches": [
+      "NFkB"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 3240
+  }
+]

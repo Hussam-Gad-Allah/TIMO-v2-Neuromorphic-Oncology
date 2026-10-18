@@ -1,0 +1,154 @@
+{
+  "sclc_pt01_classic_ascl1_bcl2_hyperdependent": {
+    "title": "Patient sclc_pt01_classic_ascl1_bcl2_hyperdependent: SCLC-A Subtype (ASCL1-High / Classic Neuroendocrine)",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "SCLC-A Subtype (ASCL1-High / Classic Neuroendocrine)",
+      "primary_driver": "Obligate biallelic TP53 and RB1 loss, high ASCL1 driving massive BCL2",
+      "hospital_treatment": "Cisplatin + Etoposide chemotherapy",
+      "real_world_outcome": "Brief partial response for 3.8 mo, rapid brain metastases, death at 7.5 mo",
+      "known_resistance_mechanism": "High BCL-2 transcription creates an impenetrable mitochondrial shield against platinum adducts"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "ASCL1_high": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt02_slfn11_loss_acquired_chemo_refractory": {
+    "title": "Patient sclc_pt02_slfn11_loss_acquired_chemo_refractory: SLFN11-Epigenetically Silenced Platinum-Resistant SCLC",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "SLFN11-Epigenetically Silenced Platinum-Resistant SCLC",
+      "primary_driver": "Biallelic loss of TP53/RB1, secondary SLFN11 methylation",
+      "hospital_treatment": "Carboplatin + Etoposide + Atezolizumab (IMpower133)",
+      "real_world_outcome": "Primary refractory, rapid progression at 2.1 mo, death at 4.2 mo",
+      "known_resistance_mechanism": "Loss of SLFN11 allows cancer cells to bypass replication fork stalling and DNA crosslinks"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "SLFN11_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt03_myc_amplified_sclc_y_aurora_refractory": {
+    "title": "Patient sclc_pt03_myc_amplified_sclc_y_aurora_refractory: SCLC-Y / Variant Subtype with High MYC Amplification",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "SCLC-Y / Variant Subtype with High MYC Amplification",
+      "primary_driver": "Focal MYC amplification, low neuroendocrine markers, high Aurora A",
+      "hospital_treatment": "Lurbinectedin salvage therapy",
+      "real_world_outcome": "Progression at 2.4 mo, bulky mediastinal progression",
+      "known_resistance_mechanism": "MYC hyperactivates downstream MCL-1 and CDK2, driving rapid cell-cycle override"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "MYC_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt04_durvalumab_exceptional_long_term_survivor": {
+    "title": "Patient sclc_pt04_durvalumab_exceptional_long_term_survivor: Extensive-Stage SCLC with Long-Term Immunotherapy Benefit",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "Extensive-Stage SCLC with Long-Term Immunotherapy Benefit",
+      "primary_driver": "High tobacco mutational burden, intact antigen presentation",
+      "hospital_treatment": "Platinum + Etoposide + Durvalumab (CASPIAN trial)",
+      "real_world_outcome": "Durable Progression-Free Survival >32 mo (Long-Term Survivor)",
+      "known_resistance_mechanism": "High clonal neoantigen load induces durable cytotoxic T-cell memory"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt05_neurod1_high_sclc_n_aggressive": {
+    "title": "Patient sclc_pt05_neurod1_high_sclc_n_aggressive: SCLC-N Subtype (NEUROD1-Driven Primitive Small Cell)",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "SCLC-N Subtype (NEUROD1-Driven Primitive Small Cell)",
+      "primary_driver": "High NEUROD1 nuclear transcription factor, STAT3 activation",
+      "hospital_treatment": "Topotecan monotherapy",
+      "real_world_outcome": "Progression at 2.8 mo, widespread hepatic metastases",
+      "known_resistance_mechanism": "NEUROD1 sustains high BCL-xL and STAT3 signaling, neutralizing topoisomerase traps"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "NEUROD1_high": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt06_notch_loss_neuroendocrine_hyperplastic": {
+    "title": "Patient sclc_pt06_notch_loss_neuroendocrine_hyperplastic: NOTCH-Inactivated Pure Neuroendocrine Carcinoma",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "NOTCH-Inactivated Pure Neuroendocrine Carcinoma",
+      "primary_driver": "Deleterious NOTCH1/2 loss, unchecked ASCL1 neuroendocrine drive",
+      "hospital_treatment": "Tarlatamab (DLL3-targeted BiTE)",
+      "real_world_outcome": "PFS 15.2 mo, significant clinical response",
+      "known_resistance_mechanism": "High surface DLL3 expression enables potent T-cell redirection"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "NOTCH_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt07_parp_inhibitor_resistant_hr_proficient": {
+    "title": "Patient sclc_pt07_parp_inhibitor_resistant_hr_proficient: Homologous Recombination Proficient Recurrent SCLC",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "Homologous Recombination Proficient Recurrent SCLC",
+      "primary_driver": "Intact BRCA/RAD51 repair axis with high SLFN11 loss",
+      "hospital_treatment": "Olaparib + Temozolomide",
+      "real_world_outcome": "Progression at 3.0 mo, leptomeningeal spread",
+      "known_resistance_mechanism": "Rapid repair of single-strand breaks overrides PARP entrapment"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "SLFN11_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sclc_pt08_pan_refractory_quadruple_driver_lethal": {
+    "title": "Patient sclc_pt08_pan_refractory_quadruple_driver_lethal: Pan-Refractory Quadruple-Feature Lethal SCLC",
+    "citation": "George et al. (2015) Nature 524:47-53; Horn et al. (2018) NEJM (IMpower133 - Atezolizumab); Paz-Ares et al. (2019) Lancet (CASPIAN - Durvalumab)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Quadruple-Feature Lethal SCLC",
+      "primary_driver": "Concurrent TP53 null, RB1 null, MYC amp, and SLFN11 loss",
+      "hospital_treatment": "Multi-agent salvage chemotherapy + IO",
+      "real_world_outcome": "Rapid failure at 1.4 mo, death at 2.8 mo",
+      "known_resistance_mechanism": "Simultaneous loss of both tumor suppressors, MYC oncogene addiction, and SLFN11 shutdown"
+    },
+    "pinned": {
+      "TP53_null": 1,
+      "RB1_null": 1,
+      "MYC_amp": 1,
+      "SLFN11_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt04_tlgl_PDGF_neutralization",
+  "index": 4,
+  "title": "T-LGL Target 04: PDGF Cytokine Neutralization",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "PDGF"
+  ],
+  "mechanism": "Antibody neutralization of autocrine PDGF cytokine abolishes microenvironmental proliferative stimulus.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt04_tlgl_PDGF_neutralization.cnf"
+}

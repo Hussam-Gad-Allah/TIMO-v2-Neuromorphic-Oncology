@@ -1,0 +1,147 @@
+{
+  "ccrcc_pt01_vhl_null_sunitinib_resistant": {
+    "title": "Patient ccrcc_pt01_vhl_null_sunitinib_resistant: VHL-Null / HIF2A Driven ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "VHL-Null / HIF2A Driven ccRCC",
+      "primary_driver": "Homozygous VHL loss, MET/AXL bypass",
+      "hospital_treatment": "Sunitinib monotherapy",
+      "real_world_outcome": "Progression at 4.2 mo, lung metastases",
+      "known_resistance_mechanism": "Secondary AXL/MET upregulation restores AKT flux despite VEGFR inhibition"
+    },
+    "pinned": {
+      "VHL_loss": 1,
+      "Hypoxia_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt02_pbrm1_loss_nivo_responder": {
+    "title": "Patient ccrcc_pt02_pbrm1_loss_nivo_responder: PBRM1-Deficient Immunotherapy Responsive ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "PBRM1-Deficient Immunotherapy Responsive ccRCC",
+      "primary_driver": "Truncating PBRM1 mutation, intact BAP1",
+      "hospital_treatment": "Nivolumab (anti-PD-1)",
+      "real_world_outcome": "Durable Complete Response >40 mo (CURED)",
+      "known_resistance_mechanism": "Absence of rigid anti-apoptotic defenses permits rapid cytotoxic T-cell granzyme lysis"
+    },
+    "pinned": {
+      "PBRM1_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt03_bap1_mutant_fulminant_lethal": {
+    "title": "Patient ccrcc_pt03_bap1_mutant_fulminant_lethal: BAP1-Mutant High-Grade Lethal ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "BAP1-Mutant High-Grade Lethal ccRCC",
+      "primary_driver": "BAP1 nonsense mutation, high mTORC1 flux",
+      "hospital_treatment": "Cabozantinib + Nivolumab",
+      "real_world_outcome": "Primary refractory, rapid progression at 2.6 mo",
+      "known_resistance_mechanism": "BAP1 loss drives massive metabolic rewiring and constitutive MCL-1 translation"
+    },
+    "pinned": {
+      "BAP1_loss": 1,
+      "VHL_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt04_pten_null_temsirolimus_failure": {
+    "title": "Patient ccrcc_pt04_pten_null_temsirolimus_failure: PI3K/PTEN-Loss Refractory Renal Carcinoma",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "PI3K/PTEN-Loss Refractory Renal Carcinoma",
+      "primary_driver": "Biallelic PTEN loss, constitutive AKT phosphorylation",
+      "hospital_treatment": "Temsirolimus (mTORC1 inhibitor)",
+      "real_world_outcome": "Progression at 3.1 mo, hepatic metastases",
+      "known_resistance_mechanism": "mTORC1 inhibition unleashes feedback hyperactivation of AKT and MCL-1"
+    },
+    "pinned": {
+      "PTEN_loss": 1,
+      "VHL_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt05_setd2_mutant_epigenetic_instability": {
+    "title": "Patient ccrcc_pt05_setd2_mutant_epigenetic_instability: SETD2 Histone Methyltransferase Deficient ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "SETD2 Histone Methyltransferase Deficient ccRCC",
+      "primary_driver": "SETD2 loss, defective DNA mismatch repair",
+      "hospital_treatment": "Lenvatinib + Pembrolizumab",
+      "real_world_outcome": "PFS 18.2 mo, significant clinical benefit",
+      "known_resistance_mechanism": "High epigenetic replication stress sensitizes tumor to multi-targeted kinase uncoupling"
+    },
+    "pinned": {
+      "SETD2_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt06_hif2a_belzutifan_resistant_bypass": {
+    "title": "Patient ccrcc_pt06_hif2a_belzutifan_resistant_bypass: HIF-2a Antagonist Resistant ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "HIF-2a Antagonist Resistant ccRCC",
+      "primary_driver": "Acquired HIF2A G323E pocket mutation",
+      "hospital_treatment": "Belzutifan (HIF-2a selective inhibitor)",
+      "real_world_outcome": "Progression at 5.0 mo, retroperitoneal recurrence",
+      "known_resistance_mechanism": "Pocket mutation prevents Belzutifan binding, maintaining VEGF transcription"
+    },
+    "pinned": {
+      "VHL_loss": 1,
+      "VEGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt07_sarcomatoid_dedifferentiated_aggressive": {
+    "title": "Patient ccrcc_pt07_sarcomatoid_dedifferentiated_aggressive: Sarcomatoid Transformed ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "Sarcomatoid Transformed ccRCC",
+      "primary_driver": "BAP1 + TP53 concurrent loss, epithelial-mesenchymal shift",
+      "hospital_treatment": "Ipilimumab + Nivolumab",
+      "real_world_outcome": "Early failure at 2.0 mo, brain metastases",
+      "known_resistance_mechanism": "Meszenchymal transition establishes high XIAP and BCL-xL survival buffer"
+    },
+    "pinned": {
+      "BAP1_loss": 1,
+      "VHL_loss": 1,
+      "PIK3CA_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "ccrcc_pt08_pan_refractory_triplet_hit_lethal": {
+    "title": "Patient ccrcc_pt08_pan_refractory_triplet_hit_lethal: Pan-Refractory Quadruple Alteration ccRCC",
+    "citation": "TCGA-KIRC (Nature 2013, 499:43-49); Motzer et al. (2015) NEJM (CheckMate-025); Choueiri et al. (2021) NEJM (KEYNOTE-564)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Quadruple Alteration ccRCC",
+      "primary_driver": "VHL null + BAP1 null + PTEN null + Hypoxia",
+      "hospital_treatment": "Lenvatinib + Everolimus salvage",
+      "real_world_outcome": "Death at 3.5 mo, widespread dissemination",
+      "known_resistance_mechanism": "Combined loss of VHL, BAP1, and PTEN confers total resistance to all TKI regimens"
+    },
+    "pinned": {
+      "VHL_loss": 1,
+      "BAP1_loss": 1,
+      "PTEN_loss": 1,
+      "Hypoxia_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

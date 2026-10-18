@@ -1,0 +1,258 @@
+{
+  "skcm_pt01_braf_v600e_vemurafenib_resistant": {
+    "title": "Patient SKCM-01: Superficial Spreading Melanoma with BRAF V600E and Acquired NRAS Reactivation Bypass",
+    "citation": "BRIM-3 Trial; Nazarian et al. (2010) Nature; Wagle et al. (2011) JCO",
+    "clinical_history": {
+      "age": 54,
+      "gender": "M",
+      "subtype": "Cutaneous Melanoma (BRAF-Mutant Subtype)",
+      "primary_driver": "BRAF V600E activating mutation with secondary NRAS Q61K acquired bypass",
+      "hospital_treatment": "Vemurafenib (selective oral BRAF inhibitor)",
+      "real_world_outcome": "Initial tumor shrinkage for 5.1 months, then explosive subcutaneous and lung metastases, death at 10.2 months",
+      "known_resistance_mechanism": "Acquired NRAS mutation switches signaling through CRAF homodimers and hyperactivates PI3K, restoring ERK flux despite Vemurafenib"
+    },
+    "pinned_molecular_baseline": {
+      "BRAF_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 255
+    }
+  },
+  "skcm_pt02_nras_q61r_hyperactivated_refractory": {
+    "title": "Patient SKCM-02: Nodular Cutaneous Melanoma with NRAS Q61R Driving Dual CRAF and PI3K Flux",
+    "citation": "NEMO Trial; Dummer et al. (2017) Lancet Oncol; Johnson et al. (2015) CCR",
+    "clinical_history": {
+      "age": 63,
+      "gender": "F",
+      "subtype": "NRAS-Mutant Cutaneous Melanoma (Non-V600)",
+      "primary_driver": "NRAS Q61R GTPase-deficient mutation, wild-type BRAF, high CRAF expression",
+      "hospital_treatment": "Binimetinib (MEK162 selective MEK inhibitor)",
+      "real_world_outcome": "Transient disease stabilization for 2.8 months, rapid axillary nodal progression and liver lesions, death at 7.4 months",
+      "known_resistance_mechanism": "MEK inhibition induces rapid feedback release of CRAF and hyperactivates PI3K/Akt, rescuing MITF and Cyclin D1"
+    },
+    "pinned_molecular_baseline": {
+      "NRAS_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "BRAF_mut": 0,
+      "NF1_loss": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 255
+    }
+  },
+  "skcm_pt03_braf_pten_double_null_fulminant": {
+    "title": "Patient SKCM-03: Fulminant Trunk Melanoma with Concurrent BRAF V600E and Biallelic PTEN Deletion",
+    "citation": "COMBI-d Trial; Long et al. (2017) Lancet Oncol; Paraiso et al. (2011) Cancer Res",
+    "clinical_history": {
+      "age": 47,
+      "gender": "M",
+      "subtype": "BRAF-Mutant / PTEN-Loss Aggressive Melanoma",
+      "primary_driver": "BRAF V600E mutation, homozygous PTEN deletion, constitutive Akt phosphorylation",
+      "hospital_treatment": "Dabrafenib + Trametinib (BRAF + MEK combination therapy)",
+      "real_world_outcome": "Primary resistance with disease progression at 3.2 months, multiple brain metastases, death at 6.8 months",
+      "known_resistance_mechanism": "PTEN deletion maintains unchecked PI3K/Akt signaling, continuously stabilizing Mcl-1 and inactivating BAD despite complete MAPK blockade"
+    },
+    "pinned_molecular_baseline": {
+      "BRAF_mut": 1,
+      "PTEN_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 256
+    }
+  },
+  "skcm_pt04_braf_wt_checkpoint_exceptional_responder": {
+    "title": "Patient SKCM-04: High Mutational Burden Wild-Type Melanoma with Complete Immunotherapy Remission",
+    "citation": "CheckMate-067 Trial; Wolchok et al. (2017) NEJM; Snyder et al. (2014) NEJM",
+    "clinical_history": {
+      "age": 59,
+      "gender": "F",
+      "subtype": "Triple-Wild-Type Cutaneous Melanoma (High UV Mutational Load)",
+      "primary_driver": "Extensive UV-induced C>T transitions, wild-type BRAF/NRAS/cKIT, intact p53 axis",
+      "hospital_treatment": "Nivolumab (anti-PD-1) + Ipilimumab (anti-CTLA-4)",
+      "real_world_outcome": "Complete pathological and radiological response (CR), ongoing disease-free survival >60 months (SURVIVED / Cured)",
+      "known_resistance_mechanism": "Intact intrinsic apoptotic machinery; absence of oncogene-driven Bcl-2/Mcl-1 locks permits rapid cytotoxic lymphocyte granzyme-mediated death"
+    },
+    "pinned_molecular_baseline": {
+      "Chemo_DNA_damage": 1,
+      "BRAF_mut": 0,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 254
+    }
+  },
+  "skcm_pt05_ckit_l576p_acral_mucosal_resistant": {
+    "title": "Patient SKCM-05: Acral Lentiginous Subungual Melanoma with c-KIT L576P and Autocrine HGF Bypass",
+    "citation": "Carvajal et al. (2011) JAMA; Guo et al. (2011) JCO; TCGA-SKCM",
+    "clinical_history": {
+      "age": 68,
+      "gender": "M",
+      "subtype": "Acral Lentiginous Melanoma (Non-Sun-Exposed Subtype)",
+      "primary_driver": "c-KIT exon 11 L576P activating point mutation, high autocrine HGF/c-MET stromal secretion",
+      "hospital_treatment": "Imatinib mesylate (KIT receptor tyrosine kinase inhibitor)",
+      "real_world_outcome": "Progression-free survival of 3.6 months, bulky groin lymphadenopathy and visceral metastases, death at 8.9 months",
+      "known_resistance_mechanism": "Secondary autocrine HGF secretion activates parallel RTK signaling and drives sustained STAT3/Mcl-1 survival transcription"
+    },
+    "pinned_molecular_baseline": {
+      "cKIT_mut": 1,
+      "HGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "BRAF_mut": 0,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 256
+    }
+  },
+  "skcm_pt06_nf1_null_desmoplastic_hypermutant": {
+    "title": "Patient SKCM-06: Desmoplastic Neurotropic Melanoma with Biallelic NF1 Tumor Suppressor Loss",
+    "citation": "Krauthammer et al. (2015) Nature Genetics; TCGA-SKCM; Eroglu et al. (2018) Nature",
+    "clinical_history": {
+      "age": 71,
+      "gender": "M",
+      "subtype": "NF1-Mutant Desmoplastic Melanoma",
+      "primary_driver": "Biallelic loss-of-function NF1 nonsense mutation, loss of Neurofibromin GTPase-activating function",
+      "hospital_treatment": "Carboplatin + Paclitaxel",
+      "real_world_outcome": "Primary chemo-refractory, perineural invasion along cranial nerves, death at 6.2 months",
+      "known_resistance_mechanism": "NF1 loss hyper-stabilizes wild-type RAS-GTP loading, continuously feeding both MAPK and PI3K/Akt survival loops"
+    },
+    "pinned_molecular_baseline": {
+      "NF1_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "BRAF_mut": 0,
+      "NRAS_mut": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 255
+    }
+  },
+  "skcm_pt07_mitf_amplified_stem_mesenchymal": {
+    "title": "Patient SKCM-07: MITF-Amplified Pigmented Melanoma with Wnt-Driven BCL2 Hyper-Dependence",
+    "citation": "Garraway et al. (2005) Nature; Broad Institute SKCM; Tirosh et al. (2016) Science",
+    "clinical_history": {
+      "age": 51,
+      "gender": "F",
+      "subtype": "MITF-Amplified Melanoma with Stem-Like Features",
+      "primary_driver": "High-level focal MITF genomic amplification, concurrent Wnt/beta-catenin nuclear flux",
+      "hospital_treatment": "Dabrafenib + Trametinib salvage therapy",
+      "real_world_outcome": "Rapid recurrence at 3.4 months, widespread cutaneous in-transit and hepatic metastases, death at 7.9 months",
+      "known_resistance_mechanism": "MITF amplification directly drives massive Bcl-2 and Cyclin D1 transcription, establishing an impenetrable anti-apoptotic lock"
+    },
+    "pinned_molecular_baseline": {
+      "BRAF_mut": 1,
+      "WNT_stim": 1,
+      "EGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "PTEN_loss": 0,
+      "P53_mut": 0,
+      "CDKN2A_loss": 0,
+      "cKIT_mut": 0,
+      "HGF_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 257
+    }
+  },
+  "skcm_pt08_pan_refractory_quadruple_pathway_metastasis": {
+    "title": "Patient SKCM-08: Pan-Refractory Quadruple-Pathway Quadruple-Mutant Metastatic Melanoma",
+    "citation": "Hodis et al. (2012) Cell; TCGA-SKCM Consortium; Hugo et al. (2016) Cell",
+    "clinical_history": {
+      "age": 60,
+      "gender": "M",
+      "subtype": "Pan-Refractory Quadruple-Hit Metastatic Melanoma",
+      "primary_driver": "Concurrent BRAF V600K, PTEN loss, CDKN2A deletion, TP53 mut, high autocrine HGF",
+      "hospital_treatment": "Ipilimumab + Nivolumab followed by Dabrafenib + Trametinib",
+      "real_world_outcome": "Progression-free survival of 1.7 months, disseminated leptomeningeal and splenic metastases, death at 4.1 months",
+      "known_resistance_mechanism": "Simultaneous disruption of MAPK, PI3K, p53, and cell cycle checkpoints induces constitutive MCL-1, BCL-xL, and XIAP expression"
+    },
+    "pinned_molecular_baseline": {
+      "BRAF_mut": 1,
+      "PTEN_loss": 1,
+      "CDKN2A_loss": 1,
+      "P53_mut": 1,
+      "HGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "NRAS_mut": 0,
+      "NF1_loss": 0,
+      "cKIT_mut": 0,
+      "EGF_stim": 0,
+      "WNT_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    },
+    "cnf_stats": {
+      "vars": 108,
+      "clauses": 259
+    }
+  }
+}

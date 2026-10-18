@@ -1,0 +1,2 @@
+{"step": 0, "unsat": 29, "best_unsat": 29, "dopamine_hunger": 0.2148, "flipped_neurons": 0, "mean_gaba": 0.0, "max_gaba": 0.0, "active_drugs": [], "mean_vesicles": 0.9996, "mean_v": -51.99, "total_spikes": 60, "blocking_clauses": 0}
+{"step": 100, "unsat": 18, "best_unsat": 17, "dopamine_hunger": 0.1314, "flipped_neurons": 0, "mean_gaba": 0.5347, "max_gaba": 8.7675, "active_drugs": ["PI3K_AKT"], "mean_vesicles": 0.6488, "mean_v": -115.79, "total_spikes": 965, "blocking_clauses": 2}

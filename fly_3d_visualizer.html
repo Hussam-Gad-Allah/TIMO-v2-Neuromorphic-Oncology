@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تيمو تيرنر | Timo Turner - Mythical Astral Sprite & 3D Real-Time State-Space Navigator</title>
+    <!-- Local Vendor Scripts for 100% Offline Support -->
+    <script src="flyfly_sat/assets/vendor/three.min.js"></script>
+    <script src="flyfly_sat/assets/vendor/OrbitControls.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        body {
+            background-color: #02040a;
+            color: #e2e8f0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+        }
+        #webgl-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        /* Cyber-Mythical Glassmorphic HUD */
+        .hud-panel {
+            position: absolute;
+            z-index: 10;
+            background: rgba(3, 8, 22, 0.82);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.18), inset 0 0 20px rgba(0, 240, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 14px 20px;
+            pointer-events: auto;
+        }
+        /* Top Left Telemetry HUD */
+        #telemetry-hud {
+            top: 20px;
+            left: 20px;
+            width: 360px;
+            box-sizing: border-box;
+            transition: all 0.25s ease;
+        }
+        #telemetry-hud.compact .hud-collapsible {
+            display: none !important;
+        }
+        .btn-hud-mode {
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid rgba(0, 240, 255, 0.45);
+            color: #00f0ff;
+            font-size: 10px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 2px 7px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.2;
+        }
+        .btn-hud-mode:hover {
+            background: rgba(0, 240, 255, 0.28);
+            border-color: #00f0ff;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            color: #ffffff;
+        }
+        .author-tag {
+            font-size: 10px;
+            color: #ffd700;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding: 1px 5px;
+            background: rgba(255, 215, 0, 0.12);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 3px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+        .hud-header {
+            font-size: 15px;
+            font-weight: bold;
+            color: #00f0ff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.35);
+            padding-bottom: 8px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .creature-subtitle {
+            font-size: 11px;
+            color: #38bdf8;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .pulse-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #00ff88;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 1.4s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.3); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
+        .hud-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 6px;
+            color: #94a3b8;
+        }
+        .hud-val {
+            color: #f8fafc;
+            font-weight: bold;
+            font-variant-numeric: tabular-nums;
+        }
+        .hud-val.cyan { color: #00f0ff; text-shadow: 0 0 10px rgba(0, 240, 255, 0.7); }
+        .hud-val.green { color: #00ff88; text-shadow: 0 0 10px rgba(0, 255, 136, 0.7); }
+        .hud-val.amber { color: #ffb703; text-shadow: 0 0 10px rgba(255, 183, 3, 0.7); }
+        .hud-val.magenta { color: #ff007f; text-shadow: 0 0 10px rgba(255, 0, 127, 0.7); }
+        .hud-val.gold { color: #ffd700; text-shadow: 0 0 12px rgba(255, 215, 0, 0.8); }
+
+        /* Energy & Electrical Gauges */
+        .gauge-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin: 4px 0 10px 0;
+            overflow: hidden;
+        }
+        .gauge-bar {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #00ff88, #00f0ff, #ff007f);
+            transition: width 0.3s ease;
+        }
+        .gauge-bar.electric {
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #ffd700);
+        }
+
+        /* Oscilloscope Canvas (Medical Cardiac Telemetry Monitor) */
+        #oscilloscope-canvas {
+            width: 100%;
+            height: 52px;
+            background: #01131a;
+            border: 1px solid rgba(0, 255, 136, 0.35);
+            border-radius: 4px;
+            margin: 4px 0 10px 0;
+            display: block;
+            box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.12);
+        }
+
+        /* Top Right Camera HUD */
+        #camera-hud {
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-cam {
+            background: rgba(10, 25, 47, 0.75);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            color: #94a3b8;
+            padding: 6px 14px;
+            font-size: 11px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-cam:hover, .btn-cam.active {
+            background: rgba(0, 240, 255, 0.25);
+            color: #00f0ff;
+            border-color: #00f0ff;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+        }
+        .btn-cam-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(10, 25, 47, 0.75);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            color: #94a3b8;
+            padding: 5px 12px;
+            font-size: 11px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+        .btn-cam-toggle:hover {
+            background: rgba(0, 240, 255, 0.2);
+            color: #00f0ff;
+            border-color: #00f0ff;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+        }
+        .btn-cam-toggle input[type="checkbox"] {
+            accent-color: #00f0ff;
+            cursor: pointer;
+        }
+
+        /* Hero Skills Tree Button & MMORPG Progression Styles */
+        .btn-skills-tree {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.16), rgba(0, 240, 255, 0.22));
+            border: 1px solid rgba(255, 215, 0, 0.55);
+            color: #ffd700;
+            padding: 8px 12px;
+            font-size: 11px;
+            font-weight: bold;
+            font-family: inherit;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+            margin-top: 6px;
+        }
+        .btn-skills-tree:hover {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.32), rgba(0, 240, 255, 0.42));
+            border-color: #ffd700;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+        .skill-badge-lvl {
+            background: rgba(255, 215, 0, 0.25);
+            border: 1px solid #ffd700;
+            color: #ffd700;
+            font-size: 9px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            letter-spacing: 1px;
+            animation: pulse-gold 1.5s infinite;
+        }
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 12px rgba(255, 215, 0, 0.8); }
+        }
+
+        /* MMORPG Skills Tree Modal (Silkroad / Conquer / Digimon Style) */
+        #skills-modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 780px;
+            max-width: 92vw;
+            max-height: 88vh;
+            background: rgba(4, 10, 28, 0.94);
+            border: 2px solid rgba(255, 215, 0, 0.65);
+            box-shadow: 0 0 50px rgba(0, 240, 255, 0.3), 0 0 35px rgba(255, 215, 0, 0.25), inset 0 0 30px rgba(0, 240, 255, 0.12);
+            backdrop-filter: blur(16px);
+            border-radius: 12px;
+            z-index: 100;
+            padding: 22px 26px;
+            display: none;
+            flex-direction: column;
+            overflow-y: auto;
+            color: #e2e8f0;
+            user-select: none;
+        }
+        #skills-modal.active {
+            display: flex;
+            animation: modalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalPop {
+            0% { opacity: 0; transform: translate(-50%, -46%) scale(0.95); }
+            100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.35);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+        .modal-title-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .modal-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffd700;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-sub {
+            font-size: 11px;
+            color: #38bdf8;
+            letter-spacing: 0.5px;
+        }
+        .btn-modal-close {
+            background: rgba(255, 0, 85, 0.2);
+            border: 1px solid rgba(255, 0, 85, 0.6);
+            color: #ff0055;
+            font-size: 14px;
+            font-weight: bold;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .btn-modal-close:hover {
+            background: #ff0055;
+            color: #ffffff;
+            box-shadow: 0 0 12px #ff0055;
+        }
+        /* Hero Overall Progress Banner */
+        .hero-banner {
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 8px;
+            padding: 10px 16px;
+            margin-bottom: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+        .hero-stat-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .hero-stat-lbl {
+            font-size: 10px;
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
+        .hero-stat-val {
+            font-size: 13px;
+            font-weight: bold;
+            color: #00ff88;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+        .skill-card {
+            background: rgba(10, 25, 52, 0.75);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: flex;
+            gap: 12px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card:hover {
+            border-color: #ffd700;
+            background: rgba(14, 34, 72, 0.9);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.25);
+            transform: translateY(-2px);
+        }
+        .skill-icon-wrap {
+            font-size: 26px;
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        .skill-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .skill-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skill-name {
+            font-size: 12px;
+            font-weight: bold;
+            color: #f8fafc;
+        }
+        .skill-lvl-badge {
+            font-size: 9px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+            background: rgba(0, 255, 136, 0.15);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+        }
+        .skill-stars {
+            font-size: 13px;
+            color: #ffd700;
+            letter-spacing: 2px;
+            text-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+            margin-bottom: 2px;
+        }
+        .skill-desc {
+            font-size: 10px;
+            color: #94a3b8;
+            line-height: 1.35;
+        }
+        .skill-xp-bar-wrap {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+        .skill-xp-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #00f0ff, #ffd700);
+            transition: width 0.4s ease;
+        }
+        .skill-xp-text {
+            font-size: 9px;
+            color: #64748b;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2px;
+        }
+        .skill-impact-tag {
+            font-size: 9px;
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.12);
+            padding: 1px 6px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 4px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+        }
+
+        /* Tree Tabs & System Branches */
+        .tree-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .tree-tab-btn {
+            background: rgba(10, 25, 47, 0.85);
+            border: 1px solid rgba(0, 240, 255, 0.35);
+            color: #94a3b8;
+            padding: 7px 13px;
+            font-size: 11px;
+            font-weight: bold;
+            font-family: inherit;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .tree-tab-btn:hover {
+            color: #00f0ff;
+            border-color: #00f0ff;
+            background: rgba(0, 240, 255, 0.18);
+        }
+        .tree-tab-btn.active {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.28), rgba(0, 240, 255, 0.32));
+            color: #ffd700;
+            border-color: #ffd700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+        .tree-branch-header {
+            grid-column: 1 / -1;
+            background: rgba(0, 240, 255, 0.08);
+            border-left: 3px solid #ffd700;
+            padding: 8px 12px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 6px;
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .branch-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .branch-cell-count {
+            font-size: 10px;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(56, 189, 248, 0.35);
+        }
+
+        /* Bottom Controls Bar */
+        #playback-hud {
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 680px;
+        }
+        .live-badge {
+            background: rgba(0, 255, 136, 0.2);
+            border: 1px solid #00ff88;
+            color: #00ff88;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+        }
+        .slider-wrap {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        input[type="range"] {
+            flex-grow: 1;
+            accent-color: #00f0ff;
+            cursor: pointer;
+        }
+        .select-run {
+            background: #061224;
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            color: #00f0ff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        /* Center Reticle */
+        .reticle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 26px;
+            height: 26px;
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 5;
+        }
+        .reticle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 4px;
+            height: 4px;
+            background: rgba(0, 240, 255, 0.7);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="reticle"></div>
+    <div id="webgl-canvas"></div>
+
+    <!-- Telemetry HUD with Real-Time Bio-Electric Gauges -->
+    <div class="hud-panel" id="telemetry-hud">
+        <div class="hud-header">
+            <div style="display: flex; align-items: center;">
+                <span>✨ تيمو تيرنر | TIMO TURNER</span>
+                <span class="author-tag">By Dr SAM</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <button id="btn-hud-toggle" class="btn-hud-mode" onclick="toggleHudCompact()" title="Toggle Compact / Full HUD">⤡ COMPACT</button>
+                <span class="pulse-dot"></span>
+            </div>
+        </div>
+        <div class="creature-subtitle hud-collapsible">
+            <span>✦ Mythical Astral Sprite & Neural Weaver ✦</span>
+        </div>
+
+        <div class="hud-row">
+            <span>ACTIVE 3-SAT TARGET</span>
+            <span class="hud-val cyan" id="val-bench">uf50-08 [Hard 3-SAT]</span>
+        </div>
+        <div class="hud-row">
+            <span>SIMULATION STEP</span>
+            <span class="hud-val" id="val-step">0</span>
+        </div>
+        <div class="hud-row">
+            <span>ENERGY (CURRENT UNSAT)</span>
+            <span class="hud-val magenta" id="val-unsat">1 clauses</span>
+        </div>
+        <div class="gauge-container">
+            <div class="gauge-bar" id="gauge-energy" style="width: 5%;"></div>
+        </div>
+
+        <!-- Highest Unsat Reached & Lowest Unsat Record -->
+        <div class="hud-row hud-collapsible" style="background: rgba(255, 0, 85, 0.12); padding: 5px 8px; border-radius: 4px; border: 1px solid rgba(255, 0, 85, 0.38); margin-bottom: 5px;">
+            <span style="color: #ff0055; font-weight: bold;">🔥 HIGHEST UNSAT REACHED</span>
+            <span class="hud-val magenta" id="val-highest-unsat" style="font-size: 13px;">-- clauses</span>
+        </div>
+        <div class="hud-row" style="background: rgba(0, 255, 136, 0.08); padding: 5px 8px; border-radius: 4px; border: 1px solid rgba(0, 255, 136, 0.3); margin-bottom: 6px;">
+            <span style="color: #00ff88; font-weight: bold;">⭐ LOWEST UNSAT RECORD</span>
+            <span class="hud-val green" id="val-lowest-unsat" style="font-size: 13px;">-- clauses</span>
+        </div>
+
+        <div class="hud-row">
+            <span>HAMMING DISTANCE TO WITNESS</span>
+            <span class="hud-val green" id="val-hamming">11 variables</span>
+        </div>
+
+        <!-- Oncology & Biological Attractor Validation Telemetry -->
+        <div class="hud-row hud-collapsible" style="background: rgba(168, 85, 247, 0.12); padding: 5px 8px; border-radius: 4px; border: 1px solid rgba(168, 85, 247, 0.38); margin-top: 6px; margin-bottom: 5px;">
+            <span style="color: #c084fc; font-weight: bold;">🧬 CELLULAR NOISE (GAUS)</span>
+            <span class="hud-val magenta" id="val-noise" style="font-size: 13px; font-weight: bold;">2.0%</span>
+        </div>
+        <div class="hud-row hud-collapsible" style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+            <span style="color: #94a3b8;">🧪 TEST COHORT: <strong id="val-cells" style="color: #38bdf8;">200 Cells</strong></span>
+            <span style="color: #94a3b8;">⏳ HORIZON: <strong id="val-cell-steps" style="color: #38bdf8;">1,500 Steps</strong></span>
+        </div>
+        <div class="hud-row hud-collapsible" style="background: rgba(255, 215, 0, 0.08); padding: 4px 8px; border-radius: 4px; border: 1px solid rgba(255, 215, 0, 0.25); margin-bottom: 6px;">
+            <span style="color: #ffd700; font-size: 11px; font-weight: bold;">💊 ACTIVE DRUGS:</span>
+            <span class="hud-val gold" id="val-drugs" style="font-size: 11px;">None / Exploring...</span>
+        </div>
+
+        <!-- Real-Time Electrical Measurements (قراءة الكهرباء الحالية) -->
+        <div class="hud-row hud-collapsible" style="border-top: 1px dashed rgba(0, 240, 255, 0.25); padding-top: 8px; margin-top: 6px;">
+            <span style="color: #38bdf8; font-weight: bold;">⚡ BIO-ELECTRIC CURRENT (الكهرباء الحالية)</span>
+            <span class="hud-val cyan" id="val-electric">3.85 nA</span>
+        </div>
+        <div class="hud-row hud-collapsible">
+            <span>MEMBRANE VOLTAGE (الجهد الغشائي)</span>
+            <span class="hud-val green" id="val-voltage">-51.2 mV</span>
+        </div>
+        <div class="hud-row hud-collapsible">
+            <span>NEURAL FIRING FREQUENCY</span>
+            <span class="hud-val amber" id="val-freq">198.4 Hz</span>
+        </div>
+        <div class="hud-row hud-collapsible">
+            <span>ASTRAL CORE DISCHARGE</span>
+            <span class="hud-val gold" id="val-discharge">88.5%</span>
+        </div>
+        <div class="gauge-container hud-collapsible">
+            <div class="gauge-bar electric" id="gauge-electric" style="width: 75%;"></div>
+        </div>
+
+        <!-- Mini Real-Time Cardiac & Neural EKG Oscilloscope (نبض القلب والعصب) -->
+        <div class="hud-row" style="margin-top: 8px; margin-bottom: 3px;">
+            <span style="color: #00ff88; font-size: 11px; font-weight: bold; display: flex; align-items: center; gap: 5px;">
+                <span class="pulse-dot" style="width: 7px; height: 7px; background:#00ff88; box-shadow:0 0 8px #00ff88;"></span>
+                <span>💓 CARDIAC & NEURAL EKG (نبض القلب)</span>
+            </span>
+            <span class="hud-val green" id="val-heart-rate" style="font-size: 12px; font-weight: bold;">136 BPM</span>
+        </div>
+        <canvas id="oscilloscope-canvas" width="320" height="52"></canvas>
+
+        <div class="hud-row">
+            <span>SEARCH PHASE</span>
+            <span class="hud-val amber" id="val-phase">Area-Restricted Foraging</span>
+        </div>
+
+        <!-- Hero Skills Tree RPG Button (Full Mode Only) -->
+        <div class="hud-row hud-collapsible" style="margin-top: 10px; border-top: 1px dashed rgba(0, 240, 255, 0.25); padding-top: 8px;">
+            <button class="btn-skills-tree" onclick="toggleSkillsModal()">
+                <span>⚔️ شجرة المهارات العصبية | SKILL TREE</span>
+                <span class="skill-badge-lvl">LVL UP ⭐</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Camera Control Buttons -->
+    <div class="hud-panel" id="camera-hud">
+        <button class="btn-cam active" id="btn-cam-orbit" onclick="setCameraMode('orbit')">Orbit 3D</button>
+        <button class="btn-cam" id="btn-cam-chase" onclick="setCameraMode('chase')">Chase Timo</button>
+        <button class="btn-cam" id="btn-cam-top" onclick="setCameraMode('top')">Manifold Map</button>
+        <button class="btn-cam" style="background: linear-gradient(135deg, rgba(255,0,85,0.35), rgba(153,0,51,0.6)); border: 1px solid #ff0055; color: #ff99bb; font-weight: bold;" onclick="captureNatureFigure('4a')" title="التقاط لقطة نشر رسمية لعقدة التحكم الفاشلة وفق معايير Nature">📸 4a (Ablation Knot)</button>
+        <button class="btn-cam" style="background: linear-gradient(135deg, rgba(0,255,136,0.3), rgba(0,136,85,0.6)); border: 1px solid #00ff88; color: #77ffbb; font-weight: bold;" onclick="captureNatureFigure('4b')" title="التقاط لقطة نشر رسمية لاكتشاف وهبوط تيمو على الحل وفق معايير Nature">📸 4b (TIMO Touchdown)</button>
+        <label class="btn-cam-toggle" title="إظهار / إخفاء مسار الطيران 3D">
+            <input type="checkbox" id="chk-trail" checked onchange="toggleTrailVisibility(this.checked)">
+            <span>Trail Lines</span>
+        </label>
+    </div>
+
+    <!-- Playback Control Bar -->
+    <div class="hud-panel" id="playback-hud">
+        <div class="live-badge">
+            <span class="pulse-dot" style="background:#00ff88; box-shadow:0 0 8px #00ff88;"></span>
+            <span>LIVE SYNC ACTIVE</span>
+        </div>
+        <div class="slider-wrap">
+            <span style="font-size: 11px; color: #64748b;">TRAJECTORY BUFFER:</span>
+            <input type="range" id="step-slider" min="0" max="1000" value="0" oninput="onSeek(this.value)">
+        </div>
+        <select class="select-run" id="select-speed" onchange="setSpeed(this.value)">
+            <option value="1">Smooth 1x</option>
+            <option value="2" selected>Smooth 2x</option>
+            <option value="5">Fast 5x</option>
+        </select>
+    </div>
+
+    <!-- MMORPG Skills Tree Modal (Silkroad / Conquer / Digimon Style) -->
+    <div id="skills-modal">
+        <div class="modal-header">
+            <div class="modal-title-wrap">
+                <div class="modal-title">
+                    <span>⚔️ تيمو تيرنر | شجرة المهارات العصبية والترقيات (HERO SKILLS & MASTERY TREE)</span>
+                </div>
+                <div class="modal-sub">
+                    <span>✦ Dynamic Connectome Neural Abilities & RPG Level Mastery System — By Dr SAM ✦</span>
+                </div>
+            </div>
+            <button class="btn-modal-close" onclick="toggleSkillsModal()" title="Close Skills Modal">✕</button>
+        </div>
+
+        <!-- Hero Overall Progress Banner -->
+        <div class="hero-banner">
+            <div class="hero-stat-block">
+                <span class="hero-stat-lbl">HERO CLASS:</span>
+                <span class="hero-stat-val" style="color: #ffd700;">Astral Cyber-Drosophila [Master Navigator]</span>
+            </div>
+            <div class="hero-stat-block">
+                <span class="hero-stat-lbl">TOTAL CONNECTOME:</span>
+                <span class="hero-stat-val" style="color: #00f0ff;">139,255 Neurons</span>
+            </div>
+            <div class="hero-stat-block">
+                <span class="hero-stat-lbl">HERO RANK:</span>
+                <span class="hero-stat-val" style="color: #00ff88;" id="hero-rank-val">Mythic Rank ★★★★★ (LVL 8)</span>
+            </div>
+            <div class="hero-stat-block">
+                <span class="hero-stat-lbl">TOTAL MASTERY XP:</span>
+                <span class="hero-stat-val" style="color: #ffd700;" id="hero-xp-val">28,450 / 32,000 XP</span>
+            </div>
+        </div>
+
+        <!-- Skill Tree Main Branches (Tabs) -->
+        <div class="tree-tabs">
+            <button class="tree-tab-btn active" id="tab-btn-all" onclick="selectSkillBranch('all')">🌟 All Systems (كافة الحواس)</button>
+            <button class="tree-tab-btn" id="tab-btn-visual" onclick="selectSkillBranch('visual')">👁️ الجهاز البصري (97k Cells)</button>
+            <button class="tree-tab-btn" id="tab-btn-cx" onclick="selectSkillBranch('cx')">🧭 المركب المركزي (CX)</button>
+            <button class="tree-tab-btn" id="tab-btn-olfactory" onclick="selectSkillBranch('olfactory')">👃 الشم والمشروم (Learning)</button>
+            <button class="tree-tab-btn" id="tab-btn-motor" onclick="selectSkillBranch('motor')">🦾 الجهاز الحركي (1200 Cells)</button>
+            <button class="tree-tab-btn" id="tab-btn-neuro" onclick="selectSkillBranch('neuro')">🧬 الهرمونات والنواقل (Amines)</button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div id="skills-container" class="skills-grid">
+            <!-- Dynamic skills rendered here -->
+        </div>
+    </div>
+
+    <script>
+        // =====================================================================
+        // Timo Turner 3D Mythical Cyber-Space Visualizer
+        // =====================================================================
+        let scene, camera, renderer, controls;
+        let timoGroup, upperWingL, upperWingR, lowerWingL, lowerWingR, astralHorn, astralCore;
+        let trailLine, trailGeometry, trailPositions = [];
+        let starParticles, gridHelper;
+        let solutionMarker;
+        let dynamicMarkers = [];
+        const MAX_DYNAMIC_MARKERS = 36;
+        let peakUnsatMarker, peakUnsatRing, peakUnsatSprite;
+        let highestUnsatReached = 0;
+        let lowestUnsatReached = 9999;
+        let currentHeartRate = 136;
+        let stardustEmitters = [];
+        
+        let cameraMode = 'orbit';
+        let isLiveSync = true;
+        let playbackSpeed = 2;
+        let currentStepIndex = 0;
+        let wingFlapTime = 0;
+
+        // Telemetry state
+        let currentElectric = 3.85;
+        let currentVoltage = -51.2;
+        let currentFreq = 198.4;
+        let currentDischarge = 88.5;
+
+        // Trajectory Data Points
+        let trajectoryData = [];
+
+        function initScene() {
+            const container = document.getElementById('webgl-canvas');
+            scene = new THREE.Scene();
+            scene.fog = new THREE.FogExp2(0x02040a, 0.0028);
+
+            camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 3500);
+            camera.position.set(40, 30, 55);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, preserveDrawingBuffer: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setClearColor(0x02040a, 1);
+            renderer.toneMapping = THREE.ACESFilmicToneMapping;
+            container.appendChild(renderer.domElement);
+
+            // OrbitControls
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.maxDistance = 700;
+            controls.minDistance = 2.5;
+
+            // Lights
+            const ambient = new THREE.AmbientLight(0x0a192f, 2.8);
+            scene.add(ambient);
+
+            const cyanLight = new THREE.PointLight(0x00f0ff, 4.0, 350);
+            cyanLight.position.set(30, 60, 40);
+            scene.add(cyanLight);
+
+            const goldLight = new THREE.PointLight(0xffd700, 3.0, 300);
+            goldLight.position.set(-40, -20, -30);
+            scene.add(goldLight);
+
+            // 1. Cyber Matrix Grid
+            createCyberGrid();
+
+            // 2. Twinkling Cosmic Starfield (نجوم مضيئة سحرية)
+            createTwinklingStarfield();
+
+            // 3. Attractor Solution Manifold Orbs
+            createAttractorManifold();
+
+            // 4. Construct Mythical Magical Creature: Timo Turner (تيمو تيرنر)
+            createTimoTurner();
+
+            // 5. Trajectory Ribbon
+            createTrajectoryRibbon();
+
+            // 6. Start Live Real-Time Polling & Oscilloscope
+            startLiveStreamPolling();
+            initOscilloscope();
+            loadInitialTrajectory();
+
+            window.addEventListener('resize', onWindowResize, false);
+            animate();
+        }
+
+        // ---------------------------------------------------------------------
+        // 1. Cyber Grid Coordinate System
+        // ---------------------------------------------------------------------
+        function createCyberGrid() {
+            gridHelper = new THREE.GridHelper(180, 45, 0x00f0ff, 0x0a2540);
+            gridHelper.position.y = -16;
+            scene.add(gridHelper);
+
+            const axisMatX = new THREE.LineBasicMaterial({ color: 0xff0055, transparent: true, opacity: 0.65 });
+            const axisMatZ = new THREE.LineBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.65 });
+
+            const createAxisLine = (p1, p2, mat) => {
+                const geom = new THREE.BufferGeometry().setFromPoints([p1, p2]);
+                return new THREE.Line(geom, mat);
+            };
+            scene.add(createAxisLine(new THREE.Vector3(-90, -16, 0), new THREE.Vector3(90, -16, 0), axisMatX));
+            scene.add(createAxisLine(new THREE.Vector3(0, -16, -90), new THREE.Vector3(0, -16, 90), axisMatZ));
+        }
+
+        // ---------------------------------------------------------------------
+        // 2. Twinkling Cosmic Starfield (نجوم مضيئة سحرية في الفراغ)
+        // ---------------------------------------------------------------------
+        function createStarTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 64;
+            canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+
+            const gradient = ctx.createRadialGradient(32, 32, 0, 32, 32, 30);
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+            gradient.addColorStop(0.2, 'rgba(100, 240, 255, 0.85)');
+            gradient.addColorStop(0.5, 'rgba(60, 120, 255, 0.35)');
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 64, 64);
+
+            // 4-point sparkle cross
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)';
+            ctx.lineWidth = 1.8;
+            ctx.beginPath();
+            ctx.moveTo(32, 6);
+            ctx.lineTo(32, 58);
+            ctx.moveTo(6, 32);
+            ctx.lineTo(58, 32);
+            ctx.stroke();
+
+            return new THREE.CanvasTexture(canvas);
+        }
+
+        function createTwinklingStarfield() {
+            const starCount = 2200;
+            const geom = new THREE.BufferGeometry();
+            const positions = new Float32Array(starCount * 3);
+            const colors = new Float32Array(starCount * 3);
+            const sizes = new Float32Array(starCount);
+
+            const palette = [
+                new THREE.Color(0xffffff), // Pure white
+                new THREE.Color(0x38bdf8), // Starlight cyan
+                new THREE.Color(0xa855f7), // Cosmic violet
+                new THREE.Color(0xfef08a), // Golden sparkle
+            ];
+
+            for (let i = 0; i < starCount; i++) {
+                positions[i * 3] = (Math.random() - 0.5) * 450;
+                positions[i * 3 + 1] = (Math.random() - 0.5) * 280 + 15;
+                positions[i * 3 + 2] = (Math.random() - 0.5) * 450;
+
+                const c = palette[Math.floor(Math.random() * palette.length)];
+                colors[i * 3] = c.r;
+                colors[i * 3 + 1] = c.g;
+                colors[i * 3 + 2] = c.b;
+
+                sizes[i] = Math.random() * 3.5 + 1.2;
+            }
+
+            geom.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geom.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            geom.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+            const starTexture = createStarTexture();
+            const mat = new THREE.PointsMaterial({
+                size: 2.8,
+                map: starTexture,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.9,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+
+            starParticles = new THREE.Points(geom, mat);
+            scene.add(starParticles);
+        }
+
+        // ---------------------------------------------------------------------
+        // 3. Attractor Solution Manifold Orbs & Peak Energy Barrier Beacon
+        // ---------------------------------------------------------------------
+        function createHoloBillboardSprite(title, subtitle, primaryColor, secondaryColor) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 512;
+            canvas.height = 140;
+            const ctx = canvas.getContext('2d');
+
+            drawHoloBillboardCanvas(ctx, title, subtitle, primaryColor, secondaryColor);
+
+            const texture = new THREE.CanvasTexture(canvas);
+            const mat = new THREE.SpriteMaterial({ map: texture, transparent: true, depthWrite: false });
+            const sprite = new THREE.Sprite(mat);
+            sprite.scale.set(16, 4.4, 1);
+            sprite.userData = { canvas, ctx, texture, primaryColor, secondaryColor };
+            return sprite;
+        }
+
+        function drawHoloBillboardCanvas(ctx, title, subtitle, primaryColor, secondaryColor) {
+            ctx.clearRect(0, 0, 512, 140);
+            ctx.fillStyle = 'rgba(10, 2, 14, 0.88)';
+            ctx.strokeStyle = primaryColor;
+            ctx.lineWidth = 3.5;
+            ctx.beginPath();
+            if (ctx.roundRect) {
+                ctx.roundRect(8, 8, 496, 124, 18);
+            } else {
+                ctx.rect(8, 8, 496, 124);
+            }
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.textAlign = 'center';
+            ctx.font = 'bold 30px monospace';
+            ctx.fillStyle = primaryColor;
+            ctx.shadowColor = primaryColor;
+            ctx.shadowBlur = 12;
+            ctx.fillText(title, 256, 56);
+
+            ctx.font = 'bold 22px monospace';
+            ctx.fillStyle = secondaryColor;
+            ctx.shadowColor = secondaryColor;
+            ctx.shadowBlur = 8;
+            ctx.fillText(subtitle, 256, 102);
+            ctx.shadowBlur = 0;
+        }
+
+        function updateHoloBillboard(sprite, title, subtitle) {
+            if (!sprite || !sprite.userData || !sprite.userData.ctx) return;
+            drawHoloBillboardCanvas(sprite.userData.ctx, title, subtitle, sprite.userData.primaryColor, sprite.userData.secondaryColor);
+            sprite.userData.texture.needsUpdate = true;
+        }
+
+        function updatePeakMarkerPosition() {
+            if (!peakUnsatMarker) return;
+            if (trajectoryData.length > 0) {
+                let maxPt = trajectoryData[0];
+                for (let i = 1; i < trajectoryData.length; i++) {
+                    if (trajectoryData[i].unsat > maxPt.unsat) {
+                        maxPt = trajectoryData[i];
+                    }
+                }
+                highestUnsatReached = Math.max(highestUnsatReached, maxPt.unsat);
+                peakUnsatMarker.position.copy(maxPt.pos);
+            }
+            document.getElementById('val-highest-unsat').textContent = `${highestUnsatReached} clauses`;
+            if (peakUnsatSprite) {
+                updateHoloBillboard(peakUnsatSprite, `🔥 PEAK: ${highestUnsatReached} UNSAT`, `MAX ENERGY BARRIER`);
+            }
+        }
+
+        function createAttractorManifold() {
+            // Target Solution Orb (Golden Glowing Witness Orb) - Initially HIDDEN until solved!
+            const solGeom = new THREE.SphereGeometry(2.8, 32, 32);
+            const solMat = new THREE.MeshBasicMaterial({
+                color: 0x00ff88,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.85
+            });
+            solutionMarker = new THREE.Mesh(solGeom, solMat);
+            solutionMarker.position.set(0, 0, 0);
+            solutionMarker.visible = false; // Hidden while fly explores probability space
+            scene.add(solutionMarker);
+
+            // Orbiting Golden Ring around Solution
+            const ringGeom = new THREE.RingGeometry(3.8, 4.3, 32);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: 0xffd700,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.75
+            });
+            const ring = new THREE.Mesh(ringGeom, ringMat);
+            ring.rotation.x = Math.PI / 2;
+            solutionMarker.add(ring);
+
+            // Solution Target Holographic Billboard
+            const solSprite = createHoloBillboardSprite("🎯 GLOBAL MINIMUM", "0 UNSAT SOLUTION", "#00ff88", "#ffd700");
+            solSprite.position.set(0, 5.2, 0);
+            solutionMarker.add(solSprite);
+
+            // -------------------------------------------------------------
+            // Highest Unsat Reached 3D Marker (حاجز الطاقة الأقصى)
+            // -------------------------------------------------------------
+            peakUnsatMarker = new THREE.Group();
+
+            // Inner Fiery Crimson/Magenta Core
+            const peakGeom = new THREE.SphereGeometry(2.6, 24, 24);
+            const peakMat = new THREE.MeshBasicMaterial({
+                color: 0xff0055,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.92
+            });
+            const peakMesh = new THREE.Mesh(peakGeom, peakMat);
+            peakUnsatMarker.add(peakMesh);
+
+            // Concentric Orbiting Energy Ring
+            const pRingGeom = new THREE.RingGeometry(3.6, 4.3, 32);
+            const pRingMat = new THREE.MeshBasicMaterial({
+                color: 0xff007f,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.85
+            });
+            peakUnsatRing = new THREE.Mesh(pRingGeom, pRingMat);
+            peakUnsatRing.rotation.x = Math.PI / 2;
+            peakUnsatMarker.add(peakUnsatRing);
+
+            // Vertical Cosmic Laser Column
+            const beamGeom = new THREE.CylinderGeometry(0.25, 0.25, 40, 16);
+            const beamMat = new THREE.MeshBasicMaterial({
+                color: 0xff0055,
+                transparent: true,
+                opacity: 0.4
+            });
+            const beam = new THREE.Mesh(beamGeom, beamMat);
+            beam.position.y = 8;
+            peakUnsatMarker.add(beam);
+
+            // Floating Holographic Billboard
+            peakUnsatSprite = createHoloBillboardSprite("🔥 HIGHEST UNSAT", "PEAK ENERGY BARRIER", "#ff0055", "#ffb703");
+            peakUnsatSprite.position.set(0, 6.8, 0);
+            peakUnsatMarker.add(peakUnsatSprite);
+
+            // Default peak position
+            peakUnsatMarker.position.set(0, 22, 0);
+            scene.add(peakUnsatMarker);
+        }
+
+        // ---------------------------------------------------------------------
+        // Dynamic State-Space Discovery Marker Manager
+        // (علامات الاكتشاف الديناميكية في فضاء الاحتمالات بحسب حركة الذبابة الحقيقية)
+        // ---------------------------------------------------------------------
+        function clearDynamicDiscoveryMarkers() {
+            if (dynamicMarkers && dynamicMarkers.length > 0) {
+                dynamicMarkers.forEach(m => {
+                    scene.remove(m);
+                });
+                dynamicMarkers = [];
+            }
+            if (solutionMarker) {
+                solutionMarker.visible = false;
+            }
+        }
+
+        function addDynamicDiscoveryMarker(pos, unsat, step, drugs, isSolution, isNewBest) {
+            // 1. GLOBAL MINIMUM (0-UNSAT) FOUND BY THE FLY!
+            if (isSolution || unsat === 0) {
+                if (solutionMarker) {
+                    solutionMarker.position.copy(pos);
+                    solutionMarker.visible = true;
+                    const drugText = (drugs && drugs.length > 0) ? drugs.join(' + ') : 'VERIFIED ATTRACTOR';
+                    const solSprite = solutionMarker.children.find(c => c.isSprite);
+                    if (solSprite) {
+                        updateHoloBillboard(solSprite, "🎯 0-UNSAT GLOBAL MINIMUM", `STEP ${step.toLocaleString()} | ${drugText}`);
+                    }
+                }
+                return;
+            }
+
+            // 2. LOCAL MINIMA & DEEP BASINS (Discovered organically along trajectory)
+            if (!isNewBest && unsat > 3) return;
+
+            // Deduplication: Avoid spawning multiple markers in the immediate vicinity (within 6 units)
+            const minDistSq = 36.0;
+            for (let i = 0; i < dynamicMarkers.length; i++) {
+                if (dynamicMarkers[i].position.distanceToSquared(pos) < minDistSq) {
+                    if (unsat < dynamicMarkers[i].userData.unsat) {
+                        dynamicMarkers[i].position.copy(pos);
+                        dynamicMarkers[i].userData.unsat = unsat;
+                        dynamicMarkers[i].userData.step = step;
+                        const sprite = dynamicMarkers[i].children.find(c => c.isSprite);
+                        if (sprite) {
+                            const isDeep = unsat <= 3;
+                            const title = isDeep ? `📍 LOCAL MINIMUM: ${unsat} UNSAT` : `📉 RECORD DIP: ${unsat} UNSAT`;
+                            updateHoloBillboard(sprite, title, `STEP ${step.toLocaleString()}`);
+                        }
+                    }
+                    return;
+                }
+            }
+
+            const markerGroup = new THREE.Group();
+            markerGroup.position.copy(pos);
+            markerGroup.userData = { unsat: unsat, step: step };
+
+            const isDeep = unsat <= 3;
+            const primaryColorHex = isDeep ? 0xffaa00 : 0xff0055;
+            const primaryColorStr = isDeep ? "#ffaa00" : "#ff0055";
+            const secondaryColorStr = isDeep ? "#ffd700" : "#00f0ff";
+
+            // Pulsing wireframe core sphere
+            const sphereGeom = new THREE.SphereGeometry(isDeep ? 1.6 : 1.2, 16, 16);
+            const sphereMat = new THREE.MeshBasicMaterial({
+                color: primaryColorHex,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.82
+            });
+            const sphere = new THREE.Mesh(sphereGeom, sphereMat);
+            markerGroup.add(sphere);
+
+            // Orbiting horizontal ring
+            const ringGeom = new THREE.RingGeometry(isDeep ? 2.2 : 1.7, isDeep ? 2.6 : 2.0, 24);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: primaryColorHex,
+                side: THREE.DoubleSide,
+                transparent: true,
+                opacity: 0.72
+            });
+            const ring = new THREE.Mesh(ringGeom, ringMat);
+            ring.rotation.x = Math.PI / 2;
+            markerGroup.add(ring);
+
+            // Vertical beacon tether down to coordinate grid floor (y = -16)
+            const tetherHeight = Math.max(2.0, pos.y - (-16.0));
+            const tetherGeom = new THREE.CylinderGeometry(0.08, 0.08, tetherHeight, 8);
+            const tetherMat = new THREE.MeshBasicMaterial({
+                color: primaryColorHex,
+                transparent: true,
+                opacity: 0.35
+            });
+            const tether = new THREE.Mesh(tetherGeom, tetherMat);
+            tether.position.y = -tetherHeight / 2.0;
+            markerGroup.add(tether);
+
+            // Floating Holographic Billboard
+            const title = isDeep ? `📍 LOCAL MINIMUM: ${unsat} UNSAT` : `📉 RECORD DIP: ${unsat} UNSAT`;
+            const subtitle = `STEP ${step.toLocaleString()}`;
+            const billboard = createHoloBillboardSprite(title, subtitle, primaryColorStr, secondaryColorStr);
+            billboard.position.set(0, isDeep ? 4.0 : 3.2, 0);
+            billboard.scale.set(13, 3.6, 1);
+            markerGroup.add(billboard);
+
+            scene.add(markerGroup);
+            dynamicMarkers.push(markerGroup);
+
+            // Keep within memory cap
+            if (dynamicMarkers.length > MAX_DYNAMIC_MARKERS) {
+                const oldest = dynamicMarkers.shift();
+                scene.remove(oldest);
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // 4. Construct Mythical Magical Creature: Timo Turner (تيمو تيرنر)
+        // ---------------------------------------------------------------------
+        function createTimoTurner() {
+            timoGroup = new THREE.Group();
+
+            // Materials
+            const astralBodyMat = new THREE.MeshStandardMaterial({
+                color: 0x00f0ff,
+                emissive: 0x003355,
+                roughness: 0.15,
+                metalness: 0.9,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.8
+            });
+            const etherealGlowMat = new THREE.MeshBasicMaterial({
+                color: 0x38bdf8,
+                wireframe: false,
+                transparent: true,
+                opacity: 0.35,
+                blending: THREE.AdditiveBlending
+            });
+            const eyeCelestialMat = new THREE.MeshBasicMaterial({ color: 0xff0077, wireframe: true });
+            const hornMat = new THREE.MeshBasicMaterial({ color: 0xffd700, wireframe: true });
+
+            // Gossamer Fairy Wings Material (Iridescent Crystal)
+            const fairyWingMat = new THREE.MeshBasicMaterial({
+                color: 0x67e8f9,
+                transparent: true,
+                opacity: 0.55,
+                side: THREE.DoubleSide,
+                blending: THREE.AdditiveBlending
+            });
+            const wingVeinMat = new THREE.LineBasicMaterial({ color: 0xffd700, transparent: true, opacity: 0.9 });
+
+            // A. Celestial Head
+            const headGeom = new THREE.SphereGeometry(0.85, 16, 16);
+            const head = new THREE.Mesh(headGeom, astralBodyMat);
+            head.position.set(0, 0.25, 1.6);
+            timoGroup.add(head);
+
+            // Ethereal Head Halo
+            const headHalo = new THREE.Mesh(new THREE.SphereGeometry(1.05, 12, 12), etherealGlowMat);
+            head.add(headHalo);
+
+            // B. Magical Starlight Horn on Forehead (قرن سحري متوهج)
+            const hornGeom = new THREE.ConeGeometry(0.18, 1.2, 12);
+            hornGeom.rotateX(Math.PI / 4);
+            astralHorn = new THREE.Mesh(hornGeom, hornMat);
+            astralHorn.position.set(0, 0.7, 0.6);
+            head.add(astralHorn);
+
+            // Starlight Crystal Tip at Horn
+            const tipGeom = new THREE.OctahedronGeometry(0.2, 0);
+            const tipMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+            const hornTip = new THREE.Mesh(tipGeom, tipMat);
+            hornTip.position.set(0, 0.85, 0.85);
+            astralHorn.add(hornTip);
+
+            // C. Large Mystical Celestial Eyes
+            const eyeGeom = new THREE.SphereGeometry(0.45, 14, 14);
+            eyeGeom.scale(0.85, 1.15, 1.0);
+            const eyeL = new THREE.Mesh(eyeGeom, eyeCelestialMat);
+            eyeL.position.set(0.65, 0.2, 0.25);
+            head.add(eyeL);
+
+            const eyeR = new THREE.Mesh(eyeGeom, eyeCelestialMat);
+            eyeR.position.set(-0.65, 0.2, 0.25);
+            head.add(eyeR);
+
+            // D. Thorax & Astral Energy Core (قلب الطاقة الأسطوري)
+            const thoraxGeom = new THREE.SphereGeometry(1.25, 16, 16);
+            thoraxGeom.scale(1.0, 1.15, 1.35);
+            const thorax = new THREE.Mesh(thoraxGeom, astralBodyMat);
+            timoGroup.add(thorax);
+
+            // Pulsing Astral Core
+            const coreGeom = new THREE.IcosahedronGeometry(0.65, 1);
+            const coreMat = new THREE.MeshBasicMaterial({
+                color: 0x00ffaa,
+                wireframe: true,
+                blending: THREE.AdditiveBlending
+            });
+            astralCore = new THREE.Mesh(coreGeom, coreMat);
+            thorax.add(astralCore);
+
+            // E. Segmented Fairy Abdomen / Tail
+            const abdomenGeom = new THREE.CylinderGeometry(0.85, 0.15, 2.8, 14);
+            abdomenGeom.rotateX(Math.PI / 2);
+            const abdomen = new THREE.Mesh(abdomenGeom, astralBodyMat);
+            abdomen.position.set(0, -0.35, -2.2);
+            abdomen.rotation.x = -0.18;
+            timoGroup.add(abdomen);
+
+            // F. 4 Gossamer Fairy Wings (Dual Upper & Lower Pairs)
+            // 1. Upper Left Wing
+            upperWingL = new THREE.Group();
+            upperWingL.position.set(0.75, 0.75, 0.2);
+            const upperWingGeom = new THREE.PlaneGeometry(3.8, 1.5);
+            upperWingGeom.translate(1.9, 0, 0);
+            const uWingMeshL = new THREE.Mesh(upperWingGeom, fairyWingMat);
+            uWingMeshL.rotation.x = Math.PI / 2;
+            upperWingL.add(uWingMeshL);
+
+            const veinPts = [
+                new THREE.Vector3(0, 0, 0),
+                new THREE.Vector3(1.6, 0, 0.45),
+                new THREE.Vector3(3.7, 0, 0),
+                new THREE.Vector3(2.3, 0, -0.55),
+                new THREE.Vector3(0.6, 0, -0.3)
+            ];
+            const veinGeom = new THREE.BufferGeometry().setFromPoints(veinPts);
+            upperWingL.add(new THREE.Line(veinGeom, wingVeinMat));
+            timoGroup.add(upperWingL);
+
+            // 2. Upper Right Wing
+            upperWingR = new THREE.Group();
+            upperWingR.position.set(-0.75, 0.75, 0.2);
+            const uWingMeshR = new THREE.Mesh(upperWingGeom, fairyWingMat);
+            uWingMeshR.rotation.x = Math.PI / 2;
+            uWingMeshR.scale.x = -1;
+            upperWingR.add(uWingMeshR);
+
+            const rVeinLine = new THREE.Line(veinGeom, wingVeinMat);
+            rVeinLine.scale.x = -1;
+            upperWingR.add(rVeinLine);
+            timoGroup.add(upperWingR);
+
+            // 3. Lower Left Wing (Smaller Gossamer Sprite Wing)
+            lowerWingL = new THREE.Group();
+            lowerWingL.position.set(0.6, 0.4, -0.7);
+            const lowerWingGeom = new THREE.PlaneGeometry(2.6, 1.1);
+            lowerWingGeom.translate(1.3, 0, 0);
+            const lWingMeshL = new THREE.Mesh(lowerWingGeom, fairyWingMat);
+            lWingMeshL.rotation.x = Math.PI / 2;
+            lowerWingL.add(lWingMeshL);
+            timoGroup.add(lowerWingL);
+
+            // 4. Lower Right Wing
+            lowerWingR = new THREE.Group();
+            lowerWingR.position.set(-0.6, 0.4, -0.7);
+            const lWingMeshR = new THREE.Mesh(lowerWingGeom, fairyWingMat);
+            lWingMeshR.rotation.x = Math.PI / 2;
+            lWingMeshR.scale.x = -1;
+            lowerWingR.add(lWingMeshR);
+            timoGroup.add(lowerWingR);
+
+            // Luminous Aura Light Beacon
+            const beacon = new THREE.PointLight(0x00f0ff, 3.2, 22);
+            timoGroup.add(beacon);
+
+            scene.add(timoGroup);
+        }
+
+        // ---------------------------------------------------------------------
+        // 5. Dynamic Trajectory Trail (Luminous Ribbon)
+        // ---------------------------------------------------------------------
+        function createTrajectoryRibbon() {
+            const maxPoints = 100000;
+            trailPositions = new Float32Array(maxPoints * 3);
+            trailGeometry = new THREE.BufferGeometry();
+            trailGeometry.setAttribute('position', new THREE.BufferAttribute(trailPositions, 3));
+
+            const trailMat = new THREE.LineBasicMaterial({
+                color: 0x00f0ff,
+                transparent: true,
+                opacity: 0.85,
+                blending: THREE.AdditiveBlending
+            });
+            trailLine = new THREE.Line(trailGeometry, trailMat);
+            scene.add(trailLine);
+        }
+
+        // ---------------------------------------------------------------------
+        // 6. Real-Time Live Stream Polling, Trajectory Cache & Cardiac EKG
+        // ---------------------------------------------------------------------
+        function loadInitialTrajectory() {
+            fetch('flyfly_sat/assets/current_trajectory.json')
+                .then(r => r.json())
+                .then(data => {
+                    if (!data || !data.points) return;
+                    clearDynamicDiscoveryMarkers();
+                    if (data.bench) {
+                        const bEl = document.getElementById('val-bench');
+                        if (bEl) bEl.textContent = `${data.bench}`;
+                        currentTrackedRun = data.bench.split('_full')[0];
+                    }
+                    if (data.max_unsat !== undefined) {
+                        highestUnsatReached = data.max_unsat;
+                        document.getElementById('val-highest-unsat').textContent = `${highestUnsatReached} clauses`;
+                    }
+                    if (data.min_unsat !== undefined) {
+                        lowestUnsatReached = data.min_unsat;
+                        document.getElementById('val-lowest-unsat').textContent = `${lowestUnsatReached} clauses`;
+                    }
+                    if (data.points && data.points.length > 0) {
+                        trajectoryData = data.points.map(pt => ({
+                            pos: new THREE.Vector3(pt.pos.x, pt.pos.y, pt.pos.z),
+                            step: pt.step,
+                            unsat: pt.unsat,
+                            hamming: pt.hamming,
+                            phase: pt.phase,
+                            is_new_best: pt.is_new_best,
+                            is_solution: pt.is_solution,
+                            drugs: pt.drugs || []
+                        }));
+
+                        // Dynamically drop discovery markers based on real exploration points
+                        trajectoryData.forEach(pt => {
+                            if (pt.is_solution || pt.unsat === 0) {
+                                addDynamicDiscoveryMarker(pt.pos, pt.unsat, pt.step, pt.drugs, true, false);
+                            } else if (pt.is_new_best || pt.unsat <= 3) {
+                                addDynamicDiscoveryMarker(pt.pos, pt.unsat, pt.step, pt.drugs, false, pt.is_new_best);
+                            }
+                        });
+
+                        document.getElementById('step-slider').max = trajectoryData.length - 1;
+                        updatePeakMarkerPosition();
+                        updateTimoPosition(0);
+                    }
+                })
+                .catch(() => {});
+        }
+
+        function startLiveStreamPolling() {
+            setInterval(fetchLiveStreamUpdate, 220);
+        }
+
+        let currentTrackedRun = null;
+        function fetchLiveStreamUpdate() {
+            fetch('/api/live')
+                .then(r => r.json())
+                .then(data => {
+                    if (!data || !data.active) return;
+
+                    // Automatically reset trajectory when a new benchmark in the batch queue begins
+                    if (currentTrackedRun !== data.run_name) {
+                        trajectoryData = [];
+                        currentStepIndex = 0;
+                        highestUnsatReached = data.max_unsat !== undefined ? data.max_unsat : (data.unsat || 0);
+                        lowestUnsatReached = data.min_unsat !== undefined ? data.min_unsat : (data.unsat || 9999);
+                        clearDynamicDiscoveryMarkers();
+                        currentTrackedRun = data.run_name;
+                    }
+
+                    // Update HUD with live electric metrics
+                    document.getElementById('val-bench').textContent = `${data.run_name} [Live Sync]`;
+                    document.getElementById('val-step').textContent = data.step.toLocaleString();
+                    document.getElementById('val-unsat').textContent = `${data.unsat} clauses`;
+                    document.getElementById('val-hamming').textContent = (data.hamming >= 0) ? `${data.hamming} variables` : `Localized Basin`;
+
+                    // Update Oncology & Attractor HUD Metrics
+                    if (data.noise !== undefined) {
+                        const noiseEl = document.getElementById('val-noise');
+                        if (noiseEl) noiseEl.textContent = `${data.noise}% (GAUS)`;
+                    }
+                    if (data.cells !== undefined) {
+                        const cellsEl = document.getElementById('val-cells');
+                        if (cellsEl) cellsEl.textContent = `${data.cells} Cells`;
+                    }
+                    if (data.cell_steps !== undefined) {
+                        const stepsEl = document.getElementById('val-cell-steps');
+                        if (stepsEl) stepsEl.textContent = `${data.cell_steps.toLocaleString()} Steps`;
+                    }
+                    if (data.drugs && data.drugs.length > 0) {
+                        const drugsEl = document.getElementById('val-drugs');
+                        if (drugsEl) drugsEl.textContent = data.drugs.join(' + ');
+                    } else {
+                        const drugsEl = document.getElementById('val-drugs');
+                        if (drugsEl) drugsEl.textContent = 'None / Exploring...';
+                    }
+
+                    // Update Peak Highest Unsat and Lowest Unsat Records strictly from active run
+                    if (data.max_unsat !== undefined && data.max_unsat > 0) {
+                        highestUnsatReached = Math.max(highestUnsatReached, data.max_unsat);
+                    }
+                    if (data.min_unsat !== undefined) {
+                        lowestUnsatReached = data.min_unsat;
+                    } else if (data.unsat !== undefined) {
+                        lowestUnsatReached = Math.min(lowestUnsatReached, data.unsat);
+                    }
+                    if (data.unsat !== undefined) {
+                        highestUnsatReached = Math.max(highestUnsatReached, data.unsat);
+                    }
+                    document.getElementById('val-highest-unsat').textContent = `${highestUnsatReached} clauses`;
+                    document.getElementById('val-lowest-unsat').textContent = `${lowestUnsatReached} clauses`;
+                    updatePeakMarkerPosition();
+
+                    if (data.bio_current !== undefined) {
+                        currentElectric = data.bio_current;
+                        currentVoltage = data.vm_voltage;
+                        currentFreq = data.spike_freq;
+                        currentDischarge = data.discharge_pct;
+
+                        document.getElementById('val-electric').textContent = `${currentElectric} nA`;
+                        document.getElementById('val-voltage').textContent = `${currentVoltage} mV`;
+                        document.getElementById('val-freq').textContent = `${currentFreq} Hz`;
+                        document.getElementById('val-discharge').textContent = `${currentDischarge}%`;
+                        document.getElementById('gauge-electric').style.width = `${Math.min(100, currentDischarge)}%`;
+                    }
+
+                    if (data.phase) {
+                        const phaseEl = document.getElementById('val-phase');
+                        if (phaseEl) {
+                            phaseEl.textContent = data.phase;
+                            phaseEl.className = data.is_fast ? "hud-val cyan" : "hud-val green";
+                        }
+                    }
+                    window.currentIsFast = (data.is_fast !== undefined) ? data.is_fast : (data.unsat > 17);
+
+                    // Energy bar
+                    const energyPercent = Math.min(100, Math.max(2, (data.unsat / 24) * 100));
+                    document.getElementById('gauge-energy').style.width = `${energyPercent}%`;
+
+                    // Append new live points & Reward Skill XP
+                    if (data.points && data.points.length > 0) {
+                        rewardSkillExperience('chemical_plume', 2);
+                        if (data.is_fast) {
+                            rewardSkillExperience('optic_flow', 3);
+                            rewardSkillExperience('octopamine_surge', 2);
+                        } else {
+                            rewardSkillExperience('compound_synergy', 4);
+                            rewardSkillExperience('proboscis_resolver', 5);
+                        }
+                        if (data.unsat <= 3) {
+                            rewardSkillExperience('proboscis_resolver', 20);
+                            rewardSkillExperience('home_vector', 15);
+                        }
+                        const sModal = document.getElementById('skills-modal');
+                        if (sModal && sModal.classList.contains('active')) {
+                            renderSkillsModal();
+                        }
+
+                        data.points.forEach(pt => {
+                            const vPos = new THREE.Vector3(pt.x, pt.y, pt.z);
+                            const pDrugs = pt.drugs || data.drugs || [];
+                            trajectoryData.push({
+                                pos: vPos,
+                                step: pt.s,
+                                unsat: pt.u,
+                                hamming: pt.h,
+                                electric: pt.electric,
+                                voltage: pt.voltage,
+                                freq: pt.freq,
+                                discharge: pt.discharge,
+                                phase: pt.phase || ((pt.u <= 3) ? "Area-Restricted Foraging" : "Global Lévy Casting"),
+                                is_new_best: pt.is_new_best,
+                                is_solution: pt.is_solution,
+                                drugs: pDrugs
+                            });
+
+                            // Dynamically place markers when Timo discovers minima or 0-unsat solution!
+                            if (pt.is_solution || pt.u === 0) {
+                                addDynamicDiscoveryMarker(vPos, pt.u, pt.s, pDrugs, true, false);
+                            } else if (pt.is_new_best || pt.u <= 3) {
+                                addDynamicDiscoveryMarker(vPos, pt.u, pt.s, pDrugs, false, pt.is_new_best);
+                            }
+                        });
+                        document.getElementById('step-slider').max = trajectoryData.length - 1;
+                        updatePeakMarkerPosition();
+                    }
+                })
+                .catch(() => {
+                    // Running in pure offline file mode
+                });
+        }
+
+        // ---------------------------------------------------------------------
+        // Real-Time Physiological Cardiac & Neural EKG Oscilloscope
+        // (رسم نبضات القلب الحية وتخطيط النشاط العصبي والكهربائي)
+        // ---------------------------------------------------------------------
+        let oscCtx, oscCanvas;
+        let oscPhase = 0;
+
+        function initOscilloscope() {
+            oscCanvas = document.getElementById('oscilloscope-canvas');
+            if (oscCanvas) oscCtx = oscCanvas.getContext('2d');
+        }
+
+        // Physiological Cardiac ECG Waveform Generator
+        // Reproduces P-wave (atrial), PR segment, Q-notch, towering sharp R-spike (ventricular),
+        // S-dip, ST segment, rounded T-wave (repolarization), and diastolic pause.
+        function getEkgSample(phase) {
+            const u = ((phase % 1) + 1) % 1;
+
+            // 1. Isoelectric baseline (0.00 -> 0.12)
+            if (u < 0.12) {
+                return Math.sin(u * 90) * 0.015;
+            }
+            // 2. P-wave: Smooth rounded upward atrial deflection (0.12 -> 0.22)
+            if (u < 0.22) {
+                const p = (u - 0.12) / 0.10;
+                return Math.sin(p * Math.PI) * 0.22;
+            }
+            // 3. PR segment: Isoelectric pause (0.22 -> 0.28)
+            if (u < 0.28) {
+                return 0.0;
+            }
+            // 4. Q-wave: Sharp initial downward notch (0.28 -> 0.32)
+            if (u < 0.32) {
+                const q = (u - 0.28) / 0.04;
+                return -Math.sin(q * Math.PI) * 0.28;
+            }
+            // 5. R-wave: Towering sharp spike upwards! High voltage ventricular depolarization (0.32 -> 0.37)
+            if (u < 0.37) {
+                const r = (u - 0.32) / 0.05;
+                const spike = Math.sin(r * Math.PI);
+                return Math.pow(spike, 1.25) * 1.95;
+            }
+            // 6. S-wave: Sharp downward notch below baseline (0.37 -> 0.42)
+            if (u < 0.42) {
+                const s = (u - 0.37) / 0.05;
+                return -Math.sin(s * Math.PI) * 0.48;
+            }
+            // 7. ST segment: Isoelectric pause (0.42 -> 0.49)
+            if (u < 0.49) {
+                return 0.0;
+            }
+            // 8. T-wave: Broad rounded ventricular repolarization dome (0.49 -> 0.67)
+            if (u < 0.67) {
+                const t = (u - 0.49) / 0.18;
+                return Math.sin(t * Math.PI) * 0.38;
+            }
+            // 9. Diastolic resting baseline until next contraction (0.67 -> 1.00)
+            return Math.sin(u * 70) * 0.015;
+        }
+
+        function drawOscilloscope() {
+            if (!oscCtx) return;
+            const w = oscCanvas.width;
+            const h = oscCanvas.height;
+            oscCtx.clearRect(0, 0, w, h);
+
+            // 1. Draw Clinical Medical ECG Grid (Hospital telemetry graph paper)
+            oscCtx.lineWidth = 1;
+            // Minor grid lines
+            oscCtx.strokeStyle = 'rgba(0, 255, 136, 0.07)';
+            oscCtx.beginPath();
+            for (let x = 0; x <= w; x += 8) {
+                oscCtx.moveTo(x, 0);
+                oscCtx.lineTo(x, h);
+            }
+            for (let y = 0; y <= h; y += 8) {
+                oscCtx.moveTo(0, y);
+                oscCtx.lineTo(w, y);
+            }
+            oscCtx.stroke();
+
+            // Major grid lines
+            oscCtx.strokeStyle = 'rgba(0, 255, 136, 0.18)';
+            oscCtx.beginPath();
+            for (let x = 0; x <= w; x += 32) {
+                oscCtx.moveTo(x, 0);
+                oscCtx.lineTo(x, h);
+            }
+            for (let y = 0; y <= h; y += 24) {
+                oscCtx.moveTo(0, y);
+                oscCtx.lineTo(w, y);
+            }
+            oscCtx.stroke();
+
+            // Center isoelectric baseline (Zero voltage line)
+            const baselineY = h * 0.60;
+            const ampScale = 14.5; // Calibrated so R-peak reaches top comfortably without clipping
+
+            oscCtx.strokeStyle = 'rgba(0, 255, 136, 0.32)';
+            oscCtx.beginPath();
+            oscCtx.moveTo(0, baselineY);
+            oscCtx.lineTo(w, baselineY);
+            oscCtx.stroke();
+
+            // 2. Dynamic Heart Rate Modulation (BPM)
+            const isFast = window.currentIsFast || (currentElectric > 3.2);
+            if (isFast) {
+                currentHeartRate = Math.round(155 + (currentElectric * 6.5) + Math.sin(Date.now() * 0.003) * 5);
+            } else {
+                currentHeartRate = Math.round(92 + (currentElectric * 4.0) + Math.sin(Date.now() * 0.002) * 3);
+            }
+            const hrEl = document.getElementById('val-heart-rate');
+            if (hrEl) hrEl.textContent = `${currentHeartRate} BPM`;
+
+            // Advancing scroll phase tied to cardiac frequency
+            const beatSpeed = (currentHeartRate / 60.0) * 0.018;
+            oscPhase += beatSpeed;
+
+            // 3. Draw Continuous Physiological ECG Heartbeat Trace
+            oscCtx.strokeStyle = '#00ff88';
+            oscCtx.shadowColor = '#00ff88';
+            oscCtx.shadowBlur = 10;
+            oscCtx.lineWidth = 2.2;
+            oscCtx.lineJoin = 'round';
+            oscCtx.beginPath();
+
+            const cycleWidth = 84; // ~3.8 full cardiac cycles fit horizontally
+
+            for (let x = 0; x < w; x += 2) {
+                const phase = (x / cycleWidth) - oscPhase;
+                const ekgVal = getEkgSample(phase);
+                const y = baselineY - (ekgVal * ampScale);
+                if (x === 0) oscCtx.moveTo(x, y);
+                else oscCtx.lineTo(x, y);
+            }
+            oscCtx.stroke();
+            oscCtx.shadowBlur = 0;
+
+            // 4. Glowing Phosphor Scanning Lead Blip at right edge
+            const rightPhase = (w / cycleWidth) - oscPhase;
+            const rightVal = getEkgSample(rightPhase);
+            const rightY = baselineY - (rightVal * ampScale);
+
+            oscCtx.fillStyle = '#ffffff';
+            oscCtx.shadowColor = '#00ff88';
+            oscCtx.shadowBlur = 14;
+            oscCtx.beginPath();
+            oscCtx.arc(w - 3, rightY, 3, 0, Math.PI * 2);
+            oscCtx.fill();
+            oscCtx.shadowBlur = 0;
+        }
+
+        // ---------------------------------------------------------------------
+        // Animation Loop & Real-Time Flight Physics
+        // ---------------------------------------------------------------------
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // 1. Twinkle Stars in Void
+            if (starParticles) {
+                starParticles.rotation.y += 0.00025;
+            }
+
+            // 2. Pulse Solution Marker (if found) & Dynamic Discovery Markers
+            if (solutionMarker && solutionMarker.visible) {
+                const scale = 1.0 + Math.sin(Date.now() * 0.006) * 0.14;
+                solutionMarker.scale.set(scale, scale, scale);
+                const ring = solutionMarker.children.find(c => c.isMesh && c.geometry.type === 'RingGeometry');
+                if (ring) ring.rotation.z += 0.015;
+            }
+            if (dynamicMarkers && dynamicMarkers.length > 0) {
+                dynamicMarkers.forEach((m, idx) => {
+                    const ring = m.children.find(c => c.isMesh && c.geometry.type === 'RingGeometry');
+                    if (ring) ring.rotation.z += 0.012 + (idx * 0.001);
+                });
+            }
+            if (peakUnsatMarker) {
+                const pScale = 1.0 + Math.sin(Date.now() * 0.005) * 0.12;
+                if (peakUnsatMarker.children[0]) {
+                    peakUnsatMarker.children[0].scale.set(pScale, pScale, pScale);
+                }
+                if (peakUnsatRing) {
+                    peakUnsatRing.rotation.z += 0.02;
+                }
+            }
+
+            // 3. Timo Turner Wing Flutter & Astral Energy Core Pulsing
+            const flapSpeed = window.currentIsFast ? 0.82 : 0.38;
+            wingFlapTime += flapSpeed;
+            const flapAngle = Math.sin(wingFlapTime) * 0.52;
+            if (upperWingL && upperWingR) {
+                upperWingL.rotation.z = flapAngle;
+                upperWingR.rotation.z = -flapAngle;
+            }
+            if (lowerWingL && lowerWingR) {
+                lowerWingL.rotation.z = flapAngle * 0.85;
+                lowerWingR.rotation.z = -flapAngle * 0.85;
+            }
+            if (astralHorn) {
+                astralHorn.rotation.z = Math.sin(wingFlapTime * 0.3) * 0.08;
+            }
+            if (astralCore) {
+                const electricPulse = 1.0 + (currentElectric / 6.0) * Math.sin(wingFlapTime * 0.8) * 0.35;
+                astralCore.scale.set(electricPulse, electricPulse, electricPulse);
+            }
+
+            // 4. Update Position along Real-Time Trajectory
+            if (trajectoryData.length > 0) {
+                currentStepIndex += playbackSpeed * 0.25;
+                if (currentStepIndex >= trajectoryData.length) {
+                    currentStepIndex = Math.max(0, trajectoryData.length - 1);
+                }
+                updateTimoPosition(Math.floor(currentStepIndex));
+            }
+
+            // 5. Draw Real-Time Cardiac EKG Oscilloscope
+            drawOscilloscope();
+
+            // 6. Camera Following Modes
+            if (cameraMode === 'chase' && timoGroup) {
+                const flyPos = timoGroup.position;
+                const offset = new THREE.Vector3(0, 6, -18).applyQuaternion(timoGroup.quaternion);
+                camera.position.lerp(flyPos.clone().add(offset), 0.09);
+                camera.lookAt(flyPos.clone().add(new THREE.Vector3(0, 1.2, 6)));
+            } else if (cameraMode === 'top') {
+                camera.position.lerp(new THREE.Vector3(0, 120, 0), 0.05);
+                camera.lookAt(0, 0, 0);
+            } else {
+                controls.update();
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // ---------------------------------------------------------------------
+        // Update Timo Turner Position, Orientation, and Trail
+        // ---------------------------------------------------------------------
+        function updateTimoPosition(idx) {
+            if (!trajectoryData[idx]) return;
+            const curr = trajectoryData[idx];
+            const next = trajectoryData[Math.min(idx + 1, trajectoryData.length - 1)];
+
+            // Position Timo Turner
+            timoGroup.position.copy(curr.pos);
+
+            // Orient towards flight vector
+            if (next) {
+                const dir = next.pos.clone().sub(curr.pos);
+                if (dir.lengthSq() > 0.0001) {
+                    const targetQuat = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 0, 1), dir.normalize());
+                    timoGroup.quaternion.slerp(targetQuat, 0.18);
+                }
+            }
+
+            // Update Trajectory Light Ribbon
+            const trailCount = Math.min(idx + 1, 100000);
+            for (let i = 0; i < trailCount; i++) {
+                const p = trajectoryData[i].pos;
+                trailPositions[i * 3] = p.x;
+                trailPositions[i * 3 + 1] = p.y;
+                trailPositions[i * 3 + 2] = p.z;
+            }
+            trailGeometry.setDrawRange(0, trailCount);
+            trailGeometry.attributes.position.needsUpdate = true;
+
+            // Slider update
+            document.getElementById('step-slider').value = idx;
+
+            // Update HUD metrics dynamically during scrubbing/playback
+            if (curr.step !== undefined) document.getElementById('val-step').textContent = curr.step.toLocaleString();
+            if (curr.unsat !== undefined) {
+                document.getElementById('val-unsat').textContent = `${curr.unsat} clauses`;
+                const energyPercent = Math.min(100, Math.max(2, (curr.unsat / 24) * 100));
+                document.getElementById('gauge-energy').style.width = `${energyPercent}%`;
+            }
+            if (curr.hamming !== undefined) {
+                document.getElementById('val-hamming').textContent = (curr.hamming >= 0) ? `${curr.hamming} variables` : `Localized Basin`;
+            }
+            if (curr.phase) {
+                const phaseEl = document.getElementById('val-phase');
+                if (phaseEl) phaseEl.textContent = curr.phase;
+            }
+            if (curr.electric !== undefined) {
+                currentElectric = curr.electric;
+                document.getElementById('val-electric').textContent = `${currentElectric} nA`;
+            }
+            if (curr.voltage !== undefined) document.getElementById('val-voltage').textContent = `${curr.voltage} mV`;
+            if (curr.freq !== undefined) document.getElementById('val-freq').textContent = `${curr.freq} Hz`;
+            if (curr.discharge !== undefined) {
+                document.getElementById('val-discharge').textContent = `${curr.discharge}%`;
+                document.getElementById('gauge-electric').style.width = `${Math.min(100, curr.discharge)}%`;
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // UI Controls & HUD Mode Handlers
+        // ---------------------------------------------------------------------
+        let isHudCompact = false;
+        function toggleHudCompact() {
+            isHudCompact = !isHudCompact;
+            const hud = document.getElementById('telemetry-hud');
+            const btn = document.getElementById('btn-hud-toggle');
+            if (hud) {
+                if (isHudCompact) {
+                    hud.classList.add('compact');
+                    if (btn) {
+                        btn.innerHTML = '⤢ FULL';
+                        btn.title = 'Switch to Full Telemetry HUD';
+                    }
+                } else {
+                    hud.classList.remove('compact');
+                    if (btn) {
+                        btn.innerHTML = '⤡ COMPACT';
+                        btn.title = 'Switch to Compact HUD Mode';
+                    }
+                }
+            }
+        }
+
+        function toggleTrailVisibility(visible) {
+            if (trailLine) {
+                trailLine.visible = visible;
+            }
+        }
+
+        function setCameraMode(mode) {
+            cameraMode = mode;
+            document.querySelectorAll('.btn-cam').forEach(b => b.classList.remove('active'));
+            if (mode === 'orbit') document.getElementById('btn-cam-orbit').classList.add('active');
+            if (mode === 'chase') document.getElementById('btn-cam-chase').classList.add('active');
+            if (mode === 'top') document.getElementById('btn-cam-top').classList.add('active');
+            controls.enabled = (mode === 'orbit');
+        }
+
+        function setSpeed(val) {
+            playbackSpeed = parseFloat(val);
+        }
+
+        function onSeek(val) {
+            currentStepIndex = parseInt(val);
+            updateTimoPosition(currentStepIndex);
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        // ---------------------------------------------------------------------
+        // Nature Communications Scientific Figure 4 Auto-Capture System
+        // ---------------------------------------------------------------------
+        function captureNatureFigure(panel) {
+            if (panel === '4a') {
+                // Figure 4a: Ablation Control Stagnant Energy Knot (Overhead isometric 45-deg angle)
+                cameraMode = 'orbit';
+                controls.enabled = true;
+                camera.position.set(40, 58, 48);
+                controls.target.set(0, 0, 0);
+                controls.update();
+                if (trajectoryData && trajectoryData.length > 0) {
+                    const targetIdx = Math.min(trajectoryData.length - 1, Math.floor(trajectoryData.length * 0.85));
+                    onSeek(targetIdx);
+                }
+            } else if (panel === '4b') {
+                // Figure 4b: TIMO Biological Attractor Touchdown (Cinematic 35-deg quarter-elevation)
+                cameraMode = 'orbit';
+                controls.enabled = true;
+                let targetPos = new THREE.Vector3(0, 0, 0);
+                if (solutionMarker && solutionMarker.visible) {
+                    targetPos.copy(solutionMarker.position);
+                } else if (trajectoryData && trajectoryData.length > 0) {
+                    targetPos.copy(trajectoryData[trajectoryData.length - 1].pos);
+                    onSeek(trajectoryData.length - 1);
+                }
+                camera.position.set(targetPos.x + 36, targetPos.y + 24, targetPos.z + 46);
+                controls.target.copy(targetPos);
+                controls.update();
+            }
+
+            renderer.render(scene, camera);
+            setTimeout(() => {
+                renderer.render(scene, camera);
+                try {
+                    const dataUrl = renderer.domElement.toDataURL('image/png');
+                    const link = document.createElement('a');
+                    link.download = (panel === '4a') ? 'Figure4a_Nature_Ablation_Knot.png' : 'Figure4b_Nature_TIMO_Touchdown.png';
+                    link.href = dataUrl;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    console.log('Nature Figure captured successfully:', link.download);
+                } catch (e) {
+                    console.error('Screenshot error:', e);
+                }
+            }, 150);
+        }
+
+        // ---------------------------------------------------------------------
+        // MMORPG Skills Tree System (Silkroad / Conquer / Digimon Style)
+        // ---------------------------------------------------------------------
+        let activeSkillBranch = 'all';
+
+        const SKILL_BRANCHES = {
+            visual: {
+                title: "الجهاز البصري وفصوص الرؤية (Optic Lobes & Visual Pathways)",
+                neurons: "97,143 Neurons (70% of Connectome)",
+                icon: "👁️"
+            },
+            cx: {
+                title: "المركب المركزي والملاحة الفضائية (Central Complex & Spatial Navigation)",
+                neurons: "2,875 Neurons (Compass & Heading)",
+                icon: "🧭"
+            },
+            olfactory: {
+                title: "الجهاز الشمي وأجسام المشروم (Olfactory Sensing & Learning)",
+                neurons: "7,458 Neurons (Memory & Chemical Plume)",
+                icon: "👃"
+            },
+            motor: {
+                title: "الجهاز الحركي والتآزر العضلي (Motor Output & Neuromuscular Synergies)",
+                neurons: "1,301 Descending & Motor Neurons",
+                icon: "🦾"
+            },
+            neuro: {
+                title: "النواقل العصبية والتحوير الهرموني (Neuromodulators & Neurotransmitters)",
+                neurons: "Octopamine / Dopamine / GABA Networks",
+                icon: "🧬"
+            }
+        };
+
+        const TIMO_SKILLS = [
+            // 1. Visual Branch (97k Cells)
+            {
+                id: "optic_flow",
+                branch: "visual",
+                name: "التدفق البصري والتنافر من الطارات (Optic Flow & Torus Evasion)",
+                icon: "👁️",
+                stars: 4,
+                lvl: 4,
+                xp: 850,
+                maxXp: 1000,
+                desc: "مسح كثافة مسارات الطيران السابقة وإطلاق التنافر البصري لمنع الحبس داخل الطارات الأسطوانية المغلقة.",
+                impact: "Torus Escape Rate: +95% | Retinotopic Parallax Active"
+            },
+            {
+                id: "looming_avoid",
+                branch: "visual",
+                name: "كواشف الاصطدام والاقتراب الحركي (Looming & Collision Detectors)",
+                icon: "⚡",
+                stars: 3,
+                lvl: 3,
+                xp: 420,
+                maxXp: 700,
+                desc: "استشعار الاقتراب السريع من الحواجز الطاقية ومناورات تفادٍ باليستية جانبية عبر خلايا Lobula LC.",
+                impact: "Energy Barrier Deflection +40%"
+            },
+
+            // 2. Central Complex Branch
+            {
+                id: "home_vector",
+                branch: "cx",
+                name: "متجه العودة للمنزل (Central Complex Cyclic Home-Vector)",
+                icon: "🧭",
+                stars: 5,
+                lvl: 5,
+                xp: 1200,
+                maxXp: 1200,
+                desc: "استدعاء ذاكرة الموقع في الجسم المروحي (FB) للعودة لحوض النخبة (2 أخطاء) وتفادي التيه في الصحراء.",
+                impact: "100% Elite Oasis Recovery | Path Integration"
+            },
+            {
+                id: "golden_angle",
+                branch: "cx",
+                name: "الانطلاق بالزاوية الذهبية (Golden Angle Phase Shift 137.5°)",
+                icon: "📐",
+                stars: 4,
+                lvl: 4,
+                xp: 680,
+                maxXp: 900,
+                desc: "تدوير متجه الطيران بزاوية ذهبية عند كل إقلاع لتغطية مسارات واستكشاف أبعاد جديدة كلياً في فضاء الـ 100D.",
+                impact: "Unvisited Sector Coverage: +85%"
+            },
+
+            // 3. Olfactory Branch
+            {
+                id: "chemical_plume",
+                branch: "olfactory",
+                name: "الاستشعار الكيميائي للبنود (Clause Chemical Plume Sensing)",
+                icon: "👃",
+                stars: 5,
+                lvl: 5,
+                xp: 1500,
+                maxXp: 1500,
+                desc: "استنشاق بنود المسألة عبر 2,281 مستقبل شمي وقياس تدرج الطاقة الكيميائية نحو نقطة الرضا الشامل (0 UNSAT).",
+                impact: "Gradient Tracking Fidelity: 99.8%"
+            },
+            {
+                id: "mbon_learning",
+                branch: "olfactory",
+                name: "التعلم المشابكي الدوباميني (Dopaminergic MBON Hardness Learning)",
+                icon: "🧪",
+                stars: 4,
+                lvl: 4,
+                xp: 790,
+                maxXp: 1000,
+                desc: "مضاعفة أوزان البنود العصية وتدريب مشابك خلايا كينيون (KC) على إعطاء الأولوية القصوى لحلها أولاً.",
+                impact: "Conflict Clause Penetration +60%"
+            },
+
+            // 4. Motor Branch
+            {
+                id: "pool_expansion",
+                branch: "motor",
+                name: "تجنيد التجمعات الحركية الكبرى (Neuromuscular 1,200 Motor Pool)",
+                icon: "🦾",
+                stars: 4,
+                lvl: 4,
+                xp: 810,
+                maxXp: 1000,
+                desc: "حشد 1,200 خلية عصبية نازلة وحركية (12 خلية لكل متغير) لتوليد تصويت سكاني ناعم وقضاء على ضوضاء التردد.",
+                impact: "Population Signal-to-Noise: 3.2x Boost"
+            },
+            {
+                id: "compound_synergy",
+                branch: "motor",
+                name: "التآزر العضلي المزدوج والثلاثي (Compound Muscle Synergies)",
+                icon: "⚡",
+                stars: 5,
+                lvl: 5,
+                xp: 1100,
+                maxXp: 1100,
+                desc: "تفعيل انقباض متزامن لمتغيرين أو ثلاثة لكسر حواجز الطاقة والوديان العميقة (Level 2 & 3 Synergies).",
+                impact: "Hamming Ridge Penetration: +75%"
+            },
+            {
+                id: "proboscis_resolver",
+                branch: "motor",
+                name: "اقتناص الفريسة الحاسم (Deep Proboscis Frustration Resolver)",
+                icon: "🎯",
+                stars: 4,
+                lvl: 4,
+                xp: 720,
+                maxXp: 950,
+                desc: "فحص مصفوفي تفرعي فائق السرعة عبر الـ GPU لحسم الأخطاء الحرجة (<= 3) فوراً والانتقال مباشرة إلى 0 أخطاء.",
+                impact: "Instant 0-UNSAT Execution on Patch Entry"
+            },
+
+            // 5. Neuro Branch
+            {
+                id: "octopamine_surge",
+                branch: "neuro",
+                name: "طيران ليفي الأسطوري بالأوكتوبامين (Octopaminergic Lévy Flight)",
+                icon: "🌪️",
+                stars: 5,
+                lvl: 5,
+                xp: 2000,
+                maxXp: 2000,
+                desc: "إفراز هرمون الأوكتوبامين لإطلاق قفزات باليستية واسعة لاختراق حواجز الطاقة والركود في الفضاء العالي.",
+                impact: "Dispersal Saccade Burst: 26 - 38 Vars"
+            },
+            {
+                id: "gaba_filter",
+                branch: "neuro",
+                name: "درع التخميد المشابكي بجابا (GABAergic Synaptic Noise Filter)",
+                icon: "🛡️",
+                stars: 4,
+                lvl: 4,
+                xp: 880,
+                maxXp: 1000,
+                desc: "كبح المتغيرات شديدة التذبذب بواسطة عصبونات APL التثبيطية لتصفية التركيز وتثبيت البنود الناجحة.",
+                impact: "Over-Activation Noise Cut: -85%"
+            }
+        ];
+
+        function toggleSkillsModal() {
+            const modal = document.getElementById('skills-modal');
+            if (modal) {
+                modal.classList.toggle('active');
+                if (modal.classList.contains('active')) {
+                    renderSkillsModal();
+                }
+            }
+        }
+
+        function selectSkillBranch(branchKey) {
+            activeSkillBranch = branchKey;
+            document.querySelectorAll('.tree-tab-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById(`tab-btn-${branchKey}`);
+            if (activeBtn) activeBtn.classList.add('active');
+            renderSkillsModal();
+        }
+
+        function renderSkillsModal() {
+            const container = document.getElementById('skills-container');
+            if (!container) return;
+
+            let html = '';
+            const branchesToRender = (activeSkillBranch === 'all') 
+                ? Object.keys(SKILL_BRANCHES) 
+                : [activeSkillBranch];
+
+            branchesToRender.forEach(branchKey => {
+                const branchInfo = SKILL_BRANCHES[branchKey];
+                const skillsInBranch = TIMO_SKILLS.filter(s => s.branch === branchKey);
+                if (skillsInBranch.length === 0) return;
+
+                html += `
+                    <div class="tree-branch-header">
+                        <span class="branch-title">${branchInfo.icon} ${branchInfo.title}</span>
+                        <span class="branch-cell-count">${branchInfo.neurons}</span>
+                    </div>
+                `;
+
+                skillsInBranch.forEach(s => {
+                    const starsHtml = '★'.repeat(s.stars) + '☆'.repeat(Math.max(0, 5 - s.stars));
+                    const pct = Math.min(100, Math.round((s.xp / s.maxXp) * 100));
+                    const isMax = s.stars >= 5;
+                    const badgeText = isMax ? 'MAX ⭐' : `LVL ${s.lvl}`;
+
+                    html += `
+                        <div class="skill-card">
+                            <div class="skill-icon-wrap">${s.icon}</div>
+                            <div class="skill-info">
+                                <div class="skill-head">
+                                    <span class="skill-name">${s.name}</span>
+                                    <span class="skill-lvl-badge">${badgeText}</span>
+                                </div>
+                                <div class="skill-stars">${starsHtml}</div>
+                                <div class="skill-desc">${s.desc}</div>
+                                <span class="skill-impact-tag">✦ ${s.impact}</span>
+                                <div class="skill-xp-bar-wrap">
+                                    <div class="skill-xp-bar" style="width: ${pct}%;"></div>
+                                </div>
+                                <div class="skill-xp-text">
+                                    <span>Mastery XP: ${s.xp} / ${s.maxXp}</span>
+                                    <span>${pct}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+
+            container.innerHTML = html;
+        }
+
+        // Skill XP Progression hook on dynamic telemetry
+        function rewardSkillExperience(skillId, xpPoints) {
+            const s = TIMO_SKILLS.find(x => x.id === skillId);
+            if (s && s.stars < 5) {
+                s.xp += xpPoints;
+                if (s.xp >= s.maxXp) {
+                    s.stars = Math.min(5, s.stars + 1);
+                    s.lvl += 1;
+                    s.xp = (s.stars === 5) ? s.maxXp : Math.max(0, s.xp - s.maxXp);
+                    s.maxXp = Math.floor(s.maxXp * 1.3);
+                }
+            }
+        }
+
+        window.onload = function() {
+            initScene();
+            renderSkillsModal();
+        };
+    </script>
+</body>
+</html>

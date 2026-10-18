@@ -1,0 +1,12 @@
+{
+  "id": "tlgl_inst05_cd45_tyrosine",
+  "title": "T-LGL Patient 05: CD45 Phosphatase Hyper-activation",
+  "pinned": {
+    "Stimuli": 1,
+    "IL15": 1,
+    "CD45": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Patient with hyperactive CD45 phosphatase maintaining LCK and FYN tyrosine kinase signaling."
+}

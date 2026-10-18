@@ -1,0 +1,24 @@
+{
+  "total_blocking_clauses": 1,
+  "total_synergy_flips": 0,
+  "blocking_clauses": [
+    {
+      "step": 3210,
+      "candidate_drugs": [
+        "Caspase",
+        "PDGFR",
+        "sFas"
+      ],
+      "clause_literals": [
+        -77,
+        -63,
+        -74
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 41.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    }
+  ],
+  "synergy_flips": []
+}

@@ -1,0 +1,228 @@
+[
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "AKT",
+      "EZH2",
+      "mTOR"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 38.5,
+    "apoptosis_rate_noisy": 90.0,
+    "proliferation_suppression_rate": 38.5,
+    "mean_steps_to_apoptosis": 175.9,
+    "wet_lab_ground_truth_matches": [
+      "AKT",
+      "mTOR"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 90
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "EZH2",
+      "PRKACA",
+      "mTOR"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 61.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "mTOR"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 150
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "AKT",
+      "MEK",
+      "PI3K"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 36.0,
+    "apoptosis_rate_noisy": 87.5,
+    "proliferation_suppression_rate": 36.0,
+    "mean_steps_to_apoptosis": 162.3,
+    "wet_lab_ground_truth_matches": [
+      "MEK",
+      "AKT",
+      "PI3K"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 180
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "HDAC",
+      "MEK"
+    ],
+    "n_drugs": 2,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 61.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "MEK"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 240
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "HDAC",
+      "MEK",
+      "mTOR"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 4.5,
+    "apoptosis_rate_noisy": 64.0,
+    "proliferation_suppression_rate": 4.5,
+    "mean_steps_to_apoptosis": 293.0,
+    "wet_lab_ground_truth_matches": [
+      "MEK",
+      "mTOR"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 270
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "MCL1"
+    ],
+    "n_drugs": 1,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 36.5,
+    "apoptosis_rate_noisy": 94.5,
+    "proliferation_suppression_rate": 36.5,
+    "mean_steps_to_apoptosis": 273.4,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 360
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "ERK",
+      "MCL1"
+    ],
+    "n_drugs": 2,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 31.0,
+    "apoptosis_rate_noisy": 93.5,
+    "proliferation_suppression_rate": 31.0,
+    "mean_steps_to_apoptosis": 276.8,
+    "wet_lab_ground_truth_matches": [
+      "ERK"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 390
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "ERK",
+      "MCL1",
+      "PKC"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 38.5,
+    "apoptosis_rate_noisy": 92.5,
+    "proliferation_suppression_rate": 38.5,
+    "mean_steps_to_apoptosis": 284.5,
+    "wet_lab_ground_truth_matches": [
+      "ERK"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 420
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "MCL1",
+      "MEK",
+      "PKC"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 44.5,
+    "apoptosis_rate_noisy": 94.0,
+    "proliferation_suppression_rate": 44.5,
+    "mean_steps_to_apoptosis": 297.6,
+    "wet_lab_ground_truth_matches": [
+      "MEK"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 630
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "MCL1",
+      "PKC"
+    ],
+    "n_drugs": 2,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 37.5,
+    "apoptosis_rate_noisy": 93.0,
+    "proliferation_suppression_rate": 37.5,
+    "mean_steps_to_apoptosis": 256.0,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 1200
+  },
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "MCL1",
+      "PI3K",
+      "PKC"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.02,
+    "noise_percent": 2.0,
+    "apoptosis_rate_clean": 100.0,
+    "apoptosis_rate_noisy": 100.0,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 242.5,
+    "wet_lab_ground_truth_matches": [
+      "PI3K"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 1230
+  }
+]

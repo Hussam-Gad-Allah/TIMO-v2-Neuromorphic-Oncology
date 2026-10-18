@@ -1,0 +1,23 @@
+[
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "AKT",
+      "EZH2",
+      "MCL1"
+    ],
+    "n_drugs": 3,
+    "noise_prob": 0.1,
+    "noise_percent": 10.0,
+    "apoptosis_rate_clean": 100.0,
+    "apoptosis_rate_noisy": 100.0,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 199.5,
+    "wet_lab_ground_truth_matches": [
+      "AKT"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 90
+  }
+]

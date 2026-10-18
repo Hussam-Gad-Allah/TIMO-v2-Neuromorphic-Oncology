@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt02_tlgl_SPHK1_inhibition",
+  "index": 2,
+  "title": "T-LGL Target 02: SPHK1 (Sphingosine Kinase 1) Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "SPHK1"
+  ],
+  "mechanism": "SPHK1 inhibition eliminates S1P production, restoring endogenous pro-apoptotic Ceramide accumulation.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt02_tlgl_SPHK1_inhibition.cnf"
+}

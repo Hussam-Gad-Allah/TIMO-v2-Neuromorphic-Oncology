@@ -1,0 +1,24 @@
+{
+  "total_blocking_clauses": 1,
+  "total_synergy_flips": 0,
+  "blocking_clauses": [
+    {
+      "step": 2430,
+      "candidate_drugs": [
+        "Caspase",
+        "NFkB",
+        "STAT3"
+      ],
+      "clause_literals": [
+        -77,
+        -68,
+        -66
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 40.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    }
+  ],
+  "synergy_flips": []
+}

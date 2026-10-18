@@ -1,0 +1,41 @@
+[
+  {
+    "model_name": "T-LGL Patient 03: PDGF-Driven SPHK1-S1P Attractor",
+    "candidate_drugs": [
+      "Caspase",
+      "Ceramide",
+      "MCL1"
+    ],
+    "n_drugs": 3,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 46.0,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "Ceramide",
+      "Caspase"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 3210
+  },
+  {
+    "model_name": "T-LGL Patient 03: PDGF-Driven SPHK1-S1P Attractor",
+    "candidate_drugs": [
+      "MEK",
+      "PI3K"
+    ],
+    "n_drugs": 2,
+    "apoptosis_rate_clean": 54.0,
+    "apoptosis_rate_noisy": 91.5,
+    "proliferation_suppression_rate": 100.0,
+    "mean_steps_to_apoptosis": 377.2,
+    "wet_lab_ground_truth_matches": [
+      "PI3K",
+      "MEK"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 3270
+  }
+]

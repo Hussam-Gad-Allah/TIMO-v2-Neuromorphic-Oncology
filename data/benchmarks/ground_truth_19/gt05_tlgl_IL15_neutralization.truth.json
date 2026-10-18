@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt05_tlgl_IL15_neutralization",
+  "index": 5,
+  "title": "T-LGL Target 05: IL-15 Master Cytokine Neutralization",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "IL15"
+  ],
+  "mechanism": "Blocks primary autocrine cytokine loop responsible for constitutive JAK-STAT3 activation.",
+  "citation": "Saadatpour et al. (2011), Table 1; Chen et al. (2012)",
+  "cnf_file": "gt05_tlgl_IL15_neutralization.cnf"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 19,
+  "steps_taken": 630,
+  "time_seconds": 4.13,
+  "seed": 42,
+  "cnf": "unsolved_pt05_flhcc_dnajb1_prkaca.cnf",
+  "n_vars": 148,
+  "n_clauses": 366,
+  "active_drugs": [
+    "EZH2",
+    "MCL1",
+    "PKC"
+  ],
+  "validation_noise": 0.05,
+  "apoptosis_rate_clean": 44.5,
+  "apoptosis_rate_noisy": 100.0,
+  "wet_lab_match": []
+}

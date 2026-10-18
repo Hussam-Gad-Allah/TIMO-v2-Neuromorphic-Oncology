@@ -1,0 +1,74 @@
+{
+  "name": "Thyroid Carcinoma (THCA - Papillary, Anaplastic, Medullary)",
+  "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+  "url": "https://doi.org/10.1016/j.cell.2014.09.050",
+  "stimuli": [
+    "TSH_stim",
+    "Chemo_DNA_damage",
+    "BRAF_mut",
+    "RET_fusion",
+    "RAS_mut",
+    "TERT_prom_mut",
+    "TP53_mut",
+    "PIK3CA_mut"
+  ],
+  "drug_targets": [
+    "BRAF",
+    "RET",
+    "MEK",
+    "ERK",
+    "PI3K",
+    "AKT",
+    "mTOR",
+    "STAT3",
+    "NFkB",
+    "MCL1",
+    "BCL2",
+    "BCLxL",
+    "XIAP"
+  ],
+  "phenotypes": {
+    "cancer_state": {
+      "Proliferation": 1,
+      "Apoptosis": 0
+    },
+    "curative_state": {
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "rules": {
+    "TSH_stim": "TSH_stim",
+    "Chemo_DNA_damage": "Chemo_DNA_damage",
+    "BRAF_mut": "BRAF_mut",
+    "RET_fusion": "RET_fusion",
+    "RAS_mut": "RAS_mut",
+    "TERT_prom_mut": "TERT_prom_mut",
+    "TP53_mut": "TP53_mut",
+    "PIK3CA_mut": "PIK3CA_mut",
+    "RET": "RET_fusion",
+    "RAS": "RAS_mut  or  RET",
+    "BRAF": "BRAF_mut  or  RAS",
+    "MEK": "BRAF",
+    "ERK": "MEK",
+    "PI3K": "PIK3CA_mut  or  RAS  or  RET",
+    "AKT": "PI3K",
+    "mTOR": "AKT",
+    "STAT3": "RET  or  ERK",
+    "NFkB": "AKT  or  Chemo_DNA_damage",
+    "ATM_ATR": "Chemo_DNA_damage",
+    "P53": "ATM_ATR  and  not TP53_mut",
+    "BCL2": "(NFkB  or  STAT3)  and  not BAX",
+    "BCLxL": "(NFkB  or  STAT3  or  ERK)  and  not BAX",
+    "MCL1": "(AKT  or  ERK  or  STAT3)  and  not BAX",
+    "XIAP": "AKT  and  not SMAC",
+    "BAX": "(P53  or  not BCL2  or  not BCLxL)  and  not MCL1",
+    "CytoC": "BAX",
+    "SMAC": "BAX",
+    "Caspase9": "CytoC  and  not XIAP",
+    "Caspase8": "Chemo_DNA_damage",
+    "Caspase3": "(Caspase9  or  Caspase8)  and  not XIAP",
+    "Apoptosis": "Caspase3",
+    "Proliferation": "(ERK  or  AKT  or  TERT_prom_mut)  and  not Apoptosis"
+  }
+}

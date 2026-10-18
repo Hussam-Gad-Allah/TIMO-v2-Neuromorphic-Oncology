@@ -1,0 +1,22 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 26,
+  "steps_taken": 210,
+  "time_seconds": 1.35,
+  "seed": 42,
+  "cnf": "unsolved_pt07_nut_brd4_nutm1.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "active_drugs": [
+    "AKT",
+    "EZH2",
+    "MCL1"
+  ],
+  "validation_noise": 0.05,
+  "apoptosis_rate_clean": 100.0,
+  "apoptosis_rate_noisy": 100.0,
+  "wet_lab_match": [
+    "AKT"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt11_tlgl_MEK_inhibition",
+  "index": 11,
+  "title": "T-LGL Target 11: MEK (MAPK/ERK Kinase) Targeted Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "MEK"
+  ],
+  "mechanism": "Inhibition with Trametinib prevents phosphorylation of downstream ERK, blocking Proliferation.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt11_tlgl_MEK_inhibition.cnf"
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt18_tlgl_GAP_activation",
+  "index": 18,
+  "title": "T-LGL Target 18: GAP (GTPase-Activating Protein) Activation",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "GAP"
+  ],
+  "mechanism": "Stimulates GTP hydrolysis to switch active Ras-GTP into inactive Ras-GDP, extinguishing survival signals.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt18_tlgl_GAP_activation.cnf"
+}

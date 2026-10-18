@@ -1,0 +1,3 @@
+step,proposed_drugs,n_drugs,apoptosis_clean,apoptosis_noisy,prolif_suppression,mean_steps,wet_lab_match,verdict,accepted
+90,AKT+EZH2+mTOR,3,29.5,96.5,29.5,163.7,AKT+mTOR,VERIFIED_THERAPEUTIC_ATTRACTOR,YES
+210,AKT+EZH2+MCL1,3,100.0,100.0,100.0,205.5,AKT,VERIFIED_THERAPEUTIC_ATTRACTOR,YES

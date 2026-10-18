@@ -1,0 +1,146 @@
+{
+  "thca_pt01_braf_v600e_radioiodine_refractory": {
+    "title": "Patient thca_pt01_braf_v600e_radioiodine_refractory: Radioiodine-Refractory Papillary Thyroid Carcinoma (RAIR-PTC)",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "Radioiodine-Refractory Papillary Thyroid Carcinoma (RAIR-PTC)",
+      "primary_driver": "BRAF V600E mutation, loss of sodium-iodide symporter (NIS)",
+      "hospital_treatment": "Lenvatinib (oral multikinase inhibitor)",
+      "real_world_outcome": "PFS 18.3 mo (SELECT trial benefit)",
+      "known_resistance_mechanism": "Marked response initially; eventual resistance via PI3K/Akt feedback upregulation"
+    },
+    "pinned": {
+      "BRAF_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt02_ret_fusion_selpercatinib_responder": {
+    "title": "Patient thca_pt02_ret_fusion_selpercatinib_responder: CCDC6-RET Translocated Papillary Thyroid Cancer",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "CCDC6-RET Translocated Papillary Thyroid Cancer",
+      "primary_driver": "CCDC6-RET rearrangement, intact p53 axis",
+      "hospital_treatment": "Selpercatinib (highly selective RET kinase inhibitor)",
+      "real_world_outcome": "Complete Remission >30 mo (LIBRETTO-001 benefit)",
+      "known_resistance_mechanism": "Potent uncoupling of RET collapses downstream MAPK and PI3K pathways"
+    },
+    "pinned": {
+      "RET_fusion": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt03_anaplastic_braf_p53_double_hit_lethal": {
+    "title": "Patient thca_pt03_anaplastic_braf_p53_double_hit_lethal: Anaplastic Thyroid Carcinoma (ATC) - Ultra-Aggressive",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "Anaplastic Thyroid Carcinoma (ATC) - Ultra-Aggressive",
+      "primary_driver": "Concurrent BRAF V600E, TP53 null, and TERT promoter mutation",
+      "hospital_treatment": "Dabrafenib + Trametinib salvage",
+      "real_world_outcome": "Primary failure at 2.1 mo, asphyxiation, death at 3.8 mo",
+      "known_resistance_mechanism": "Co-occurrence of p53 loss and TERT drives unstoppable mitotic immortality"
+    },
+    "pinned": {
+      "BRAF_mut": 1,
+      "TP53_mut": 1,
+      "TERT_prom_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt04_ras_mutant_follicular_carcinoma": {
+    "title": "Patient thca_pt04_ras_mutant_follicular_carcinoma: NRAS Q61R Mutant Follicular Thyroid Carcinoma",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "NRAS Q61R Mutant Follicular Thyroid Carcinoma",
+      "primary_driver": "Activating NRAS mutation, preferential PI3K signaling",
+      "hospital_treatment": "Sorafenib monotherapy",
+      "real_world_outcome": "Progression at 4.5 mo, widespread pulmonary metastases",
+      "known_resistance_mechanism": "Feedback activation of CRAF and Akt shields cancer cells from Sorafenib"
+    },
+    "pinned": {
+      "RAS_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt05_medullary_ret_m918t_cabozantinib_res": {
+    "title": "Patient thca_pt05_medullary_ret_m918t_cabozantinib_res: MEN2B / Sporadic Medullary Thyroid Carcinoma (MTC)",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "MEN2B / Sporadic Medullary Thyroid Carcinoma (MTC)",
+      "primary_driver": "RET M918T activating kinase mutation, secondary gatekeeper",
+      "hospital_treatment": "Cabozantinib (RET / VEGFR2 / MET inhibitor)",
+      "real_world_outcome": "Progression at 5.2 mo, hepatic lesions, death at 11.0 mo",
+      "known_resistance_mechanism": "Acquired gatekeeper mutation impedes TKI binding pocket access"
+    },
+    "pinned": {
+      "RET_fusion": 1,
+      "PIK3CA_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt06_tert_promoter_aggressive_recurrent": {
+    "title": "Patient thca_pt06_tert_promoter_aggressive_recurrent: High-Risk TERT-Mutated Tall-Cell PTC",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "High-Risk TERT-Mutated Tall-Cell PTC",
+      "primary_driver": "TERT C228T promoter mutation, telomerase reactivation",
+      "hospital_treatment": "Radioiodine ablation + Lenvatinib",
+      "real_world_outcome": "Progression at 6.0 mo, invasive tracheal invasion",
+      "known_resistance_mechanism": "Telomerase immortality maintains genomic survival despite DNA radiation"
+    },
+    "pinned": {
+      "TERT_prom_mut": 1,
+      "BRAF_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt07_pi3k_akt_hyperactive_refractory": {
+    "title": "Patient thca_pt07_pi3k_akt_hyperactive_refractory: PIK3CA-Mutant Advanced Thyroid Carcinoma",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "PIK3CA-Mutant Advanced Thyroid Carcinoma",
+      "primary_driver": "PIK3CA H1047R hotspot mutation + RAS activation",
+      "hospital_treatment": "Everolimus (mTOR inhibitor) + Lenvatinib",
+      "real_world_outcome": "Progression at 3.4 mo, pleural effusion",
+      "known_resistance_mechanism": "mTOR inhibition triggers relief of feedback inhibition on Akt/Mcl-1"
+    },
+    "pinned": {
+      "PIK3CA_mut": 1,
+      "RAS_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "thca_pt08_pan_refractory_anaplastic_triplet_hit": {
+    "title": "Patient thca_pt08_pan_refractory_anaplastic_triplet_hit: Pan-Refractory Quadruple-Feature Anaplastic Carcinoma",
+    "citation": "TCGA-THCA (Cell 2014, 159:676-690); Schlumberger et al. (2015) NEJM (SELECT - Lenvatinib); Subbiah et al. (2020) Lancet Oncol (Selpercatinib)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Quadruple-Feature Anaplastic Carcinoma",
+      "primary_driver": "BRAF V600E + RET + TP53 null + TERT triplet",
+      "hospital_treatment": "Chemo-IO followed by multi-TKI salvage",
+      "real_world_outcome": "Death at 2.0 mo, fulminant neck mass",
+      "known_resistance_mechanism": "Simultaneous activation of dual kinase drivers with p53 loss locks apoptosis"
+    },
+    "pinned": {
+      "BRAF_mut": 1,
+      "RET_fusion": 1,
+      "TP53_mut": 1,
+      "TERT_prom_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

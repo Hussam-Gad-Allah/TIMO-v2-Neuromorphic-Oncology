@@ -1,0 +1,141 @@
+{
+  "sarc_pt01_gist_kit_exon11_imatinib_resistant": {
+    "title": "Patient sarc_pt01_gist_kit_exon11_imatinib_resistant: Gastrointestinal Stromal Tumor (GIST)",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Gastrointestinal Stromal Tumor (GIST)",
+      "primary_driver": "KIT exon 11 del with secondary exon 17 D816H gatekeeper",
+      "hospital_treatment": "Imatinib mesylate 400mg daily",
+      "real_world_outcome": "Progression at 5.2 mo, multiple liver metastases",
+      "known_resistance_mechanism": "Secondary ATP activation loop mutation impairs Imatinib binding"
+    },
+    "pinned": {
+      "KIT_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt02_dedifferentiated_liposarcoma_mdm2_amp": {
+    "title": "Patient sarc_pt02_dedifferentiated_liposarcoma_mdm2_amp: Dedifferentiated Liposarcoma (DDLPS)",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Dedifferentiated Liposarcoma (DDLPS)",
+      "primary_driver": "Giant 12q13-15 amplicon (MDM2 + CDK4 co-amplified)",
+      "hospital_treatment": "Doxorubicin monotherapy",
+      "real_world_outcome": "Primary chemo-refractory at 2.4 mo, retroperitoneal mass >25cm",
+      "known_resistance_mechanism": "Massive MDM2 amplification targets p53 for constant degradation"
+    },
+    "pinned": {
+      "MDM2_amp": 1,
+      "CDK4_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt03_leiomyosarcoma_rb1_p53_double_null": {
+    "title": "Patient sarc_pt03_leiomyosarcoma_rb1_p53_double_null: Uterine / Retroperitoneal Leiomyosarcoma (LMS)",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Uterine / Retroperitoneal Leiomyosarcoma (LMS)",
+      "primary_driver": "Biallelic loss of both TP53 and RB1",
+      "hospital_treatment": "Gemcitabine + Docetaxel",
+      "real_world_outcome": "Refractory at 3.0 mo, multiple pulmonary cannonball lesions",
+      "known_resistance_mechanism": "Complete ablation of cell-cycle arrest and apoptosis checkpoints"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "RB1_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt04_pdgfra_d842v_avapritinib_responder": {
+    "title": "Patient sarc_pt04_pdgfra_d842v_avapritinib_responder: PDGFRA-Mutant Gastric GIST",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "PDGFRA-Mutant Gastric GIST",
+      "primary_driver": "Pathognomonic PDGFRA exon 18 D842V mutation",
+      "hospital_treatment": "Avapritinib (NAVIGATOR trial protocol)",
+      "real_world_outcome": "Durable Complete Remission >36 mo (CURED)",
+      "known_resistance_mechanism": "Selective conformation-specific uncoupling of mutant PDGFRA"
+    },
+    "pinned": {
+      "PDGFRA_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt05_synovial_sarcoma_ss18_ssx_fusion": {
+    "title": "Patient sarc_pt05_synovial_sarcoma_ss18_ssx_fusion: Monophasic Synovial Sarcoma",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Monophasic Synovial Sarcoma",
+      "primary_driver": "t(X;18) SS18-SSX fusion driving BAF complex remodeling",
+      "hospital_treatment": "Ifosfamide + Doxorubicin",
+      "real_world_outcome": "Progression at 4.1 mo, pleural effusion",
+      "known_resistance_mechanism": "Epigenetic transcriptional rewiring sustains Mcl-1 and Bcl-2"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt06_undifferentiated_pleomorphic_sarcoma_ups": {
+    "title": "Patient sarc_pt06_undifferentiated_pleomorphic_sarcoma_ups: High-Grade Undifferentiated Pleomorphic Sarcoma (UPS)",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "High-Grade Undifferentiated Pleomorphic Sarcoma (UPS)",
+      "primary_driver": "Severe chromosomal complexity, TP53 missense",
+      "hospital_treatment": "Pembrolizumab (SARC028 trial)",
+      "real_world_outcome": "PFS 19.5 mo, major clinical benefit",
+      "known_resistance_mechanism": "High neoantigenic burden and inflammatory microenvironment"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt07_angiosarcoma_radiation_induced_cmyc_amp": {
+    "title": "Patient sarc_pt07_angiosarcoma_radiation_induced_cmyc_amp: Post-Radiation Cutaneous Angiosarcoma",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Post-Radiation Cutaneous Angiosarcoma",
+      "primary_driver": "High-level MYC amplification + vascular endothelial proliferation",
+      "hospital_treatment": "Paclitaxel weekly",
+      "real_world_outcome": "Progression at 2.8 mo, scalp ulceration, death at 5.5 mo",
+      "known_resistance_mechanism": "MYC overexpression overrides taxane mitotic apoptosis"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "sarc_pt08_pan_refractory_kit_mdm2_p53_triplet": {
+    "title": "Patient sarc_pt08_pan_refractory_kit_mdm2_p53_triplet: Pan-Refractory Triplet-Hit Sarcoma",
+    "citation": "TCGA-SARC (Cell 2017, 171:562-575); Demetri et al. (2002) NEJM (Imatinib in GIST); Tap et al. (2016) Lancet (Doxorubicin + Olaratumab)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Sarcoma",
+      "primary_driver": "Concurrent KIT mut, MDM2 amp, and TP53 null",
+      "hospital_treatment": "Sunitinib followed by Regorafenib salvage",
+      "real_world_outcome": "Rapid failure at 1.8 mo, death at 3.4 mo",
+      "known_resistance_mechanism": "Simultaneous kinase driving with total p53 shutdown"
+    },
+    "pinned": {
+      "KIT_mut": 1,
+      "MDM2_amp": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

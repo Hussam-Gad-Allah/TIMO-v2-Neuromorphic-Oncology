@@ -1,0 +1,17 @@
+{
+  "cnf": "F:\\Research II - PhD\\flyfly_oncology\\data\\benchmarks\\unsolved_patients\\unsolved_pt02_mrt_smarcb1_null.cnf",
+  "n_vars": 148,
+  "n_clauses": 366,
+  "config": {
+    "mode": "full",
+    "seed": 42,
+    "max_steps": 2000000,
+    "max_allowed_drugs": 3,
+    "validation_noise": 0.18,
+    "target_apoptosis": 100.0
+  },
+  "flags": {
+    "snn": true,
+    "oncology": true
+  }
+}

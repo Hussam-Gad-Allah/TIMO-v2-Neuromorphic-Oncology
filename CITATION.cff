@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use TIMO v2 in your research, please cite the following work."
+authors:
+  - family-names: "Gad-Allah"
+    given-names: "Hussam"
+    orcid: "https://orcid.org/0009-0002-6823-2951"
+    affiliation: "Department of Data Science, Faculty of Graduate Studies for Statistical Research (FGSSR), Cairo University & Capital University (CAPU), Giza, Egypt"
+title: "Drosophila Connectome Spiking Dynamics Decode Synergistic Drug Attractors in Refractory Human Cancers"
+version: 2.0.0
+date-released: 2026-10-18
+url: "https://github.com/Hussam-Gad-Allah/TIMO-v2-Neuromorphic-Oncology"
+repository-code: "https://github.com/Hussam-Gad-Allah/TIMO-v2-Neuromorphic-Oncology"
+license: MIT

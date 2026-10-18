@@ -1,0 +1,22 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 27,
+  "steps_taken": 810,
+  "time_seconds": 6.28,
+  "seed": 42,
+  "cnf": "unsolved_pt03_ewing_ewsr1_fli1.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "active_drugs": [
+    "AKT",
+    "BET_BRD4",
+    "MCL1"
+  ],
+  "validation_noise": 0.02,
+  "apoptosis_rate_clean": 100.0,
+  "apoptosis_rate_noisy": 100.0,
+  "wet_lab_match": [
+    "AKT"
+  ]
+}

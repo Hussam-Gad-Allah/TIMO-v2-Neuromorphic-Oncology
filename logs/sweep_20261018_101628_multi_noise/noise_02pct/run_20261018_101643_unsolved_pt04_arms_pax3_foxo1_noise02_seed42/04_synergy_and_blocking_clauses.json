@@ -1,0 +1,39 @@
+{
+  "total_blocking_clauses": 2,
+  "total_synergy_flips": 0,
+  "blocking_clauses": [
+    {
+      "step": 150,
+      "candidate_drugs": [
+        "AKT",
+        "EZH2",
+        "PI3K"
+      ],
+      "clause_literals": [
+        -52,
+        -46,
+        -51
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 30.0,
+      "apoptosis_rate_noisy": 85.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 240,
+      "candidate_drugs": [
+        "PI3K",
+        "PKC"
+      ],
+      "clause_literals": [
+        -51,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 19.5,
+      "apoptosis_rate_noisy": 78.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    }
+  ],
+  "synergy_flips": []
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt14_tlgl_BclxL_inhibition",
+  "index": 14,
+  "title": "T-LGL Target 14: Bcl-xL Antiapoptotic Neutralization",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "BclxL"
+  ],
+  "mechanism": "Neutralization of Bcl-xL permits BID-dependent mitochondrial outer membrane permeabilization.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt14_tlgl_BclxL_inhibition.cnf"
+}

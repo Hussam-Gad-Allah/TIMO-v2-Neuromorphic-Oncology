@@ -1,0 +1,142 @@
+{
+  "esca_pt01_her2_amp_trastuzumab_resistant": {
+    "title": "Patient esca_pt01_her2_amp_trastuzumab_resistant: HER2+ Esophageal Adenocarcinoma",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "HER2+ Esophageal Adenocarcinoma",
+      "primary_driver": "Focal HER2 amplification + secondary EGFR bypass",
+      "hospital_treatment": "Trastuzumab + Cisplatin/5-FU",
+      "real_world_outcome": "Progression at 4.6 mo, celiac adenopathy",
+      "known_resistance_mechanism": "EGFR and PI3K/Akt activation bypasses HER2 blockade"
+    },
+    "pinned": {
+      "HER2_amp": 1,
+      "EGFR_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt02_pembrolizumab_cured_pd_l1_high": {
+    "title": "Patient esca_pt02_pembrolizumab_cured_pd_l1_high: Esophageal Squamous Cell Carcinoma (ESCC)",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "Esophageal Squamous Cell Carcinoma (ESCC)",
+      "primary_driver": "PD-L1 CPS >= 10, tobacco/alcohol mutational load",
+      "hospital_treatment": "Pembrolizumab + Chemo (KEYNOTE-590)",
+      "real_world_outcome": "Complete Remission >42 mo (CURED)",
+      "known_resistance_mechanism": "Absence of rigid anti-apoptotic defenses facilitates rapid cytotoxic T-cell death"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt03_ccnd1_amp_cdk4_refractory": {
+    "title": "Patient esca_pt03_ccnd1_amp_cdk4_refractory: CCND1-Amplified Advanced ESCC",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "CCND1-Amplified Advanced ESCC",
+      "primary_driver": "11q13 CCND1 amplification + TP53 missense",
+      "hospital_treatment": "Nivolumab + Ipilimumab (CheckMate-648)",
+      "real_world_outcome": "Primary refractory, rapid death at 2.4 mo",
+      "known_resistance_mechanism": "Unrestrained CDK4/6 activity drives relentless S-phase entry"
+    },
+    "pinned": {
+      "CCND1_amp": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt04_pi3k_mutant_platinum_resistant": {
+    "title": "Patient esca_pt04_pi3k_mutant_platinum_resistant: PIK3CA E545K Activated Adenocarcinoma",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "PIK3CA E545K Activated Adenocarcinoma",
+      "primary_driver": "Activating PI3K catalytic mutation, high MCL-1",
+      "hospital_treatment": "FOLFOX chemotherapy",
+      "real_world_outcome": "Early failure at 3.0 mo, hepatic spread",
+      "known_resistance_mechanism": "Constitutive Akt flux continuously phosphorylates BAD"
+    },
+    "pinned": {
+      "PIK3CA_mut": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt05_cdkn2a_null_radiochemo_refractory": {
+    "title": "Patient esca_pt05_cdkn2a_null_radiochemo_refractory: Biallelic CDKN2A Deleted ESCC",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "Biallelic CDKN2A Deleted ESCC",
+      "primary_driver": "Homozygous p16INK4a loss, high Cyclin D1",
+      "hospital_treatment": "Chemoradiotherapy (CROSS trial protocol)",
+      "real_world_outcome": "Progression at 3.5 mo, tracheoesophageal fistula",
+      "known_resistance_mechanism": "Loss of p16INK4a hyperactivates CDK4/6, blocking radiation senescence"
+    },
+    "pinned": {
+      "CDKN2A_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt06_egfr_overexpressed_cetuximab_failure": {
+    "title": "Patient esca_pt06_egfr_overexpressed_cetuximab_failure: EGFR-Driven Mid-Thoracic ESCC",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "EGFR-Driven Mid-Thoracic ESCC",
+      "primary_driver": "High EGFR copy number, wild-type KRAS",
+      "hospital_treatment": "Cetuximab + Paclitaxel",
+      "real_world_outcome": "Progression at 3.2 mo, bone metastases",
+      "known_resistance_mechanism": "Parallel PI3K and STAT3 survival transcription sustains Mcl-1"
+    },
+    "pinned": {
+      "EGFR_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt07_tp53_nonsense_fulminant_lethal": {
+    "title": "Patient esca_pt07_tp53_nonsense_fulminant_lethal: Disruptive TP53 Null Esophageal Carcinoma",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "Disruptive TP53 Null Esophageal Carcinoma",
+      "primary_driver": "TP53 R175H hotspot mutation, loss of BAX induction",
+      "hospital_treatment": "Docetaxel + Cisplatin + 5-FU",
+      "real_world_outcome": "Primary chemo-resistance, death at 3.9 mo",
+      "known_resistance_mechanism": "Inability to transactivate BAX/PUMA upon DNA crosslinks"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "esca_pt08_pan_refractory_triplet_hit_lethal": {
+    "title": "Patient esca_pt08_pan_refractory_triplet_hit_lethal: Pan-Refractory Triplet-Hit Gastroesophageal Cancer",
+    "citation": "TCGA-ESCA (Nature 2017, 541:169-175); Sun et al. (2021) Lancet (KEYNOTE-590); Doki et al. (2022) NEJM (CheckMate-648)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Gastroesophageal Cancer",
+      "primary_driver": "Concurrent HER2 amp, CCND1 amp, and TP53 null",
+      "hospital_treatment": "Trastuzumab Deruxtecan salvage",
+      "real_world_outcome": "Rapid failure at 1.8 mo, death at 3.5 mo",
+      "known_resistance_mechanism": "Co-amplification of RTK and cell cycle drivers creates absolute apoptosis lock"
+    },
+    "pinned": {
+      "HER2_amp": 1,
+      "CCND1_amp": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

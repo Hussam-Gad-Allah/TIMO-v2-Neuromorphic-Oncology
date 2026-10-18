@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt06_tlgl_JAK_inhibition",
+  "index": 6,
+  "title": "T-LGL Target 06: JAK (Janus Kinase) Kinase Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "JAK"
+  ],
+  "mechanism": "JAK inhibition (e.g., Tofacitinib / Ruxolitinib) deprives STAT3 of activating phosphorylation.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt06_tlgl_JAK_inhibition.cnf"
+}

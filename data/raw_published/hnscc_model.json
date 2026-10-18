@@ -1,0 +1,76 @@
+{
+  "name": "Head & Neck Squamous Cell Carcinoma (HNSCC)",
+  "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+  "url": "https://doi.org/10.1038/nature14129",
+  "stimuli": [
+    "EGF_stim",
+    "Chemo_DNA_damage",
+    "EGFR_amp",
+    "PIK3CA_mut",
+    "TP53_mut",
+    "CDKN2A_loss",
+    "CCND1_amp",
+    "HPV_pos",
+    "NOTCH1_loss"
+  ],
+  "drug_targets": [
+    "EGFR",
+    "PI3K",
+    "AKT",
+    "mTOR",
+    "MEK",
+    "ERK",
+    "STAT3",
+    "NFkB",
+    "CDK4_6",
+    "MCL1",
+    "BCL2",
+    "BCLxL",
+    "XIAP"
+  ],
+  "phenotypes": {
+    "cancer_state": {
+      "Proliferation": 1,
+      "Apoptosis": 0
+    },
+    "curative_state": {
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "rules": {
+    "EGF_stim": "EGF_stim",
+    "Chemo_DNA_damage": "Chemo_DNA_damage",
+    "EGFR_amp": "EGFR_amp",
+    "PIK3CA_mut": "PIK3CA_mut",
+    "TP53_mut": "TP53_mut",
+    "CDKN2A_loss": "CDKN2A_loss",
+    "CCND1_amp": "CCND1_amp",
+    "HPV_pos": "HPV_pos",
+    "NOTCH1_loss": "NOTCH1_loss",
+    "EGFR": "EGFR_amp  or  EGF_stim",
+    "RAS": "EGFR",
+    "MEK": "RAS",
+    "ERK": "MEK",
+    "PI3K": "PIK3CA_mut  or  EGFR",
+    "AKT": "PI3K",
+    "mTOR": "AKT",
+    "STAT3": "EGFR  or  ERK",
+    "NFkB": "AKT  or  Chemo_DNA_damage",
+    "CDK4_6": "CCND1_amp  or  CDKN2A_loss",
+    "ATM_ATR": "Chemo_DNA_damage",
+    "P53": "(ATM_ATR  and  not TP53_mut)  and  not HPV_pos",
+    "BCL2": "(NFkB  or  STAT3)  and  not BAX",
+    "BCLxL": "(NFkB  or  STAT3  or  ERK)  and  not BAX",
+    "MCL1": "(AKT  or  ERK  or  STAT3)  and  not BAX",
+    "XIAP": "AKT  and  not SMAC",
+    "BAX": "(P53  or  not BCL2  or  not BCLxL)  and  not MCL1",
+    "CytoC": "BAX",
+    "SMAC": "BAX",
+    "Caspase9": "CytoC  and  not XIAP",
+    "Caspase8": "Chemo_DNA_damage",
+    "Caspase3": "(Caspase9  or  Caspase8)  and  not XIAP",
+    "Apoptosis": "Caspase3",
+    "Proliferation": "(ERK  or  AKT  or  CDK4_6)  and  not Apoptosis"
+  }
+}

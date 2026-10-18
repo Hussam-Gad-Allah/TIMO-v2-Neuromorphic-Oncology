@@ -1,0 +1,70 @@
+[
+  {
+    "model_name": "AML Patient 02: DNMT3A-mutant High-Risk Resistant",
+    "candidate_drugs": [
+      "FLT3"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 60.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "FLT3"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 30
+  },
+  {
+    "model_name": "AML Patient 02: DNMT3A-mutant High-Risk Resistant",
+    "candidate_drugs": [
+      "MAPK"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 61.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 90
+  },
+  {
+    "model_name": "AML Patient 02: DNMT3A-mutant High-Risk Resistant",
+    "candidate_drugs": [
+      "PI3K_AKT"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 64.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PI3K_AKT"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 120
+  },
+  {
+    "model_name": "AML Patient 02: DNMT3A-mutant High-Risk Resistant",
+    "candidate_drugs": [
+      "BCL2",
+      "STAT5"
+    ],
+    "n_drugs": 2,
+    "apoptosis_rate_clean": 49.0,
+    "apoptosis_rate_noisy": 97.0,
+    "proliferation_suppression_rate": 49.0,
+    "mean_steps_to_apoptosis": 41.8,
+    "wet_lab_ground_truth_matches": [
+      "STAT5",
+      "BCL2"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 180
+  }
+]

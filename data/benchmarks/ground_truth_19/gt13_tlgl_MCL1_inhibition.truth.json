@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt13_tlgl_MCL1_inhibition",
+  "index": 13,
+  "title": "T-LGL Target 13: Mcl-1 Direct Anti-Apoptotic Blockade",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "MCL1"
+  ],
+  "mechanism": "Direct inhibition of Mcl-1 releases BID and activates Caspase-mediated mitochondrial apoptosis.",
+  "citation": "Saadatpour et al. (2011), Table 1; Zhang et al. (2008)",
+  "cnf_file": "gt13_tlgl_MCL1_inhibition.cnf"
+}

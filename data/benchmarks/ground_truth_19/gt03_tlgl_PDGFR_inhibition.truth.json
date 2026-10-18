@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt03_tlgl_PDGFR_inhibition",
+  "index": 3,
+  "title": "T-LGL Target 03: PDGFR (PDGF Receptor) Blockade",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "PDGFR"
+  ],
+  "mechanism": "Blocks the PDGF autocrine survival loop, inactivating SPHK1 and PI3K downstream cascades.",
+  "citation": "Saadatpour et al. (2011), Table 1; Zhang et al. (2008)",
+  "cnf_file": "gt03_tlgl_PDGFR_inhibition.cnf"
+}

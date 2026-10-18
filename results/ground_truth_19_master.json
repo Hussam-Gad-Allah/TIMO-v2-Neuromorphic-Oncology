@@ -1,0 +1,443 @@
+{
+  "1": {
+    "idx": 1,
+    "id": "gt01_tlgl_S1P_knockout",
+    "gene": "S1P",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "S1P"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "SPHK1",
+      "sFas"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 99.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3060,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170044_gt01_tlgl_S1P_knockout_noise02_seed42",
+    "timestamp": "2026-10-16 17:01:02",
+    "noise_percent": 2.0
+  },
+  "2": {
+    "idx": 2,
+    "id": "gt02_tlgl_SPHK1_inhibition",
+    "gene": "SPHK1",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "SPHK1"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "SPHK1",
+      "sFas"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 99.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "EXACT MATCH (Published Solution)",
+    "steps": 3060,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170102_gt02_tlgl_SPHK1_inhibition_noise02_seed42",
+    "timestamp": "2026-10-16 17:01:17",
+    "noise_percent": 2.0
+  },
+  "3": {
+    "idx": 3,
+    "id": "gt03_tlgl_PDGFR_inhibition",
+    "gene": "PDGFR",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "PDGFR"
+    ],
+    "paper": "Saadatpour 2011; Zhang 2008",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "Ceramide",
+      "SPHK1"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 98.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 2790,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170117_gt03_tlgl_PDGFR_inhibition_noise02_seed42",
+    "timestamp": "2026-10-16 17:01:36",
+    "noise_percent": 2.0
+  },
+  "4": {
+    "idx": 4,
+    "id": "gt04_tlgl_PDGF_neutralization",
+    "gene": "PDGF",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "PDGF"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "Ceramide",
+      "SPHK1"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 98.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 2790,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170136_gt04_tlgl_PDGF_neutralization_noise02_seed42",
+    "timestamp": "2026-10-16 17:01:53",
+    "noise_percent": 2.0
+  },
+  "5": {
+    "idx": 5,
+    "id": "gt05_tlgl_IL15_neutralization",
+    "gene": "IL15",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "IL15"
+    ],
+    "paper": "Saadatpour 2011; Chen 2012",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "sFas"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 5430,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170153_gt05_tlgl_IL15_neutralization_noise02_seed42",
+    "timestamp": "2026-10-16 17:02:25",
+    "noise_percent": 2.0
+  },
+  "6": {
+    "idx": 6,
+    "id": "gt06_tlgl_JAK_inhibition",
+    "gene": "JAK",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "JAK"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "SPHK1",
+      "sFas"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 99.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3060,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170225_gt06_tlgl_JAK_inhibition_noise02_seed42",
+    "timestamp": "2026-10-16 17:02:42",
+    "noise_percent": 2.0
+  },
+  "7": {
+    "idx": 7,
+    "id": "gt07_tlgl_STAT3_knockdown",
+    "gene": "STAT3",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "STAT3"
+    ],
+    "paper": "Saadatpour 2011; Epling 2001",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "SPHK1",
+      "sFas"
+    ],
+    "apoptosis_clean": 100.0,
+    "apoptosis_noisy": 99.5,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 2.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3060,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170242_gt07_tlgl_STAT3_knockdown_noise02_seed42",
+    "timestamp": "2026-10-16 17:02:59",
+    "noise_percent": 2.0
+  },
+  "8": {
+    "idx": 8,
+    "id": "gt08_tlgl_PI3K_inhibition",
+    "gene": "PI3K",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "PI3K"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "TIMEOUT / INCOMPLETE",
+    "discovered_drugs": [
+      "BclxL",
+      "NFkB",
+      "PDGFR"
+    ],
+    "apoptosis_clean": 0.0,
+    "apoptosis_noisy": 0.0,
+    "eradication_level": "0.0% SUB-THRESHOLD (Noise: 2.0%)",
+    "match": "UNSOLVED",
+    "steps": 137,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261016_170043_multi_noise\\noise_02pct\\run_20261016_170259_gt08_tlgl_PI3K_inhibition_noise02_seed42",
+    "timestamp": "2026-10-16 17:03:01",
+    "noise_percent": 2.0
+  },
+  "9": {
+    "idx": 9,
+    "id": "gt09_tlgl_NFkB_inhibition",
+    "gene": "NFkB",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "NFkB"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "EXACT MATCH (Published Solution)",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091315_gt09_tlgl_NFkB_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:13:31",
+    "noise_percent": 18.0
+  },
+  "10": {
+    "idx": 10,
+    "id": "gt10_tlgl_RAS_inhibition",
+    "gene": "RAS",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "RAS"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091331_gt10_tlgl_RAS_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:13:46",
+    "noise_percent": 18.0
+  },
+  "11": {
+    "idx": 11,
+    "id": "gt11_tlgl_MEK_inhibition",
+    "gene": "MEK",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "MEK"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091346_gt11_tlgl_MEK_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:14:01",
+    "noise_percent": 18.0
+  },
+  "12": {
+    "idx": 12,
+    "id": "gt12_tlgl_ERK_inhibition",
+    "gene": "ERK",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "ERK"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091401_gt12_tlgl_ERK_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:14:17",
+    "noise_percent": 18.0
+  },
+  "13": {
+    "idx": 13,
+    "id": "gt13_tlgl_MCL1_inhibition",
+    "gene": "MCL1",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "MCL1"
+    ],
+    "paper": "Saadatpour 2011; Zhang 2008",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091417_gt13_tlgl_MCL1_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:14:32",
+    "noise_percent": 18.0
+  },
+  "14": {
+    "idx": 14,
+    "id": "gt14_tlgl_BclxL_inhibition",
+    "gene": "BclxL",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "BclxL"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091432_gt14_tlgl_BclxL_inhibition_noise18_seed42",
+    "timestamp": "2026-10-14 09:14:48",
+    "noise_percent": 18.0
+  },
+  "15": {
+    "idx": 15,
+    "id": "gt15_tlgl_sFas_neutralization",
+    "gene": "sFas",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "sFas"
+    ],
+    "paper": "Saadatpour 2011; Liu 2002",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "EXACT MATCH (Published Solution)",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091448_gt15_tlgl_sFas_neutralization_noise18_seed42",
+    "timestamp": "2026-10-14 09:15:03",
+    "noise_percent": 18.0
+  },
+  "16": {
+    "idx": 16,
+    "id": "gt16_tlgl_Ceramide_restoration",
+    "gene": "Ceramide",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "Ceramide"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091503_gt16_tlgl_Ceramide_restoration_noise18_seed42",
+    "timestamp": "2026-10-14 09:15:18",
+    "noise_percent": 18.0
+  },
+  "17": {
+    "idx": 17,
+    "id": "gt17_tlgl_Fas_death_agonist",
+    "gene": "Fas",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "Fas"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091518_gt17_tlgl_Fas_death_agonist_noise18_seed42",
+    "timestamp": "2026-10-14 09:15:34",
+    "noise_percent": 18.0
+  },
+  "18": {
+    "idx": 18,
+    "id": "gt18_tlgl_GAP_activation",
+    "gene": "GAP",
+    "model": "T-LGL Leukemia",
+    "ground_truth": [
+      "GAP"
+    ],
+    "paper": "Saadatpour 2011, Table 1",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "NFkB",
+      "sFas"
+    ],
+    "apoptosis_clean": 54.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 3030,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091534_gt18_tlgl_GAP_activation_noise18_seed42",
+    "timestamp": "2026-10-14 09:15:49",
+    "noise_percent": 18.0
+  },
+  "19": {
+    "idx": 19,
+    "id": "gt19_aml_BCL2_MCL1_synergy",
+    "gene": "AML Synergy",
+    "model": "AML Leukemia",
+    "ground_truth": [
+      "BCL2",
+      "MCL1"
+    ],
+    "paper": "Palma et al. 2021, JPM",
+    "status": "VERIFIED & SOLVED",
+    "discovered_drugs": [
+      "FLT3"
+    ],
+    "apoptosis_clean": 0.0,
+    "apoptosis_noisy": 100.0,
+    "eradication_level": "100% COMPLETE ERADICATION (Noise: 18.0%)",
+    "match": "SYNERGISTIC REGIMEN",
+    "steps": 30,
+    "run_dir": "F:\\Research II - PhD\\flyfly_oncology\\logs\\sweep_20261014_085315_multi_noise\\noise_18pct\\run_20261014_091549_gt19_aml_BCL2_MCL1_synergy_noise18_seed42",
+    "timestamp": "2026-10-14 09:15:50",
+    "noise_percent": 18.0
+  }
+}

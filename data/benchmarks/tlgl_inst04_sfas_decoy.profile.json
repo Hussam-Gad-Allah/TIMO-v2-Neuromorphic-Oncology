@@ -1,0 +1,13 @@
+{
+  "id": "tlgl_inst04_sfas_decoy",
+  "title": "T-LGL Patient 04: Soluble Fas Decoy Receptor Resistance",
+  "pinned": {
+    "Stimuli": 1,
+    "IL15": 1,
+    "PDGF": 1,
+    "sFas": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Fas-resistant patient overexpressing soluble decoy receptor sFas."
+}

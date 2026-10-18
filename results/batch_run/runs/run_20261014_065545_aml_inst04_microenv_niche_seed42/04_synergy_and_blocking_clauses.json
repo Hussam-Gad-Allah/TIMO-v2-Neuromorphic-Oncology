@@ -1,0 +1,153 @@
+{
+  "total_blocking_clauses": 8,
+  "total_synergy_flips": 2,
+  "blocking_clauses": [
+    {
+      "step": 30,
+      "candidate_drugs": [
+        "FLT3"
+      ],
+      "clause_literals": [
+        -18
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 60.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 90,
+      "candidate_drugs": [
+        "MAPK",
+        "PI3K_AKT"
+      ],
+      "clause_literals": [
+        -21,
+        -19
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 63.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 180,
+      "candidate_drugs": [
+        "STAT5"
+      ],
+      "clause_literals": [
+        -24
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 63.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 300,
+      "candidate_drugs": [
+        "MAPK"
+      ],
+      "clause_literals": [
+        -21
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 66.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 330,
+      "candidate_drugs": [
+        "MCL1",
+        "PI3K_AKT"
+      ],
+      "clause_literals": [
+        -23,
+        -19
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 81.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 990,
+      "candidate_drugs": [
+        "PIM"
+      ],
+      "clause_literals": [
+        -20
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 60.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 1440,
+      "candidate_drugs": [
+        "PI3K_AKT"
+      ],
+      "clause_literals": [
+        -19
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 66.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 4620,
+      "candidate_drugs": [
+        "MCL1"
+      ],
+      "clause_literals": [
+        -23
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 84.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    }
+  ],
+  "synergy_flips": [
+    {
+      "step": 177,
+      "cluster_indices": [
+        40,
+        4
+      ],
+      "cluster_symbols": [
+        "AUX_NOT_13",
+        "FLT3"
+      ],
+      "rates": [
+        0.7895298004150391,
+        0.6558430790901184
+      ],
+      "unsat_before": 21,
+      "unsat_after": 20
+    },
+    {
+      "step": 180,
+      "cluster_indices": [
+        19,
+        11,
+        9
+      ],
+      "cluster_symbols": [
+        "DRUG_INHIB_PIM",
+        "MCL1",
+        "MYC"
+      ],
+      "rates": [
+        0.800000011920929,
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "unsat_before": 20,
+      "unsat_after": 18
+    }
+  ]
+}

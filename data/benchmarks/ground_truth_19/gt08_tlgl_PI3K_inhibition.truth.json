@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt08_tlgl_PI3K_inhibition",
+  "index": 8,
+  "title": "T-LGL Target 08: PI3K (Phosphoinositide 3-Kinase) Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "PI3K"
+  ],
+  "mechanism": "Inactivates AKT and NF-kB, downregulating anti-apoptotic proteins FLIP and IAP.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt08_tlgl_PI3K_inhibition.cnf"
+}

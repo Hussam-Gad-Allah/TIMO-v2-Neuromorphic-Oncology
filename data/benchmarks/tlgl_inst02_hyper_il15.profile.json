@@ -1,0 +1,12 @@
+{
+  "id": "tlgl_inst02_hyper_il15",
+  "title": "T-LGL Patient 02: Hyper-IL15 Autocrine Attractor",
+  "pinned": {
+    "Stimuli": 1,
+    "IL15": 1,
+    "PDGF": 0,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Patient with intense IL-15 autocrine loop driving the JAK-STAT3 survival axis."
+}

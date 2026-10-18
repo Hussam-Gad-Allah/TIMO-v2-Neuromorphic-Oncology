@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt09_tlgl_NFkB_inhibition",
+  "index": 9,
+  "title": "T-LGL Target 09: NF-kB Survival Pathway Inhibition",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "NFkB"
+  ],
+  "mechanism": "NF-kB inhibition (Bortezomib / Bay-11) relieves repression on apoptotic DISC assembly.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt09_tlgl_NFkB_inhibition.cnf"
+}

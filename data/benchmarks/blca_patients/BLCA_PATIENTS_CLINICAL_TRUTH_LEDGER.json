@@ -1,0 +1,143 @@
+{
+  "blca_pt01_fgfr3_s249c_erdafitinib_resistant": {
+    "title": "Patient blca_pt01_fgfr3_s249c_erdafitinib_resistant: Luminal-Papillary FGFR3-Mutant Bladder Cancer",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "Luminal-Papillary FGFR3-Mutant Bladder Cancer",
+      "primary_driver": "FGFR3 S249C activating mutation with acquired PI3K bypass",
+      "hospital_treatment": "Erdafitinib (selective oral FGFR1-4 inhibitor)",
+      "real_world_outcome": "PFS 5.5 mo, rapid bilateral pelvic progression",
+      "known_resistance_mechanism": "Parallel PIK3CA activation and MCL-1 stabilization bypasses FGFR3 inhibition"
+    },
+    "pinned": {
+      "FGFR3_mut": 1,
+      "PIK3CA_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt02_her2_amplified_platinum_failure": {
+    "title": "Patient blca_pt02_her2_amplified_platinum_failure: ERBB2-Amplified Infiltrating Urothelial Carcinoma",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "ERBB2-Amplified Infiltrating Urothelial Carcinoma",
+      "primary_driver": "High-level HER2 gene amplification + TP53 loss",
+      "hospital_treatment": "Gemcitabine + Cisplatin",
+      "real_world_outcome": "Primary chemo-refractory at 3.0 mo, retroperitoneal lymphadenopathy",
+      "known_resistance_mechanism": "HER2 hyperactivation insulates cancer cells against platinum crosslinks"
+    },
+    "pinned": {
+      "ERBB2_amp": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt03_tmb_high_pembrolizumab_cured": {
+    "title": "Patient blca_pt03_tmb_high_pembrolizumab_cured: Basal-Squamous High-TMB Immunotherapy Responsive",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "Basal-Squamous High-TMB Immunotherapy Responsive",
+      "primary_driver": "APOBEC-mediated hypermutation, intact p53 axis",
+      "hospital_treatment": "Pembrolizumab (anti-PD-1)",
+      "real_world_outcome": "Complete Remission >45 mo (CURED)",
+      "known_resistance_mechanism": "Absence of rigid anti-apoptotic defenses facilitates rapid cytotoxic T-cell lysis"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt04_rb1_p53_double_null_neuroendocrine": {
+    "title": "Patient blca_pt04_rb1_p53_double_null_neuroendocrine: Small-Cell / Neuroendocrine Transformed BLCA",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "Small-Cell / Neuroendocrine Transformed BLCA",
+      "primary_driver": "Concurrent biallelic loss of TP53 and RB1",
+      "hospital_treatment": "Etoposide + Cisplatin",
+      "real_world_outcome": "Transient response 3.2 mo, rapid visceral death at 6.0 mo",
+      "known_resistance_mechanism": "Bypass of all cell-cycle checkpoints confers aggressive apoptosis resistance"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "RB1_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt05_kdm6a_mutant_epigenetic_instability": {
+    "title": "Patient blca_pt05_kdm6a_mutant_epigenetic_instability: KDM6A Epigenetic Altered Urothelial Carcinoma",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "KDM6A Epigenetic Altered Urothelial Carcinoma",
+      "primary_driver": "Truncating KDM6A mutation, defective histone methylation",
+      "hospital_treatment": "Enfortumab Vedotin + Pembrolizumab (EV-302)",
+      "real_world_outcome": "PFS 24.1 mo, outstanding clinical benefit",
+      "known_resistance_mechanism": "High epigenetic replication stress sensitizes tumor to combined targeted perturbation"
+    },
+    "pinned": {
+      "KDM6A_loss": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt06_pi3k_mutant_gemcitabine_resistant": {
+    "title": "Patient blca_pt06_pi3k_mutant_gemcitabine_resistant: PIK3CA E542K Activated Infiltrating Carcinoma",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "PIK3CA E542K Activated Infiltrating Carcinoma",
+      "primary_driver": "Activating PI3K catalytic subunit mutation",
+      "hospital_treatment": "Gemcitabine + Carboplatin",
+      "real_world_outcome": "Early progression at 2.9 mo, lung metastases",
+      "known_resistance_mechanism": "Constitutive AKT flux phosphorylates BAD and suppresses mitochondrial death"
+    },
+    "pinned": {
+      "PIK3CA_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt07_fgfr3_fusion_acquired_gatekeeper_mut": {
+    "title": "Patient blca_pt07_fgfr3_fusion_acquired_gatekeeper_mut: FGFR3-TACC3 Translocated Advanced Carcinoma",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "FGFR3-TACC3 Translocated Advanced Carcinoma",
+      "primary_driver": "FGFR3-TACC3 rearrangement + secondary gatekeeper V555M",
+      "hospital_treatment": "Infigratinib salvage",
+      "real_world_outcome": "Progression at 3.4 mo, bony metastases",
+      "known_resistance_mechanism": "Gatekeeper mutation produces steric clash in ATP pocket"
+    },
+    "pinned": {
+      "FGFR3_mut": 1,
+      "FGF_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "blca_pt08_pan_refractory_fgfr_her2_p53_triplet": {
+    "title": "Patient blca_pt08_pan_refractory_fgfr_her2_p53_triplet: Pan-Refractory Triplet-Hit Urothelial Carcinoma",
+    "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Urothelial Carcinoma",
+      "primary_driver": "Concurrent FGFR3 mut, HER2 amp, and TP53 null",
+      "hospital_treatment": "Chemo-IO followed by ADC salvage",
+      "real_world_outcome": "Rapid failure at 1.9 mo, liver failure",
+      "known_resistance_mechanism": "Dual RTK hyperactivation with p53 loss locks the apoptotic threshold"
+    },
+    "pinned": {
+      "FGFR3_mut": 1,
+      "ERBB2_amp": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

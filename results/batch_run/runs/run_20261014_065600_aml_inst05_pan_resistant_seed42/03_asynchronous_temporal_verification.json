@@ -1,0 +1,71 @@
+[
+  {
+    "model_name": "AML Patient 05: Pan-Resistant Triple Mutant",
+    "candidate_drugs": [
+      "FLT3"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 60.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "FLT3"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 30
+  },
+  {
+    "model_name": "AML Patient 05: Pan-Resistant Triple Mutant",
+    "candidate_drugs": [
+      "MAPK",
+      "PI3K_AKT"
+    ],
+    "n_drugs": 2,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 63.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "PI3K_AKT"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 90
+  },
+  {
+    "model_name": "AML Patient 05: Pan-Resistant Triple Mutant",
+    "candidate_drugs": [
+      "STAT5"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 59.5,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [
+      "STAT5"
+    ],
+    "passed_verification": false,
+    "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+    "step": 240
+  },
+  {
+    "model_name": "AML Patient 05: Pan-Resistant Triple Mutant",
+    "candidate_drugs": [
+      "BCL2"
+    ],
+    "n_drugs": 1,
+    "apoptosis_rate_clean": 51.0,
+    "apoptosis_rate_noisy": 96.0,
+    "proliferation_suppression_rate": 51.0,
+    "mean_steps_to_apoptosis": 40.8,
+    "wet_lab_ground_truth_matches": [
+      "BCL2"
+    ],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 300
+  }
+]

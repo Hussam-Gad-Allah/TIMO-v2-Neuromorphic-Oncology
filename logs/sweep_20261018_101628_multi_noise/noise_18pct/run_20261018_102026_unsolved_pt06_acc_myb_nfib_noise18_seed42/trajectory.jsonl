@@ -1,0 +1,6 @@
+{"s": 0, "u": 65, "h": 0, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": []}
+{"s": 10, "u": 57, "h": 2, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2"]}
+{"s": 20, "u": 49, "h": 2, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 30, "u": 48, "h": 3, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}
+{"s": 40, "u": 47, "h": 3, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}
+{"s": 50, "u": 47, "h": 3, "m": "cruise", "noise": 18.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}

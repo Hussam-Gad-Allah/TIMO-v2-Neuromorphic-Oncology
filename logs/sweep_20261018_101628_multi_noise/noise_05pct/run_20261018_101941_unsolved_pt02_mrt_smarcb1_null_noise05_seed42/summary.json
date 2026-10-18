@@ -1,0 +1,23 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 33,
+  "steps_taken": 150,
+  "time_seconds": 1.11,
+  "seed": 42,
+  "cnf": "unsolved_pt02_mrt_smarcb1_null.cnf",
+  "n_vars": 148,
+  "n_clauses": 366,
+  "active_drugs": [
+    "EZH2",
+    "PI3K",
+    "mTOR"
+  ],
+  "validation_noise": 0.05,
+  "apoptosis_rate_clean": 100.0,
+  "apoptosis_rate_noisy": 96.0,
+  "wet_lab_match": [
+    "PI3K",
+    "mTOR"
+  ]
+}

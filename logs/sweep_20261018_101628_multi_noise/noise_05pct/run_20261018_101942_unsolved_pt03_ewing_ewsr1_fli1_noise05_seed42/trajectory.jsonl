@@ -1,0 +1,36 @@
+{"s": 0, "u": 71, "h": 0, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": []}
+{"s": 10, "u": 63, "h": 1, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2"]}
+{"s": 20, "u": 53, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}
+{"s": 30, "u": 52, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 40, "u": 51, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 50, "u": 50, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 60, "u": 50, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 70, "u": 46, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 80, "u": 44, "h": 1, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2"]}
+{"s": 90, "u": 42, "h": 1, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2"]}
+{"s": 100, "u": 41, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["ERK", "EZH2", "mTOR"]}
+{"s": 110, "u": 38, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "mTOR"]}
+{"s": 120, "u": 34, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "mTOR"]}
+{"s": 130, "u": 31, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 140, "u": 30, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 150, "u": 30, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 160, "u": 31, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 170, "u": 30, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 180, "u": 30, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 190, "u": 29, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 200, "u": 29, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 210, "u": 29, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 220, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 230, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 240, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 250, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 260, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 270, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 280, "u": 28, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 290, "u": 27, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 300, "u": 27, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K", "mTOR"]}
+{"s": 310, "u": 27, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K"]}
+{"s": 320, "u": 27, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K"]}
+{"s": 330, "u": 27, "h": 2, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "PI3K"]}
+{"s": 340, "u": 27, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1", "PI3K"]}
+{"s": 350, "u": 27, "h": 3, "m": "cruise", "noise": 5.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1", "PI3K"]}

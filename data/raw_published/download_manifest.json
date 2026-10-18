@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-10-14 18:42:33",
+  "curator": "Antigravity FlyFly Oncology Engine",
+  "models": {
+    "T-LGL Leukemia Survival Signaling Network": {
+      "local_file": "t_lgl_leukemia_zhang2008.json",
+      "sha256": "c7473031c0ef21256be60d58c00fc604d661f8f6aa40de5dc38e8a5da1869d4d",
+      "size_bytes": 6571,
+      "source_citation": "Zhang et al. (2008) PNAS 105(42):16308-16313 / GINsim Model 87",
+      "remote_url": "https://raw.githubusercontent.com/hklarner/pyboolnet/master/pyboolnet/repository/zhang_tlgl/zhang_tlgl.bnet",
+      "node_count": 60,
+      "drug_target_count": 18
+    },
+    "AML FLT3-ITD Patient-Specific Drug Resistance Network": {
+      "local_file": "aml_palma2021.json",
+      "sha256": "942c2e7d772b7f3132d45d66f056830eaa84ea72f0a3596df30891b9034333c6",
+      "size_bytes": 1364,
+      "source_citation": "Palma et al. (2021) J. Pers. Med. 11(2):117",
+      "remote_url": "https://raw.githubusercontent.com/colomoto/colomoto-models/master/models/AML_Palma2021.bnet",
+      "node_count": 17,
+      "drug_target_count": 7
+    },
+    "Pancreatic Ductal Adenocarcinoma (PDAC) KRAS-G12D Survival Network": {
+      "local_file": "pdac_kras_model.json",
+      "sha256": "99a24b33885f1497fa3ab7676bf8ca548f81ca9ea45d9b06916604c12378d245",
+      "size_bytes": 2165,
+      "source_citation": "Eduati et al. (2020) Mol. Syst. Biol. 16:e8664; Briones-Andrade et al. (2024) R. Soc. Open Sci.",
+      "remote_url": "https://doi.org/10.15252/msb.20188664",
+      "node_count": 38,
+      "drug_target_count": 15
+    },
+    "Glioblastoma Multiforme (GBM) EGFRvIII/PTEN/MGMT Signaling Network": {
+      "local_file": "gbm_model.json",
+      "sha256": "bd2b9979bc364bbc45163dc0191189915d1b6a0264ce4903f2d2bfff710c6ba6",
+      "size_bytes": 2488,
+      "source_citation": "Verhaak et al. (2010) Cancer Cell; Fumi\u00e3 & Martins (2013) PLoS ONE; TCGA-GBM",
+      "remote_url": "https://doi.org/10.1016/j.ccr.2009.12.020",
+      "node_count": 45,
+      "drug_target_count": 15
+    },
+    "Triple-Negative Breast Cancer (TNBC) Heterogeneity & Survival Network": {
+      "local_file": "tnbc_model.json",
+      "sha256": "18a4f685d672edf39d1ebac0dfba902bb82768b50be68de3205a22a7b1e2a8a7",
+      "size_bytes": 2482,
+      "source_citation": "Lehmann et al. (2011) J. Clin. Invest. 121(7):2750-2767; Montagud et al. (2019) PLoS Comput. Biol.; TCGA-BRCA",
+      "remote_url": "https://doi.org/10.1172/JCI45014",
+      "node_count": 44,
+      "drug_target_count": 15
+    },
+    "Metastatic Colorectal Cancer (mCRC) Oncogenic Network": {
+      "local_file": "mcrc_model.json",
+      "sha256": "3b66d1390a9300123a754698111828d212615af610a7695d84253b347cd8a120",
+      "size_bytes": 2798,
+      "source_citation": "Flobak et al. (2015) PLoS Comput. Biol. 11(9):e1004426; Grieco et al. (2013); TCGA-COAD/READ",
+      "remote_url": "https://doi.org/10.1371/journal.pcbi.1004426",
+      "node_count": 51,
+      "drug_target_count": 17
+    },
+    "Non-Small Cell Lung Cancer (NSCLC) Oncogenic Signaling Network": {
+      "local_file": "nsclc_model.json",
+      "sha256": "e1f996fe49bbbd286f897c64dbf8807bc8eae6b595b5f2d5af4ea924fda0c8b6",
+      "size_bytes": 2522,
+      "source_citation": "Deritei et al. (2019) npj Syst. Biol. Appl. 5:26; Tsirvouli et al. (2020) Front. Physiol.; TCGA-LUAD/LUSC",
+      "remote_url": "https://doi.org/10.1038/s41540-019-0103-6",
+      "node_count": 42,
+      "drug_target_count": 16
+    },
+    "Cutaneous & Metastatic Melanoma (SKCM) MAPK/PI3K Signaling Network": {
+      "local_file": "melanoma_model.json",
+      "sha256": "0b7ef0cf99e229dd03185eba9e0f9a4bc98d2a8e02aa185f3241f05e55557bbc",
+      "size_bytes": 2365,
+      "source_citation": "Sun et al. (2018) Cell Rep. 24(13):3466-3476; Grieco et al. (2013); TCGA-SKCM Consortium",
+      "remote_url": "https://doi.org/10.1016/j.celrep.2018.08.081",
+      "node_count": 40,
+      "drug_target_count": 15
+    },
+    "Castration-Resistant Prostate Cancer (CRPC) AR/PI3K/PARP Signaling Network": {
+      "local_file": "crpc_model.json",
+      "sha256": "148500a08338cc905134624dcdf924ac9f43bc2d5be4fa3c8dea6b9201af2f2e",
+      "size_bytes": 2766,
+      "source_citation": "Stoy et al. (2021); Gross et al.; TCGA-PRAD Consortium (Cell 2015, 163:1011-1025); Armenia et al. (2018) Nat. Genet.",
+      "remote_url": "https://doi.org/10.1016/j.cell.2015.10.025",
+      "node_count": 46,
+      "drug_target_count": 14
+    },
+    "High-Grade Serous Ovarian Cancer (HGSOC) DNA Damage & Apoptosis Signaling Network": {
+      "local_file": "hgsoc_model.json",
+      "sha256": "397079a063fc247f7d1d3cf2ce3718629b771be4cb67ee55985aca7d984f1017",
+      "size_bytes": 2607,
+      "source_citation": "TCGA-OV Consortium (Nature 2011, 474:609-615); Cohen et al. (2020) Mol. Syst. Biol.; Flobak et al.",
+      "remote_url": "https://doi.org/10.1038/nature10166",
+      "node_count": 46,
+      "drug_target_count": 15
+    }
+  }
+}

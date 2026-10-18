@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst06_relapsed_refractory",
+  "title": "AML Patient 06: Relapsed/Refractory Dual-Axis Dependent",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 1,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Relapsed/refractory patient requiring dual-target BCL2 + MCL1 synthetic lethality."
+}

@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt17_tlgl_Fas_death_agonist",
+  "index": 17,
+  "title": "T-LGL Target 17: Fas Death Receptor Agonist Activation",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "Fas"
+  ],
+  "mechanism": "Agonistic stimulation of Fas receptor drives death-inducing signaling complex (DISC) assembly.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt17_tlgl_Fas_death_agonist.cnf"
+}

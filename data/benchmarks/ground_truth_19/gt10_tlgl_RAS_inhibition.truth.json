@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt10_tlgl_RAS_inhibition",
+  "index": 10,
+  "title": "T-LGL Target 10: RAS Small GTPase Inactivation",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "RAS"
+  ],
+  "mechanism": "Shuts off upstream driver of the proliferative MAPK/MEK/ERK phosphorylation cascade.",
+  "citation": "Saadatpour et al. (2011), Table 1",
+  "cnf_file": "gt10_tlgl_RAS_inhibition.cnf"
+}

@@ -1,0 +1,12 @@
+{"s": 0, "u": 70, "h": 0, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": []}
+{"s": 10, "u": 62, "h": 1, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2"]}
+{"s": 20, "u": 54, "h": 3, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}
+{"s": 30, "u": 52, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 40, "u": 51, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 50, "u": 51, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 60, "u": 51, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 70, "u": 44, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 80, "u": 42, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 90, "u": 41, "h": 2, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["EZH2", "MCL1"]}
+{"s": 100, "u": 37, "h": 3, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}
+{"s": 110, "u": 37, "h": 3, "m": "cruise", "noise": 2.0, "cells": 200, "cell_steps": 1500, "drugs": ["AKT", "EZH2", "MCL1"]}

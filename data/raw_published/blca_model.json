@@ -1,0 +1,78 @@
+{
+  "name": "Bladder & Urothelial Carcinoma (BLCA)",
+  "citation": "TCGA-BLCA (Cell 2017, 171:540-556); Loriot et al. (2019) NEJM (BLC2001 - Erdafitinib); Powles et al. (2024) NEJM (EV-302)",
+  "url": "https://doi.org/10.1016/j.cell.2017.09.007",
+  "stimuli": [
+    "EGF_stim",
+    "FGF_stim",
+    "Chemo_DNA_damage",
+    "FGFR3_mut",
+    "ERBB2_amp",
+    "PIK3CA_mut",
+    "TP53_mut",
+    "RB1_loss",
+    "KDM6A_loss"
+  ],
+  "drug_targets": [
+    "FGFR3",
+    "HER2",
+    "EGFR",
+    "MEK",
+    "ERK",
+    "PI3K",
+    "AKT",
+    "mTOR",
+    "STAT3",
+    "NFkB",
+    "MCL1",
+    "BCL2",
+    "BCLxL",
+    "XIAP"
+  ],
+  "phenotypes": {
+    "cancer_state": {
+      "Proliferation": 1,
+      "Apoptosis": 0
+    },
+    "curative_state": {
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "rules": {
+    "EGF_stim": "EGF_stim",
+    "FGF_stim": "FGF_stim",
+    "Chemo_DNA_damage": "Chemo_DNA_damage",
+    "FGFR3_mut": "FGFR3_mut",
+    "ERBB2_amp": "ERBB2_amp",
+    "PIK3CA_mut": "PIK3CA_mut",
+    "TP53_mut": "TP53_mut",
+    "RB1_loss": "RB1_loss",
+    "KDM6A_loss": "KDM6A_loss",
+    "FGFR3": "FGFR3_mut  or  FGF_stim",
+    "HER2": "ERBB2_amp",
+    "EGFR": "EGF_stim",
+    "RAS": "FGFR3  or  HER2  or  EGFR",
+    "MEK": "RAS",
+    "ERK": "MEK",
+    "PI3K": "PIK3CA_mut  or  FGFR3  or  HER2",
+    "AKT": "PI3K",
+    "mTOR": "AKT",
+    "STAT3": "FGFR3  or  ERK",
+    "NFkB": "AKT  or  Chemo_DNA_damage",
+    "ATM_ATR": "Chemo_DNA_damage",
+    "P53": "ATM_ATR  and  not TP53_mut",
+    "BCL2": "(NFkB  or  STAT3)  and  not BAX",
+    "BCLxL": "(NFkB  or  STAT3  or  ERK)  and  not BAX",
+    "MCL1": "(AKT  or  ERK  or  STAT3)  and  not BAX",
+    "XIAP": "AKT  and  not SMAC",
+    "BAX": "(P53  or  not BCL2  or  not BCLxL)  and  not MCL1",
+    "CytoC": "BAX",
+    "SMAC": "BAX",
+    "Caspase9": "CytoC  and  not XIAP",
+    "Caspase8": "Chemo_DNA_damage",
+    "Caspase3": "(Caspase9  or  Caspase8)  and  not XIAP",
+    "Apoptosis": "Caspase3",
+    "Proliferation": "(ERK  or  AKT  or  FGFR3)  and  not Apoptosis"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst01_flt3_itd_std",
+  "title": "AML Patient 01: Standard FLT3-ITD Positive",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 0,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 0,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Standard FLT3-ITD mutated AML sensitive to targeted kinase/survival inhibition."
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+    "candidate_drugs": [
+      "EZH2"
+    ],
+    "n_drugs": 1,
+    "noise_prob": 0.18,
+    "noise_percent": 18.0,
+    "apoptosis_rate_clean": 0.0,
+    "apoptosis_rate_noisy": 100.0,
+    "proliferation_suppression_rate": 0.0,
+    "mean_steps_to_apoptosis": 1500.0,
+    "wet_lab_ground_truth_matches": [],
+    "passed_verification": true,
+    "verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+    "step": 90
+  }
+]

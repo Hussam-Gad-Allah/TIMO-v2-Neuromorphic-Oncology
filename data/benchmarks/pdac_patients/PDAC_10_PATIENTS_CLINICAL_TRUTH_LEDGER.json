@@ -1,0 +1,232 @@
+{
+  "pdac_pt01_gemcitabine_resistant": {
+    "title": "Patient PT-01: Classical Gemcitabine Resistant PDAC",
+    "citation": "Tiriac et al. (2018) Cancer Discovery; TCGA-PAAD Case #1",
+    "clinical_history": {
+      "age": 64,
+      "gender": "M",
+      "stage": "Stage III (Unresectable)",
+      "primary_driver": "KRAS-G12D, TP53-null, CDKN2A-loss",
+      "hospital_treatment": "Gemcitabine + Nab-paclitaxel (First-line)",
+      "real_world_outcome": "Progression at 4.2 months, deceased at 7.1 months (Chemoresistant)",
+      "known_resistance_mechanism": "Intrinsic apoptotic block; high baseline EGFR and MEK survival loops"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 1,
+      "TNF_stim": 1,
+      "TGFB_stim": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt02_folfirinox_refractory": {
+    "title": "Patient PT-02: FOLFIRINOX Refractory PI3K-Hyperactive PDAC",
+    "citation": "Eduati et al. (2020) Mol. Syst. Biol. Biopsy PT02",
+    "clinical_history": {
+      "age": 58,
+      "gender": "F",
+      "stage": "Stage IV (Peritoneal Metastasis)",
+      "primary_driver": "KRAS-G12V, PTEN-loss, PI3K/AKT hyperactive",
+      "hospital_treatment": "FOLFIRINOX (5-FU + Leucovorin + Irinotecan + Oxaliplatin)",
+      "real_world_outcome": "Completely refractory to platinum chemotherapy; progression at 3.8 months",
+      "known_resistance_mechanism": "Constitutive AKT/mTOR metabolic survival bypassing DNA-damage apoptosis"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 1,
+      "TNF_stim": 1,
+      "TGFB_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt03_smad4_metastatic": {
+    "title": "Patient PT-03: SMAD4-Deleted Aggressive Liver Metastatic PDAC",
+    "citation": "Tiriac et al. (2018) Cancer Discovery; TCGA-PAAD Case #3",
+    "clinical_history": {
+      "age": 61,
+      "gender": "M",
+      "stage": "Stage IV (Liver Metastasis)",
+      "primary_driver": "KRAS-G12D, SMAD4-null, TP53-mut",
+      "hospital_treatment": "Gemcitabine monotherapy",
+      "real_world_outcome": "Rapid hepatic metastatic storm within 90 days; death at 5.5 months",
+      "known_resistance_mechanism": "Loss of TGF-beta tumor suppression; compensatory STAT3 and MCL1 shielding"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "TGFB_stim": 1,
+      "TNF_stim": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt04_erlotinib_relapsed": {
+    "title": "Patient PT-04: Erlotinib Targeted Therapy Relapsed PDAC",
+    "citation": "Eduati et al. (2020) Biopsy PT04; Moore et al. (2007) JCO",
+    "clinical_history": {
+      "age": 67,
+      "gender": "M",
+      "stage": "Stage III (Locally Advanced)",
+      "primary_driver": "KRAS-G12R, EGFR overexpressed, TP53-mut",
+      "hospital_treatment": "Erlotinib (EGFR inhibitor) + Gemcitabine",
+      "real_world_outcome": "Transient partial response for 3 months, followed by lethal relapse at 6.4 months",
+      "known_resistance_mechanism": "XIAP downstream checkpoint blocked caspase execution despite EGFR suppression"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "EGFR_stim": 1,
+      "TNF_stim": 1,
+      "Hypoxia_stim": 0,
+      "TGFB_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt05_folfirinox_responder": {
+    "title": "Patient PT-05: Exceptional FOLFIRINOX Long-Term Survivor",
+    "citation": "TCGA-PAAD Long-Term Survivor Cohort; Tiriac et al. (2018)",
+    "clinical_history": {
+      "age": 52,
+      "gender": "F",
+      "stage": "Stage IIB (Resected)",
+      "primary_driver": "KRAS-G12D, ATM/BRCA alteration, TP53 intact",
+      "hospital_treatment": "Adjuvant FOLFIRINOX (12 cycles)",
+      "real_world_outcome": "Complete clinical response; disease-free survival >28 months (SURVIVED)",
+      "known_resistance_mechanism": "Functional p53 apoptotic priming; vulnerable to DNA damage"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 0,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 0,
+      "TNF_stim": 0,
+      "TGFB_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt06_hypoxic_avascular": {
+    "title": "Patient PT-06: Avascular Dense Desmoplastic Core PDAC",
+    "citation": "Eduati et al. (2020) Biopsy PT06; Provenzano et al. (Cancer Cell)",
+    "clinical_history": {
+      "age": 71,
+      "gender": "M",
+      "stage": "Stage III (Fibrotic Tumor)",
+      "primary_driver": "KRAS-G12D, TP53-mut, High interstitial fluid pressure",
+      "hospital_treatment": "Gemcitabine + Nab-paclitaxel",
+      "real_world_outcome": "Severe hypoperfusion prevented drug delivery; progression at 3.1 months",
+      "known_resistance_mechanism": "Hypoxic metabolic adaptation via NF-kB and mTOR; apoptosis silence"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "Hypoxia_stim": 1,
+      "EGFR_stim": 1,
+      "TGFB_stim": 0,
+      "TNF_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt07_cytokine_cachexia": {
+    "title": "Patient PT-07: High-Inflammatory Cytokine Storm & Cachexia PDAC",
+    "citation": "Tiriac et al. (2018) Case #7; Fearon et al. (Cell 2012)",
+    "clinical_history": {
+      "age": 63,
+      "gender": "M",
+      "stage": "Stage IV (Cachexia Phenotype)",
+      "primary_driver": "KRAS-G12D, High circulating TNF-alpha and IL-6, TP53-mut",
+      "hospital_treatment": "Modified FOLFIRINOX",
+      "real_world_outcome": "Severe chemotherapy toxicity, early discontinuation at 2 months, death at 4.8 months",
+      "known_resistance_mechanism": "Constitutive NF-kB driving MCL1 and BCL-xL; massive anti-apoptotic shield"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "TNF_stim": 1,
+      "TGFB_stim": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt08_myc_amplified": {
+    "title": "Patient PT-08: Highly Proliferative MYC-Amplified PDAC",
+    "citation": "TCGA-PAAD Case #8; Witkiewicz et al. (2015) Nat. Commun.",
+    "clinical_history": {
+      "age": 55,
+      "gender": "M",
+      "stage": "Stage IV (Aggressive Proliferation)",
+      "primary_driver": "KRAS-G12D, MYC gene amplification (8q24), TP53-mut",
+      "hospital_treatment": "Gemcitabine + Nab-paclitaxel",
+      "real_world_outcome": "Doubling time <3 weeks; fulminant progression, deceased at 4.1 months",
+      "known_resistance_mechanism": "High ERK and Cyclin D signaling continuously overcoming cell-cycle arrest"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 1,
+      "TNF_stim": 0,
+      "TGFB_stim": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt09_trail_insensitive": {
+    "title": "Patient PT-09: Extrinsic Death Receptor Refractory PDAC",
+    "citation": "Eduati et al. (2020) Biopsy PT09; Stanger et al.",
+    "clinical_history": {
+      "age": 68,
+      "gender": "F",
+      "stage": "Stage III (Locally Advanced)",
+      "primary_driver": "KRAS-G12V, c-FLIP overexpression, TP53-mut",
+      "hospital_treatment": "Experimental TRAIL-receptor agonist + Gemcitabine",
+      "real_world_outcome": "Complete insensitivity to extrinsic apoptosis triggers; death at 6.0 months",
+      "known_resistance_mechanism": "c-FLIP blocks Caspase-8; XIAP blocks Caspase-3/9"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "TNF_stim": 1,
+      "EGFR_stim": 1,
+      "Hypoxia_stim": 0,
+      "TGFB_stim": 0,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "pdac_pt10_mitochondrial_shield": {
+    "title": "Patient PT-10: Mitochondrial Redundancy Multi-Drug Resistant PDAC",
+    "citation": "TCGA-PAAD Case #10; Leverson et al. (Cancer Cell)",
+    "clinical_history": {
+      "age": 60,
+      "gender": "F",
+      "stage": "Stage IV (Post-FOLFIRINOX Relapse)",
+      "primary_driver": "KRAS-G12D, TP53-mut, Co-expression of BCL-2, BCL-xL, and MCL-1",
+      "hospital_treatment": "Second-line Gemcitabine + Capecitabine",
+      "real_world_outcome": "Slow disease progression, refractory to all conventional cytotoxic agents",
+      "known_resistance_mechanism": "Triple redundancy on mitochondrial outer membrane prevents BAX/BAK pore opening"
+    },
+    "pinned_molecular_baseline": {
+      "KRAS_mut": 1,
+      "P53_mut": 1,
+      "EGFR_stim": 1,
+      "TGFB_stim": 1,
+      "Hypoxia_stim": 1,
+      "TNF_stim": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

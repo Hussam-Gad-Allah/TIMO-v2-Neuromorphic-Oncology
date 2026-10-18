@@ -1,0 +1,1193 @@
+{
+  "step": 11760,
+  "status": "biomedical_verified",
+  "best_unsat": 7,
+  "cur_unsat": 13,
+  "last_best_step": 3720,
+  "failures": 0,
+  "blocking_clauses_count": 32,
+  "synergies_count": 0,
+  "assignment": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0
+  ],
+  "best_assignment": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "active_drugs": [
+    "ERK",
+    "HDAC",
+    "PI3K"
+  ],
+  "blocking_clauses": [
+    [
+      -52,
+      -46,
+      -53
+    ],
+    [
+      -47,
+      -54,
+      -53
+    ],
+    [
+      -55,
+      -57,
+      -56
+    ],
+    [
+      -49,
+      -61,
+      -54
+    ],
+    [
+      -49,
+      -54,
+      -56
+    ],
+    [
+      -55,
+      -61,
+      -53
+    ],
+    [
+      -61,
+      -58,
+      -53
+    ],
+    [
+      -61,
+      -59,
+      -53
+    ],
+    [
+      -61,
+      -54,
+      -53
+    ],
+    [
+      -61,
+      -56,
+      -53
+    ],
+    [
+      -49,
+      -61,
+      -53
+    ],
+    [
+      -54,
+      -58,
+      -53
+    ],
+    [
+      -49,
+      -54,
+      -53
+    ],
+    [
+      -55,
+      -54,
+      -53
+    ],
+    [
+      -46,
+      -54,
+      -53
+    ],
+    [
+      -54,
+      -56,
+      -53
+    ],
+    [
+      -57,
+      -54,
+      -53
+    ],
+    [
+      -54,
+      -59,
+      -53
+    ],
+    [
+      -61,
+      -54,
+      -56
+    ],
+    [
+      -49,
+      -54,
+      -58
+    ],
+    [
+      -55,
+      -46,
+      -54
+    ],
+    [
+      -61,
+      -54,
+      -59
+    ],
+    [
+      -54,
+      -56,
+      -58
+    ],
+    [
+      -49,
+      -46,
+      -54
+    ],
+    [
+      -57,
+      -61,
+      -54
+    ],
+    [
+      -61,
+      -54,
+      -58
+    ],
+    [
+      -47,
+      -61,
+      -54
+    ],
+    [
+      -49,
+      -47,
+      -54
+    ],
+    [
+      -47,
+      -54,
+      -56
+    ]
+  ],
+  "evaluated_drug_sets": [
+    [
+      "EZH2",
+      "MEK"
+    ],
+    [
+      "MCL1",
+      "MEK"
+    ],
+    [
+      "HDAC",
+      "MEK",
+      "PKC"
+    ],
+    [
+      "CDK4_6",
+      "MCL1",
+      "mTOR"
+    ],
+    [
+      "CDK4_6",
+      "MEK",
+      "PKC"
+    ],
+    [
+      "HDAC",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "CDK4_6",
+      "MEK"
+    ],
+    [
+      "MCL1",
+      "YAP_TEAD",
+      "mTOR"
+    ],
+    [
+      "HDAC",
+      "MEK"
+    ],
+    [
+      "CDK4_6",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "MCL1"
+    ],
+    [
+      "FAK",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "ERK",
+      "HDAC",
+      "PI3K"
+    ],
+    [
+      "CDK4_6",
+      "MEK",
+      "YAP_TEAD"
+    ],
+    [
+      "MCL1",
+      "MEK",
+      "PKC"
+    ],
+    [
+      "ERK",
+      "MCL1",
+      "mTOR"
+    ],
+    [
+      "MEK",
+      "YAP_TEAD",
+      "mTOR"
+    ],
+    [
+      "MCL1",
+      "PKC",
+      "mTOR"
+    ],
+    [
+      "MCL1",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "ERK",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "MCL1",
+      "MEK",
+      "PRKACA"
+    ],
+    [
+      "ERK",
+      "FAK",
+      "PKC"
+    ],
+    [
+      "MCL1",
+      "MEK",
+      "YAP_TEAD"
+    ],
+    [
+      "MCL1",
+      "PRKACA",
+      "mTOR"
+    ],
+    [
+      "MCL1",
+      "mTOR"
+    ],
+    [
+      "MEK",
+      "PKC",
+      "mTOR"
+    ],
+    [
+      "MEK",
+      "PRKACA",
+      "mTOR"
+    ],
+    [
+      "MEK",
+      "PKC"
+    ],
+    [
+      "EZH2",
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "HDAC",
+      "MCL1",
+      "MEK"
+    ],
+    [
+      "MEK",
+      "PKC",
+      "YAP_TEAD"
+    ],
+    [
+      "CDK4_6",
+      "MCL1",
+      "MEK"
+    ],
+    [
+      "AKT",
+      "EZH2",
+      "mTOR"
+    ],
+    [
+      "ERK",
+      "HDAC"
+    ],
+    [
+      "MEK",
+      "mTOR"
+    ],
+    [
+      "FAK",
+      "PKC"
+    ],
+    [
+      "MEK",
+      "PRKACA"
+    ],
+    [
+      "FAK",
+      "MCL1",
+      "MEK"
+    ],
+    [
+      "MEK",
+      "YAP_TEAD"
+    ],
+    [
+      "CDK4_6",
+      "EZH2",
+      "MEK"
+    ],
+    [
+      "HDAC"
+    ],
+    [
+      "CDK4_6",
+      "HDAC",
+      "MEK"
+    ],
+    [
+      "MEK"
+    ],
+    [
+      "FAK"
+    ],
+    [
+      "ERK",
+      "EZH2",
+      "MEK"
+    ]
+  ],
+  "blocking_history": [
+    {
+      "step": 90,
+      "candidate_drugs": [
+        "AKT",
+        "EZH2",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -52,
+        -46,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 29.5,
+      "apoptosis_rate_noisy": 81.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 120,
+      "candidate_drugs": [
+        "HDAC"
+      ],
+      "clause_literals": [
+        -47
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 59.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 150,
+      "candidate_drugs": [
+        "HDAC",
+        "MEK"
+      ],
+      "clause_literals": [
+        -47,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 60.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 210,
+      "candidate_drugs": [
+        "HDAC",
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -47,
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 2.0,
+      "apoptosis_rate_noisy": 60.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 270,
+      "candidate_drugs": [
+        "FAK"
+      ],
+      "clause_literals": [
+        -57
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 64.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 300,
+      "candidate_drugs": [
+        "FAK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -57,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 64.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 390,
+      "candidate_drugs": [
+        "ERK",
+        "FAK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -55,
+        -57,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 56.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 540,
+      "candidate_drugs": [
+        "CDK4_6",
+        "MEK"
+      ],
+      "clause_literals": [
+        -49,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 65.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 1110,
+      "candidate_drugs": [
+        "CDK4_6",
+        "MEK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -49,
+        -54,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 57.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 3720,
+      "candidate_drugs": [
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 1.5,
+      "apoptosis_rate_noisy": 63.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 3810,
+      "candidate_drugs": [
+        "MEK",
+        "YAP_TEAD",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -54,
+        -58,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 3.0,
+      "apoptosis_rate_noisy": 59.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 3840,
+      "candidate_drugs": [
+        "CDK4_6",
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -49,
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 2.0,
+      "apoptosis_rate_noisy": 66.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 3960,
+      "candidate_drugs": [
+        "ERK",
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -55,
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 6.5,
+      "apoptosis_rate_noisy": 66.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 3990,
+      "candidate_drugs": [
+        "EZH2",
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -46,
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 1.0,
+      "apoptosis_rate_noisy": 59.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 4020,
+      "candidate_drugs": [
+        "MEK",
+        "PKC",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -54,
+        -56,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.5,
+      "apoptosis_rate_noisy": 56.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 4800,
+      "candidate_drugs": [
+        "FAK",
+        "MEK",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -57,
+        -54,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 1.0,
+      "apoptosis_rate_noisy": 57.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5250,
+      "candidate_drugs": [
+        "MEK",
+        "PRKACA",
+        "mTOR"
+      ],
+      "clause_literals": [
+        -54,
+        -59,
+        -53
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 2.0,
+      "apoptosis_rate_noisy": 64.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5280,
+      "candidate_drugs": [
+        "MEK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -54,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 65.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5340,
+      "candidate_drugs": [
+        "MCL1",
+        "MEK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -61,
+        -54,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 25.0,
+      "apoptosis_rate_noisy": 88.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5370,
+      "candidate_drugs": [
+        "MEK"
+      ],
+      "clause_literals": [
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 62.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5460,
+      "candidate_drugs": [
+        "MEK",
+        "YAP_TEAD"
+      ],
+      "clause_literals": [
+        -54,
+        -58
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 57.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5610,
+      "candidate_drugs": [
+        "CDK4_6",
+        "MEK",
+        "YAP_TEAD"
+      ],
+      "clause_literals": [
+        -49,
+        -54,
+        -58
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 60.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5730,
+      "candidate_drugs": [
+        "EZH2",
+        "MEK"
+      ],
+      "clause_literals": [
+        -46,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 53.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 5760,
+      "candidate_drugs": [
+        "ERK",
+        "EZH2",
+        "MEK"
+      ],
+      "clause_literals": [
+        -55,
+        -46,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 65.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 6570,
+      "candidate_drugs": [
+        "MEK",
+        "PRKACA"
+      ],
+      "clause_literals": [
+        -54,
+        -59
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 56.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 6840,
+      "candidate_drugs": [
+        "MCL1",
+        "MEK",
+        "PRKACA"
+      ],
+      "clause_literals": [
+        -61,
+        -54,
+        -59
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 21.0,
+      "apoptosis_rate_noisy": 89.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 7170,
+      "candidate_drugs": [
+        "MEK",
+        "PKC",
+        "YAP_TEAD"
+      ],
+      "clause_literals": [
+        -54,
+        -56,
+        -58
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 54.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 7350,
+      "candidate_drugs": [
+        "CDK4_6",
+        "EZH2",
+        "MEK"
+      ],
+      "clause_literals": [
+        -49,
+        -46,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 60.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 11280,
+      "candidate_drugs": [
+        "HDAC",
+        "MCL1",
+        "MEK"
+      ],
+      "clause_literals": [
+        -47,
+        -61,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 19.5,
+      "apoptosis_rate_noisy": 89.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 11400,
+      "candidate_drugs": [
+        "CDK4_6",
+        "HDAC",
+        "MEK"
+      ],
+      "clause_literals": [
+        -49,
+        -47,
+        -54
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 62.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 11550,
+      "candidate_drugs": [
+        "HDAC",
+        "MEK",
+        "PKC"
+      ],
+      "clause_literals": [
+        -47,
+        -54,
+        -56
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 62.0,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    },
+    {
+      "step": 11580,
+      "candidate_drugs": [
+        "ERK",
+        "HDAC"
+      ],
+      "clause_literals": [
+        -55,
+        -47
+      ],
+      "verdict": "REJECTED_INEFFECTIVE_OR_UNSTABLE",
+      "apoptosis_rate_clean": 0.0,
+      "apoptosis_rate_noisy": 64.5,
+      "biological_rationale": "Insufficient apoptotic commitment under asynchronous Monte Carlo dynamics"
+    }
+  ],
+  "synergy_history": [],
+  "cnf_path": "F:\\Research II - PhD\\flyfly_oncology\\data\\benchmarks\\unsolved_patients\\unsolved_pt07_nut_brd4_nutm1.cnf",
+  "mapping_path": "F:\\Research II - PhD\\flyfly_oncology\\data\\benchmarks\\unsolved_patients\\unsolved_pt07_nut_brd4_nutm1.mapping.json",
+  "model_name": "Prospective Unsolved & Orphan Cancers Discovery Cohort (12 Refractory Lineages)",
+  "seed": 42,
+  "noise_percent": 2.0,
+  "timestamp": "2026-10-18 10:19:24"
+}

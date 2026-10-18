@@ -1,0 +1,141 @@
+{
+  "mm_pt01_t11_14_venetoclax_responder": {
+    "title": "Patient mm_pt01_t11_14_venetoclax_responder: t(11;14) CCND1 Translocated Multiple Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "t(11;14) CCND1 Translocated Multiple Myeloma",
+      "primary_driver": "t(11;14)(q13;q32) high BCL2/MCL1 ratio, plasma cell dyscrasia",
+      "hospital_treatment": "Venetoclax + Dexamethasone (BELLINI trial protocol)",
+      "real_world_outcome": "Complete Remission (CR) with negative MRD >38 mo (CURED)",
+      "known_resistance_mechanism": "Extreme mitochondrial sensitivity to BCL-2 inhibition triggers swift apoptosis"
+    },
+    "pinned": {
+      "T_11_14": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt02_del17p_bortezomib_refractory": {
+    "title": "Patient mm_pt02_del17p_bortezomib_refractory: High-Risk del(17p) Proteasome-Inhibitor Refractory MM",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "High-Risk del(17p) Proteasome-Inhibitor Refractory MM",
+      "primary_driver": "Biallelic TP53 deletion/mutation, high chromosomal instability",
+      "hospital_treatment": "Bortezomib + Lenalidomide + Dexamethasone (VRd)",
+      "real_world_outcome": "Progression at 4.0 mo, extramedullary plasmacytomas, death at 8.1 mo",
+      "known_resistance_mechanism": "Loss of p53 prevents proteotoxic stress-induced pro-apoptotic signaling"
+    },
+    "pinned": {
+      "DEL17P": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt03_t4_14_high_risk_mcl1_dependent": {
+    "title": "Patient mm_pt03_t4_14_high_risk_mcl1_dependent: t(4;14) FGFR3/MMSET Epigenetic Aggressive MM",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "t(4;14) FGFR3/MMSET Epigenetic Aggressive MM",
+      "primary_driver": "t(4;14)(p16;q32) histone H3K36 hypermethylation, high MCL-1",
+      "hospital_treatment": "Carfilzomib + Pomalidomide + Dexamethasone (KPd)",
+      "real_world_outcome": "Early failure at 3.2 mo, widespread osteolytic lesions",
+      "known_resistance_mechanism": "MMSET directly drives sustained MCL-1 transcription, insulating plasma cells"
+    },
+    "pinned": {
+      "T_4_14_MMSET": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt04_daratumumab_cured_cd38_high": {
+    "title": "Patient mm_pt04_daratumumab_cured_cd38_high: Standard-Risk Newly Diagnosed Multiple Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "Standard-Risk Newly Diagnosed Multiple Myeloma",
+      "primary_driver": "High cell surface CD38 expression, wild-type p53",
+      "hospital_treatment": "Daratumumab (anti-CD38) + VRd (POLLUX / GRIFFIN)",
+      "real_world_outcome": "Stringent Complete Response (sCR) >50 mo (CURED)",
+      "known_resistance_mechanism": "Potent antibody-dependent cellular cytotoxicity easily collapses myeloma basin"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt05_kras_g12d_extramedullary_fulminant": {
+    "title": "Patient mm_pt05_kras_g12d_extramedullary_fulminant: KRAS-Mutant Extramedullary Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "KRAS-Mutant Extramedullary Myeloma",
+      "primary_driver": "KRAS G12D activating mutation, plasma cell leukemia features",
+      "hospital_treatment": "Elotuzumab + Pomalidomide + Dexamethasone",
+      "real_world_outcome": "Primary refractory at 2.2 mo, circulating plasma cells, death at 4.6 mo",
+      "known_resistance_mechanism": "Constitutive MAPK and PI3K signaling bypasses proteasome inhibition"
+    },
+    "pinned": {
+      "KRAS_mut": 1,
+      "DEL17P": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt06_myc_rearranged_aggressive_plasmablastic": {
+    "title": "Patient mm_pt06_myc_rearranged_aggressive_plasmablastic: Secondary MYC-Translocated Plasmablastic Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "Secondary MYC-Translocated Plasmablastic Myeloma",
+      "primary_driver": "8q24 MYC rearrangement into IgH locus, rapid proliferation",
+      "hospital_treatment": "DCEP chemotherapy (Dexamethasone, Cyclo, Etoposide, Cisplatin)",
+      "real_world_outcome": "Progression at 2.6 mo, hypercalcemic crisis, death at 5.2 mo",
+      "known_resistance_mechanism": "Massive MYC overexpression overrides all cell-cycle checkpoints"
+    },
+    "pinned": {
+      "MYC_transloc": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt07_il6_autocrine_bone_marrow_protective": {
+    "title": "Patient mm_pt07_il6_autocrine_bone_marrow_protective: Stromal Cytokine-Dependent Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "Stromal Cytokine-Dependent Myeloma",
+      "primary_driver": "Bone marrow stromal IL-6/STAT3 autocrine signaling loop",
+      "hospital_treatment": "Ixazomib + Lenalidomide + Dexamethasone",
+      "real_world_outcome": "Progression at 4.8 mo, diffuse bone marrow replacement",
+      "known_resistance_mechanism": "IL-6/STAT3 signaling continuously upregulates MCL-1 and BCL-xL"
+    },
+    "pinned": {
+      "IL6_stim": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "mm_pt08_pan_refractory_penta_refractory_lethal": {
+    "title": "Patient mm_pt08_pan_refractory_penta_refractory_lethal: Penta-Refractory Quadruple-Driver Lethal Myeloma",
+    "citation": "Dimopoulos et al. (2016) NEJM (POLLUX - Daratumumab); San Miguel et al. (2008) NEJM (VISTA - Bortezomib); Kumar et al. (2017) Lancet Oncol",
+    "clinical_history": {
+      "subtype": "Penta-Refractory Quadruple-Driver Lethal Myeloma",
+      "primary_driver": "Concurrent del(17p), t(4;14), MYC transloc, and KRAS mut",
+      "hospital_treatment": "CAR-T (Cilta-cel) followed by Bispecific T-cell engager salvage",
+      "real_world_outcome": "Rapid relapse at 1.9 mo, multi-organ failure, death at 3.2 mo",
+      "known_resistance_mechanism": "Simultaneous disruption of proteostasis, p53, and MAPK produces absolute pan-resistance"
+    },
+    "pinned": {
+      "DEL17P": 1,
+      "T_4_14_MMSET": 1,
+      "MYC_transloc": 1,
+      "KRAS_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

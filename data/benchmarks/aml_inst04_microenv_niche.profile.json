@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst04_microenv_niche",
+  "title": "AML Patient 04: Bone Marrow Microenvironment Protected",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 1,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 0,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Stroma-protected niche providing extrinsic microenvironmental survival drive via PI3K/AKT."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst02_dnmt3a_resistant",
+  "title": "AML Patient 02: DNMT3A-mutant High-Risk Resistant",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 0,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "High-risk resistant patient with DNMT3A epigenetic silencing of P53, resisting monotherapy."
+}

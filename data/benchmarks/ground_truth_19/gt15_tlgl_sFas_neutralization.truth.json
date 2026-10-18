@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "gt15_tlgl_sFas_neutralization",
+  "index": 15,
+  "title": "T-LGL Target 15: Soluble Fas (sFas) Decoy Receptor Neutralization",
+  "model_type": "t_lgl",
+  "ground_truth_solution": [
+    "sFas"
+  ],
+  "mechanism": "Eliminates soluble decoy sFas, allowing membrane-bound Fas to bind FasL and trigger DISC/Caspase apoptosis.",
+  "citation": "Saadatpour et al. (2011), Table 1; Liu et al. (2002)",
+  "cnf_file": "gt15_tlgl_sFas_neutralization.cnf"
+}

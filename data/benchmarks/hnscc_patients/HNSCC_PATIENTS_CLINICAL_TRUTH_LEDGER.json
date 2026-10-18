@@ -1,0 +1,143 @@
+{
+  "hnscc_pt01_egfr_amp_cetuximab_resistant": {
+    "title": "Patient hnscc_pt01_egfr_amp_cetuximab_resistant: HPV-Negative EGFR-Amplified Laryngeal Carcinoma",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "HPV-Negative EGFR-Amplified Laryngeal Carcinoma",
+      "primary_driver": "High EGFR copy number, secondary MET/AXL flux",
+      "hospital_treatment": "Cetuximab (anti-EGFR) + Platinum/5-FU (EXTREME)",
+      "real_world_outcome": "Progression at 4.5 mo, bilateral neck nodal recurrence",
+      "known_resistance_mechanism": "Parallel PI3K/Akt activation and persistent STAT3 sustain MCL-1 despite Cetuximab"
+    },
+    "pinned": {
+      "EGFR_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt02_hpv_positive_exceptional_responder": {
+    "title": "Patient hnscc_pt02_hpv_positive_exceptional_responder: HPV-Associated Oropharyngeal Carcinoma (p16+)",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "HPV-Associated Oropharyngeal Carcinoma (p16+)",
+      "primary_driver": "High-risk HPV-16 E6/E7 oncoprotein expression, wild-type TP53",
+      "hospital_treatment": "Cisplatin + Radiation therapy",
+      "real_world_outcome": "Complete Remission >60 mo (CURED)",
+      "known_resistance_mechanism": "Intact apoptotic machinery readily responds to genotoxic radiation damage"
+    },
+    "pinned": {
+      "HPV_pos": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt03_ccnd1_amp_cdk4_hyperactive_refractory": {
+    "title": "Patient hnscc_pt03_ccnd1_amp_cdk4_hyperactive_refractory: CCND1-Amplified Recurrent Oral Cavity Squamous Carcinoma",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "CCND1-Amplified Recurrent Oral Cavity Squamous Carcinoma",
+      "primary_driver": "11q13 CCND1 amplification, CDKN2A deletion",
+      "hospital_treatment": "Pembrolizumab + Chemo (KEYNOTE-048)",
+      "real_world_outcome": "Early failure at 2.6 mo, carotid blowout, death at 5.1 mo",
+      "known_resistance_mechanism": "Unrestrained CDK4/6 activity overrides cell-cycle checkpoint arrest"
+    },
+    "pinned": {
+      "CCND1_amp": 1,
+      "CDKN2A_loss": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt04_pi3k_mutant_radioresistant": {
+    "title": "Patient hnscc_pt04_pi3k_mutant_radioresistant: PIK3CA Helical Mutant Radioresistant Carcinoma",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "PIK3CA Helical Mutant Radioresistant Carcinoma",
+      "primary_driver": "PIK3CA E545K mutation + TP53 missense",
+      "hospital_treatment": "Docetaxel + Cisplatin + 5-FU (TPF induction)",
+      "real_world_outcome": "Progression at 3.1 mo, pulmonary metastases",
+      "known_resistance_mechanism": "Constitutive Akt activation prevents radiation-induced cytochrome c release"
+    },
+    "pinned": {
+      "PIK3CA_mut": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt05_notch1_loss_stem_like_aggressive": {
+    "title": "Patient hnscc_pt05_notch1_loss_stem_like_aggressive: NOTCH1-Deficient Dedifferentiated Oral Cancer",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "NOTCH1-Deficient Dedifferentiated Oral Cancer",
+      "primary_driver": "Inactivating NOTCH1 mutation, mesenchymal stem traits",
+      "hospital_treatment": "Nivolumab monotherapy",
+      "real_world_outcome": "Primary immune evasion at 2.1 mo, death at 4.8 mo",
+      "known_resistance_mechanism": "Mesenchymal transition upregulates XIAP and BCL-xL survival buffer"
+    },
+    "pinned": {
+      "NOTCH1_loss": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt06_pembrolizumab_cured_high_cps": {
+    "title": "Patient hnscc_pt06_pembrolizumab_cured_high_cps: PD-L1 High (CPS >= 50) Squamous Carcinoma",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "PD-L1 High (CPS >= 50) Squamous Carcinoma",
+      "primary_driver": "Tobacco smoking mutational signature, wild-type PIK3CA",
+      "hospital_treatment": "Pembrolizumab monotherapy",
+      "real_world_outcome": "Durable Complete Remission >36 mo (CURED)",
+      "known_resistance_mechanism": "Absence of oncogene-driven anti-apoptotic traps allows cytotoxic T-cell lysis"
+    },
+    "pinned": {
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt07_tp53_disruptive_platinum_refractory": {
+    "title": "Patient hnscc_pt07_tp53_disruptive_platinum_refractory: Disruptive TP53 Mutant Hypopharyngeal Cancer",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "Disruptive TP53 Mutant Hypopharyngeal Cancer",
+      "primary_driver": "DNA-binding domain nonsense TP53 mutation",
+      "hospital_treatment": "Carboplatin + Paclitaxel",
+      "real_world_outcome": "Refractory at 2.8 mo, distant bone metastases",
+      "known_resistance_mechanism": "Total absence of p53 eliminates transactivation of pro-apoptotic BAX"
+    },
+    "pinned": {
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "hnscc_pt08_pan_refractory_egfr_pi3k_p53_triplet": {
+    "title": "Patient hnscc_pt08_pan_refractory_egfr_pi3k_p53_triplet: Pan-Refractory Triplet-Hit Head & Neck Cancer",
+    "citation": "TCGA-HNSC (Nature 2015, 517:576-582); Vermorken et al. (2008) NEJM (EXTREME); Burtness et al. (2019) Lancet (KEYNOTE-048)",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Head & Neck Cancer",
+      "primary_driver": "Concurrent EGFR amp, PIK3CA mut, and TP53 null",
+      "hospital_treatment": "Cetuximab + Chemotherapy followed by IO salvage",
+      "real_world_outcome": "Rapid failure at 1.7 mo, death at 3.9 mo",
+      "known_resistance_mechanism": "Simultaneous activation of EGFR and PI3K with p53 loss establishes total resistance"
+    },
+    "pinned": {
+      "EGFR_amp": 1,
+      "PIK3CA_mut": 1,
+      "TP53_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "cll_pt01_del17p_tp53_fludarabine_resistant": {
+    "title": "Patient cll_pt01_del17p_tp53_fludarabine_resistant: High-Risk 17p-Deleted / TP53-Mutant CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "High-Risk 17p-Deleted / TP53-Mutant CLL",
+      "primary_driver": "del(17p13.1) with TP53 missense, fludarabine refractory",
+      "hospital_treatment": "FCR chemoimmunotherapy (Fludarabine, Cyclophosphamide, Rituximab)",
+      "real_world_outcome": "Primary refractory, rapid lymphocytosis at 2.9 mo, death at 7.1 mo",
+      "known_resistance_mechanism": "Absence of p53 renders purine analog DNA damage completely futile"
+    },
+    "pinned": {
+      "DEL17P_TP53": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt02_btk_c481s_ibrutinib_resistant": {
+    "title": "Patient cll_pt02_btk_c481s_ibrutinib_resistant: Acquired Ibrutinib-Resistant Relapsed CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "Acquired Ibrutinib-Resistant Relapsed CLL",
+      "primary_driver": "Acquired BTK C481S mutation in ATP-binding domain",
+      "hospital_treatment": "Ibrutinib (covalent BTK inhibitor) 420mg daily",
+      "real_world_outcome": "Progression at 4.2 mo, explosive Richter transformation",
+      "known_resistance_mechanism": "C481S mutation prevents covalent bond formation by Ibrutinib"
+    },
+    "pinned": {
+      "BTK_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt03_venetoclax_responder_bcl2_hyperdependent": {
+    "title": "Patient cll_pt03_venetoclax_responder_bcl2_hyperdependent: Relapsed/Refractory BCL2-Dependent CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "Relapsed/Refractory BCL2-Dependent CLL",
+      "primary_driver": "High BCL-2 protein expression, unmutated IGHV",
+      "hospital_treatment": "Venetoclax (ABT-199 selective BCL-2 BH3 mimetic)",
+      "real_world_outcome": "Undetectable Minimal Residual Disease (uMRD) >40 mo (CURED)",
+      "known_resistance_mechanism": "Severe mitochondrial dependency on BCL-2 allows instantaneous apoptosis"
+    },
+    "pinned": {
+      "BCL2_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt04_plcg2_mutant_ibrutinib_bypass": {
+    "title": "Patient cll_pt04_plcg2_mutant_ibrutinib_bypass: PLCG2 R665W Mutant Post-BTKi Refractory CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "PLCG2 R665W Mutant Post-BTKi Refractory CLL",
+      "primary_driver": "Activating mutation downstream of BTK in PLCG2",
+      "hospital_treatment": "Acalabrutinib (2nd-generation BTK inhibitor)",
+      "real_world_outcome": "Primary failure at 2.4 mo, splenomegaly, death at 5.0 mo",
+      "known_resistance_mechanism": "Downstream activation of PLCG2 bypasses all BTK inhibitors"
+    },
+    "pinned": {
+      "PLCG2_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt05_bcl2_g101v_acquired_venetoclax_resistant": {
+    "title": "Patient cll_pt05_bcl2_g101v_acquired_venetoclax_resistant: Acquired Venetoclax-Resistant Relapsed CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "Acquired Venetoclax-Resistant Relapsed CLL",
+      "primary_driver": "Secondary BCL2 G101V mutation in BH3-binding groove",
+      "hospital_treatment": "Venetoclax salvage therapy",
+      "real_world_outcome": "Progression at 5.1 mo, massive generalized lymphadenopathy",
+      "known_resistance_mechanism": "G101V mutation causes steric clash reducing Venetoclax affinity 180-fold"
+    },
+    "pinned": {
+      "BCL2_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt06_notch1_mutated_richter_transformation": {
+    "title": "Patient cll_pt06_notch1_mutated_richter_transformation: NOTCH1 P2514fs Mutant Aggressive CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "NOTCH1 P2514fs Mutant Aggressive CLL",
+      "primary_driver": "NOTCH1 PEST domain truncation, constitutive NF-kB",
+      "hospital_treatment": "R-CHOP chemoimmunotherapy",
+      "real_world_outcome": "Refractory at 2.1 mo, diffuse large B-cell lymphoma transformation",
+      "known_resistance_mechanism": "Constitutive NOTCH1/NF-kB activation drives massive MCL-1 survival"
+    },
+    "pinned": {
+      "NOTCH1_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt07_sf3b1_mutant_spliceosome_aberrant": {
+    "title": "Patient cll_pt07_sf3b1_mutant_spliceosome_aberrant: SF3B1 K700E Splicing-Deficient Poor-Prognosis CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "SF3B1 K700E Splicing-Deficient Poor-Prognosis CLL",
+      "primary_driver": "Recurrent spliceosomal mutation, high MCL-1S/L ratio",
+      "hospital_treatment": "Bendamustine + Rituximab (BR)",
+      "real_world_outcome": "Progression at 4.0 mo, marrow failure, death at 8.2 mo",
+      "known_resistance_mechanism": "Aberrant pre-mRNA splicing insulates pro-survival Bcl-2 family proteins"
+    },
+    "pinned": {
+      "SF3B1_mut": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  },
+  "cll_pt08_pan_refractory_del17p_btk_bcl2_triplet": {
+    "title": "Patient cll_pt08_pan_refractory_del17p_btk_bcl2_triplet: Pan-Refractory Triplet-Hit Ultra-Lethal CLL",
+    "citation": "Byrd et al. (2014) NEJM (RESONATE - Ibrutinib); Seymour et al. (2018) NEJM (MURANO - Venetoclax + Rituximab); Landau et al. (2015) Nature",
+    "clinical_history": {
+      "subtype": "Pan-Refractory Triplet-Hit Ultra-Lethal CLL",
+      "primary_driver": "Concurrent del(17p), BTK C481S, and BCL2 G101V",
+      "hospital_treatment": "Pirtobrutinib + CAR-T salvage",
+      "real_world_outcome": "Death at 1.9 mo, fulminant leukemic meningitis",
+      "known_resistance_mechanism": "Combined evasion of DNA checkpoints, BTK inhibition, and BCL-2 monotherapy"
+    },
+    "pinned": {
+      "DEL17P_TP53": 1,
+      "BTK_mut": 1,
+      "BCL2_amp": 1,
+      "Chemo_DNA_damage": 1,
+      "Proliferation": 0,
+      "Apoptosis": 1
+    }
+  }
+}

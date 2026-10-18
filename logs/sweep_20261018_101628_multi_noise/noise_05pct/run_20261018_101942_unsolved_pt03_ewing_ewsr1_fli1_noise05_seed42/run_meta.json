@@ -1,0 +1,17 @@
+{
+  "cnf": "F:\\Research II - PhD\\flyfly_oncology\\data\\benchmarks\\unsolved_patients\\unsolved_pt03_ewing_ewsr1_fli1.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "config": {
+    "mode": "full",
+    "seed": 42,
+    "max_steps": 2000000,
+    "max_allowed_drugs": 3,
+    "validation_noise": 0.05,
+    "target_apoptosis": 100.0
+  },
+  "flags": {
+    "snn": true,
+    "oncology": true
+  }
+}

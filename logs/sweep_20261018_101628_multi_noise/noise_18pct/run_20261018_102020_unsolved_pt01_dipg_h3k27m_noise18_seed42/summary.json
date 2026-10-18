@@ -1,0 +1,22 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 38,
+  "steps_taken": 90,
+  "time_seconds": 0.59,
+  "seed": 42,
+  "cnf": "unsolved_pt01_dipg_h3k27m.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "active_drugs": [
+    "AKT",
+    "EZH2",
+    "MCL1"
+  ],
+  "validation_noise": 0.18,
+  "apoptosis_rate_clean": 100.0,
+  "apoptosis_rate_noisy": 100.0,
+  "wet_lab_match": [
+    "AKT"
+  ]
+}

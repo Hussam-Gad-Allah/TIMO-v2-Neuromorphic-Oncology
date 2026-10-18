@@ -1,0 +1,22 @@
+{
+  "status": "solved",
+  "solved": true,
+  "best_unsat": 32,
+  "steps_taken": 270,
+  "time_seconds": 2.21,
+  "seed": 42,
+  "cnf": "unsolved_pt04_arms_pax3_foxo1.cnf",
+  "n_vars": 148,
+  "n_clauses": 367,
+  "active_drugs": [
+    "MCL1",
+    "PI3K",
+    "PKC"
+  ],
+  "validation_noise": 0.02,
+  "apoptosis_rate_clean": 100.0,
+  "apoptosis_rate_noisy": 99.0,
+  "wet_lab_match": [
+    "PI3K"
+  ]
+}

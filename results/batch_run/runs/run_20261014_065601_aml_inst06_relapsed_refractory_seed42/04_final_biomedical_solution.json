@@ -1,0 +1,58 @@
+{
+  "model_name": "AML Patient 06: Relapsed/Refractory Dual-Axis Dependent",
+  "timestamp": "2026-10-14 06:56:12",
+  "status": "biomedical_verified",
+  "steps_taken": 3661,
+  "elapsed_seconds": 10.63,
+  "active_drugs": [
+    "BCL2"
+  ],
+  "verification_verdict": "VERIFIED_THERAPEUTIC_ATTRACTOR",
+  "apoptosis_rate_clean": 51.0,
+  "apoptosis_rate_noisy": 95.5,
+  "proliferation_suppression_rate": 51.0,
+  "mean_steps_to_apoptosis": 43.5,
+  "wet_lab_matches": [
+    "BCL2"
+  ],
+  "blocking_clauses_count": 7,
+  "synergy_flips_count": 2,
+  "gene_states": {
+    "FLT3_ITD": 1,
+    "Microenv": 1,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 1,
+    "FLT3": 1,
+    "STAT5": 1,
+    "PI3K_AKT": 1,
+    "PIM": 1,
+    "MAPK": 1,
+    "MYC": 1,
+    "BCL2": 0,
+    "MCL1": 0,
+    "MDM2": 1,
+    "P53": 0,
+    "BAX_BAK": 1,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "pre_treatment_states": {
+    "FLT3_ITD": 0,
+    "Microenv": 0,
+    "NPM1_mut": 0,
+    "DNMT3A_mut": 0,
+    "FLT3": 0,
+    "STAT5": 0,
+    "PI3K_AKT": 0,
+    "PIM": 0,
+    "MAPK": 0,
+    "MYC": 0,
+    "BCL2": 0,
+    "MCL1": 0,
+    "MDM2": 0,
+    "P53": 0,
+    "BAX_BAK": 0,
+    "Proliferation": 1,
+    "Apoptosis": 0
+  }
+}

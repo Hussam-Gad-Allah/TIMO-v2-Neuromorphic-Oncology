@@ -1,0 +1,13 @@
+{
+  "id": "aml_inst03_npm1_co_mutant",
+  "title": "AML Patient 03: FLT3-ITD + NPM1 Co-mutated",
+  "pinned": {
+    "FLT3_ITD": 1,
+    "Microenv": 0,
+    "NPM1_mut": 1,
+    "DNMT3A_mut": 0,
+    "Proliferation": 0,
+    "Apoptosis": 1
+  },
+  "description": "Double-mutated patient with FLT3-ITD and NPM1 activating anti-apoptotic BCL-2."
+}
